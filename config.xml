@@ -31,6 +31,14 @@
         <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
     </platform>
     <platform name="ios">
+        <icon src="icons/ios/57_BR.png" width="57" height = "57"/>
+        <icon src="icons/ios/72_BR.png" width="72" height = "72"/>
+        <icon src="icons/ios/76_BR.png" width="76" height = "76"/>
+        <icon src="icons/ios/114_BR.png" width="114" height = "114"/>
+        <icon src="icons/ios/120_BR.png" width="120" height = "120"/>
+        <icon src="icons/ios/144_BR.png" width="144" height = "144"/>
+        <icon src="icons/ios/152_BR.png" width="152" height = "152"/>
+        <!--
         <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
         <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />
         <icon height="40" platform="ios" src="www/res/icon/ios/icon-40.png" width="40" />
@@ -57,6 +65,7 @@
         <splash height="1024" platform="ios" src="www/res/screen/ios/Default-Portrait~ipad.png" width="768" />
         <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
+    -->
     </platform>
     <platform name="wp8">
         <icon height="99" platform="wp8" src="www/res/icon/wp8/ApplicationIcon.png" width="99" />
