@@ -24,6 +24,20 @@
         <icon density="xhdpi" src="www/res/icon/android/drawable-xhdpi-icon.png" />
         <icon density="xxhdpi" src="www/res/icon/android/drawable-xxhdpi-icon.png" />
         <icon density="xxxhdpi" src="www/res/icon/android/drawable-xxxhdpi-icon.png" />
+        -->
+        <splash density="land-ldpi" src="/ios/logo-CACv.png" />
+        <splash density="land-mdpi" src="/ios/logo-CACv.png" />
+        <splash density="land-hdpi" src="/ios/logo-CACv.png" />
+        <splash density="land-xhdpi" src="/ios/logo-CACv.png" />
+        <splash density="land-xxhdpi" src="/ios/logo-CACv.png" />
+        <splash density="land-xxxhdpi" src="/ios/logo-CACv.png" />
+        <splash density="port-ldpi" src="/ios/logo-CACv.png" />
+        <splash density="port-mdpi" src="/ios/logo-CACv.png" />
+        <splash density="port-hdpi" src="/ios/logo-CACv.png" />
+        <splash density="port-xhdpi" src="/ios/logo-CACv.png" />
+        <splash density="port-xxhdpi" src="/ios/logo-CACv.png" />
+        <splash density="port-xxxhdpi" src="/ios/logo-CACv.png" />
+        <!--
         <splash density="land-ldpi" src="www/res/screen/android/drawable-land-ldpi-screen.png" />
         <splash density="land-mdpi" src="www/res/screen/android/drawable-land-mdpi-screen.png" />
         <splash density="land-hdpi" src="www/res/screen/android/drawable-land-hdpi-screen.png" />
@@ -36,7 +50,7 @@
         <splash density="port-xhdpi" src="www/res/screen/android/drawable-port-xhdpi-screen.png" />
         <splash density="port-xxhdpi" src="www/res/screen/android/drawable-port-xxhdpi-screen.png" />
         <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
-    -->
+    
     </platform>
     <platform name="ios">
         <icon platform="ios" src="icons/ios/57.png" width="57" height = "57"/>
@@ -100,9 +114,11 @@
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <!--
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
+    -->
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
