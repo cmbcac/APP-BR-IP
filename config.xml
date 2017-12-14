@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="iptvbrcac" version="1.0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="iptvbrcac" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>IPTV BR CAC</name>
     <description>
         Consulta els mapes de cobertures de les televisions IP així com ràdios i televisions.
@@ -11,24 +11,24 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <platform name="android">
-        <icon density="ldpi" src="icons/ios/57_IP.png" />
-        <icon density="mdpi" src="icons/ios/72_IP.png" />
-        <icon density="hdpi" height="76" src="icons/ios/76_IP.png" width="76" />
-        <icon density="xhdpi" height="114" src="icons/ios/114_IP.png" width="114" />
-        <icon density="xxhdpi" height="120" src="icons/ios/144_IP.png" width="120" />
-        <icon density="xxxhdpi" height="152" src="icons/ios/152_IP.png" width="152" />
-        <splash density="land-ldpi" src="/icons/ios/logo-CACv.png" />
-        <splash density="land-mdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="land-hdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="land-xhdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="land-xxhdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="land-xxxhdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="port-ldpi" src="icons/ios/logo-CACv.png" />
-        <splash density="port-mdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="port-hdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="port-xhdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="port-xxhdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="port-xxxhdpi" src="icons/ios/logo-CACv.png" />
+        <icon density="ldpi" platform="android" src="icons/ios/57_IP.png" />
+        <icon density="mdpi" platform="android" src="icons/ios/72_IP.png" />
+        <icon density="hdpi" height="76" platform="android" src="icons/ios/76_IP.png" width="76" />
+        <icon density="xhdpi" height="114" platform="android" src="icons/ios/114_IP.png" width="114" />
+        <icon density="xxhdpi" height="120" platform="android" src="icons/ios/144_IP.png" width="120" />
+        <icon density="xxxhdpi" height="152" platform="android" src="icons/ios/152_IP.png" width="152" />
+        <splash density="land-ldpi" platform="android" src="/icons/ios/logo-CACv.png" />
+        <splash density="land-mdpi" platform="android" src="icons/ios/logo-CACv.png" />
+        <splash density="land-hdpi" platform="android" src="icons/ios/logo-CACv.png" />
+        <splash density="land-xhdpi" platform="android" src="icons/ios/logo-CACv.png" />
+        <splash density="land-xxhdpi" platform="android" src="icons/ios/logo-CACv.png" />
+        <splash density="land-xxxhdpi" platform="android" src="icons/ios/logo-CACv.png" />
+        <splash density="port-ldpi" platform="android" src="icons/ios/logo-CACv.png" />
+        <splash density="port-mdpi" platform="android" src="icons/ios/logo-CACv.png" />
+        <splash density="port-hdpi" platform="android" src="icons/ios/logo-CACv.png" />
+        <splash density="port-xhdpi" platform="android" src="icons/ios/logo-CACv.png" />
+        <splash density="port-xxhdpi" platform="android" src="icons/ios/logo-CACv.png" />
+        <splash density="port-xxxhdpi" platform="android" src="icons/ios/logo-CACv.png" />
     </platform>
     <platform name="ios">
         <icon height="57" platform="ios" src="icon-57_IP.png" width="57" />
