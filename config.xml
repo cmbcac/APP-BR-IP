@@ -17,7 +17,7 @@
         <icon density="xhdpi" height="114" src="icons/ios/114_IP.png" width="114" />
         <icon density="xxhdpi" height="120" src="icons/ios/144_IP.png" width="120" />
         <icon density="xxxhdpi" height="152" src="icons/ios/152_IP.png" width="152" />
-        <splash density="land-ldpi" src=/icons/ios/logo-CACv.png" />
+        <splash density="land-ldpi" src="/icons/ios/logo-CACv.png" />
         <splash density="land-mdpi" src="icons/ios/logo-CACv.png" />
         <splash density="land-hdpi" src="icons/ios/logo-CACv.png" />
         <splash density="land-xhdpi" src="icons/ios/logo-CACv.png" />
@@ -31,13 +31,13 @@
         <splash density="port-xxxhdpi" src="icons/ios/logo-CACv.png" />
     </platform>
     <platform name="ios">
-        <icon height="57" platform="ios" src="57_IP.png" width="57" />
-        <icon height="72" platform="ios" src="72_IP.png" width="72" />
-        <icon height="76" platform="ios" src="6_IP.png" width="76" />
-        <icon height="114" platform="ios" src="114_IP.png" width="114" />
-        <icon height="120" platform="ios" src="120_IP.png" width="120" />
-        <icon height="144" platform="ios" src="144_IP.png" width="144" />
-        <icon height="152" platform="ios" src="152_IP.png" width="152" />
+        <icon height="57" platform="ios" src="icon-57_IP.png" width="57" />
+        <icon height="72" platform="ios" src="icon-72_IP.png" width="72" />
+        <icon height="76" platform="ios" src="icon-76_IP.png" width="76" />
+        <icon height="114" platform="ios" src="icon-114_IP.png" width="114" />
+        <icon height="120" platform="ios" src="icon-120_IP.png" width="120" />
+        <icon height="144" platform="ios" src="icon-144_IP.png" width="144" />
+        <icon height="152" platform="ios" src="icon-152_IP.png" width="152" />
     </platform>
     <plugin name="cordova-plugin-battery-status" spec="~1.1.1" />
     <plugin name="cordova-plugin-camera" spec="~2.1.1" />
