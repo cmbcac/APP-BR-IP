@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="iptvbrcac" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>IPTV BR CAC</name>
     <description>
         Consulta els mapes de cobertures de les televisions IP així com ràdios i televisions.
     </description>
-    <author email="cmb.cac@gmail.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="cmb.cac@gmail.com" href="http://www.cac.cat">
+        Consell de l'Audiovisual de Catalunya
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
@@ -17,18 +17,18 @@
         <icon density="xhdpi" height="114" src="icons/ios/114_IP.png" width="114" />
         <icon density="xxhdpi" height="120" src="icons/ios/144_IP.png" width="120" />
         <icon density="xxxhdpi" height="152" src="icons/ios/152_IP.png" width="152" />
-        <splash density="land-ldpi" src="/ios/logo-CACv.png" />
-        <splash density="land-mdpi" src="/ios/logo-CACv.png" />
-        <splash density="land-hdpi" src="/ios/logo-CACv.png" />
-        <splash density="land-xhdpi" src="/ios/logo-CACv.png" />
-        <splash density="land-xxhdpi" src="/ios/logo-CACv.png" />
-        <splash density="land-xxxhdpi" src="/ios/logo-CACv.png" />
-        <splash density="port-ldpi" src="/ios/logo-CACv.png" />
-        <splash density="port-mdpi" src="/ios/logo-CACv.png" />
-        <splash density="port-hdpi" src="/ios/logo-CACv.png" />
-        <splash density="port-xhdpi" src="/ios/logo-CACv.png" />
-        <splash density="port-xxhdpi" src="/ios/logo-CACv.png" />
-        <splash density="port-xxxhdpi" src="/ios/logo-CACv.png" />
+        <splash density="land-ldpi" src="icons/ios/logo-CACv.png" />
+        <splash density="land-mdpi" src="icons/ios/logo-CACv.png" />
+        <splash density="land-hdpi" src="icons/ios/logo-CACv.png" />
+        <splash density="land-xhdpi" src="icons/ios/logo-CACv.png" />
+        <splash density="land-xxhdpi" src="icons/ios/logo-CACv.png" />
+        <splash density="land-xxxhdpi" src="icons/ios/logo-CACv.png" />
+        <splash density="port-ldpi" src="icons/ios/logo-CACv.png" />
+        <splash density="port-mdpi" src="icons/ios/logo-CACv.png" />
+        <splash density="port-hdpi" src="icons/ios/logo-CACv.png" />
+        <splash density="port-xhdpi" src="icons/ios/logo-CACv.png" />
+        <splash density="port-xxhdpi" src="icons/ios/logo-CACv.png" />
+        <splash density="port-xxxhdpi" src="icons/ios/logo-CACv.png" />
     </platform>
     <platform name="ios">
         <icon height="57" platform="ios" src="icons/ios/57_IP.png" width="57" />
