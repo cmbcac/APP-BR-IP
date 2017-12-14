@@ -11,34 +11,34 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <platform name="android">
-        <icon density="ldpi" src="icons/ios/57_IP.png" />
-        <icon density="mdpi" src="icons/ios/72_IP.png" />
-        <icon density="hdpi" height="76" src="icons/ios/76_IP.png" width="76" />
-        <icon density="xhdpi" height="114" src="icons/ios/114_IP.png" width="114" />
-        <icon density="xxhdpi" height="120" src="icons/ios/144_IP.png" width="120" />
-        <icon density="xxxhdpi" height="152" src="icons/ios/152_IP.png" width="152" />
-        <splash density="land-ldpi" src="icons/ios/logo-CACv.png" />
-        <splash density="land-mdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="land-hdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="land-xhdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="land-xxhdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="land-xxxhdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="port-ldpi" src="icons/ios/logo-CACv.png" />
-        <splash density="port-mdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="port-hdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="port-xhdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="port-xxhdpi" src="icons/ios/logo-CACv.png" />
-        <splash density="port-xxxhdpi" src="icons/ios/logo-CACv.png" />
+        <icon density="ldpi" src="www/icons/ios/57_IP.png" />
+        <icon density="mdpi" src="www/icons/ios/72_IP.png" />
+        <icon density="hdpi" height="76" src="www/icons/ios/76_IP.png" width="76" />
+        <icon density="xhdpi" height="114" src="www/icons/ios/114_IP.png" width="114" />
+        <icon density="xxhdpi" height="120" src="www/icons/ios/144_IP.png" width="120" />
+        <icon density="xxxhdpi" height="152" src="www/icons/ios/152_IP.png" width="152" />
+        <splash density="land-ldpi" src="www/icons/ios/logo-CACv.png" />
+        <splash density="land-mdpi" src="www/icons/ios/logo-CACv.png" />
+        <splash density="land-hdpi" src="www/icons/ios/logo-CACv.png" />
+        <splash density="land-xhdpi" src="www/icons/ios/logo-CACv.png" />
+        <splash density="land-xxhdpi" src="www/icons/ios/logo-CACv.png" />
+        <splash density="land-xxxhdpi" src="www/icons/ios/logo-CACv.png" />
+        <splash density="port-ldpi" src="www/icons/ios/logo-CACv.png" />
+        <splash density="port-mdpi" src="www/icons/ios/logo-CACv.png" />
+        <splash density="port-hdpi" src="www/icons/ios/logo-CACv.png" />
+        <splash density="port-xhdpi" src="www/icons/ios/logo-CACv.png" />
+        <splash density="port-xxhdpi" src="www/icons/ios/logo-CACv.png" />
+        <splash density="port-xxxhdpi" src="www/icons/ios/logo-CACv.png" />
     </platform>
     <platform name="ios">
-        <icon height="57" platform="ios" src="icons/ios/57_IP.png" width="57" />
-        <icon height="72" platform="ios" src="icons/ios/72_IP.png" width="72" />
-        <icon height="76" platform="ios" src="icons/ios/76_IP.png" width="76" />
-        <icon height="114" platform="ios" src="icons/ios/114_IP.png" width="114" />
-        <icon height="120" platform="ios" src="icons/ios/120_IP.png" width="120" />
-        <icon height="144" platform="ios" src="icons/ios/144_IP.png" width="144" />
-        <icon height="152" platform="ios" src="icons/ios/152_IP.png" width="152" />
-        <icon height="152" platform="ios" src="icons/ios/152_IP.png" width="152" />
+        <icon height="57" platform="ios" src="www/icons/ios/57_IP.png" width="57" />
+        <icon height="72" platform="ios" src="www/icons/ios/72_IP.png" width="72" />
+        <icon height="76" platform="ios" src="www/icons/ios/76_IP.png" width="76" />
+        <icon height="114" platform="ios" src="www/icons/ios/114_IP.png" width="114" />
+        <icon height="120" platform="ios" src="www/icons/ios/120_IP.png" width="120" />
+        <icon height="144" platform="ios" src="www/icons/ios/144_IP.png" width="144" />
+        <icon height="152" platform="ios" src="www/icons/ios/152_IP.png" width="152" />
+        <icon height="152" platform="ios" src="www/icons/ios/152_IP.png" width="152" />
     </platform>
     <engine name="android" spec="~6.3.0" />
     <plugin name="cordova-plugin-battery-status" spec="~1.1.1" />
