@@ -18,11 +18,6 @@ a:hover {
 
 }
 
-
-
-
-
-
 .one-third {/*  */
   height:33%;
   margin:0px;
@@ -59,10 +54,19 @@ h1#op2, h1#op3{/*  */
   left:72%;
   width:200px
 }
-
-
-#top{/*  */
+/*
+#top{  
   background-color:#FCFEFE;
+  background-image: url("../img/form-icon.png");
+  background-repeat: no-repeat;
+  background-size:40%;
+  background-position-y: center;
+  background-position-x: 22%;
+}*/
+
+#top{  
+  background-color:#FCFEFE;
+  background-image: url("../img/form-icon.png");
   background-image: url(http://grinbaumorthodontics.com/img/schedule/fill-out-form-icon.png);
   background-repeat: no-repeat;
   background-size:40%;
@@ -70,19 +74,44 @@ h1#op2, h1#op3{/*  */
   background-position-x: 22%;
 }
 
-#mid{/*  */
+/*
+#mid{
     background-color: #FCFEFE;
     height: 34%;
     text-align: center;
     position: relative;
-    background-image: url(https://image.ibb.co/jXwEOR/the_location_of_the_1724293_960_720.png);/*url(https://preview.ibb.co/mkkfFw/catalonia_google_maps.png);*/
+    background-image: url("../img/radio-icon2.png");
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position-y: center;
+  background-position-x:84%;
+}*/
+  #mid{
+    background-color: #FCFEFE;
+    height: 34%;
+    text-align: center;
+    position: relative;
+    
+    background-image: url(https://image.ibb.co/jXwEOR/the_location_of_the_1724293_960_720.png);
     background-repeat: no-repeat;
     background-size: 45%;
     background-position-y: center;
 	background-position-x:84%;
 }
-#bot{/*  */
+/*
+#bot{
   background-color:#FCFEFE;
+  background-image: url("../img/user-icon.png");
+  background-repeat: no-repeat;
+  background-size:40%;
+  background-position-y: center;
+  background-position-x: 16%;
+  
+}
+*/
+#bot{
+  background-color:#FCFEFE;
+  
   background-image: url(https://www.jetco.com.hk/images/icons/Icon-contact-us.png);
   background-repeat: no-repeat;
   background-size:60%;
@@ -90,6 +119,7 @@ h1#op2, h1#op3{/*  */
   background-position-x: 3%;
   
 }
+
 
 
 
