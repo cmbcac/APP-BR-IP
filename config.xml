@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="iptvbrcac" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="iptvbrcac" version="1.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>IPTV BR CAC</name>
     <description>
         Consulta els mapes de cobertures de les televisions IP així com ràdios i televisions.
@@ -31,14 +31,13 @@
         <splash density="port-xxxhdpi" src="www/icons/ios/logo-CACv.png" />
     </platform>
     <platform name="ios">
-        <icon height="57" platform="ios" src="www/icons/ios/57_IP.png" width="57" />
-        <icon height="72" platform="ios" src="www/icons/ios/72_IP.png" width="72" />
-        <icon height="76" platform="ios" src="www/icons/ios/76_IP.png" width="76" />
-        <icon height="114" platform="ios" src="www/icons/ios/114_IP.png" width="114" />
-        <icon height="120" platform="ios" src="www/icons/ios/120_IP.png" width="120" />
-        <icon height="144" platform="ios" src="www/icons/ios/144_IP.png" width="144" />
-        <icon height="152" platform="ios" src="www/icons/ios/152_IP.png" width="152" />
-        <icon height="152" platform="ios" src="www/icons/ios/152_IP.png" width="152" />
+        <icon height="57" platform="ios" src="www/icons/ios/57_IP" width="57" />
+        <icon height="72" platform="ios" src="www/icons/ios/72_IP" width="72" />
+        <icon height="76" platform="ios" src="www/icons/ios/76_IP" width="76" />
+        <icon height="114" platform="ios" src="www/icons/ios/114_IP" width="114" />
+        <icon height="120" platform="ios" src="www/icons/ios/120_IP" width="120" />
+        <icon height="144" platform="ios" src="www/icons/ios/144_IP" width="144" />
+        <icon height="152" platform="ios" src="www/icons/ios/152_IP" width="152" />
     </platform>
     <engine name="android" spec="~6.3.0" />
     <plugin name="cordova-plugin-battery-status" spec="~1.1.1" />
