@@ -10,14 +10,14 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-    <!--<platform name="android">
+    <platform name="android">
         <icon density="ldpi" platform="android" src="icons/ios/57_IP.png" />
         <icon density="mdpi" platform="android" src="icons/ios/72_IP.png" />
         <icon density="hdpi" height="76" platform="android" src="icons/ios/76_IP.png" width="76" />
         <icon density="xhdpi" height="114" platform="android" src="icons/ios/114_IP.png" width="114" />
         <icon density="xxhdpi" height="120" platform="android" src="icons/ios/144_IP.png" width="120" />
         <icon density="xxxhdpi" height="152" platform="android" src="icons/ios/152_IP.png" width="152" />
-        <splash density="land-ldpi" platform="android" src="/icons/ios/logo-CACv.png" />
+        <!--<splash density="land-ldpi" platform="android" src="/icons/ios/logo-CACv.png" />
         <splash density="land-mdpi" platform="android" src="icons/ios/logo-CACv.png" />
         <splash density="land-hdpi" platform="android" src="icons/ios/logo-CACv.png" />
         <splash density="land-xhdpi" platform="android" src="icons/ios/logo-CACv.png" />
@@ -28,8 +28,8 @@
         <splash density="port-hdpi" platform="android" src="icons/ios/logo-CACv.png" />
         <splash density="port-xhdpi" platform="android" src="icons/ios/logo-CACv.png" />
         <splash density="port-xxhdpi" platform="android" src="icons/ios/logo-CACv.png" />
-        <splash density="port-xxxhdpi" platform="android" src="icons/ios/logo-CACv.png" />
-    </platform>-->
+        <splash density="port-xxxhdpi" platform="android" src="icons/ios/logo-CACv.png" />-->
+    </platform>
     <platform name="ios">
         <icon height="57" platform="ios" src="icons/ios/icon-57_IP.png" width="57" />
         <icon height="72" platform="ios" src="icons/ios/icon-72_IP.png" width="72" />
