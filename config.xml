@@ -30,7 +30,7 @@
         <splash density="port-xxhdpi" platform="android" src="icons/ios/logo-CACv.png" />
         <splash density="port-xxxhdpi" platform="android" src="icons/ios/logo-CACv.png" />
     </platform>-->
-    <!--<platform name="ios">-->
+    <platform name="ios">
         <icon height="57" platform="ios" src="icons/ios/icon-57_IP.png" width="57" />
         <icon height="72" platform="ios" src="icons/ios/icon-72_IP.png" width="72" />
         <icon height="76" platform="ios" src="icons/ios/icon-76_IP.png" width="76" />
@@ -39,7 +39,7 @@
         <icon height="144" platform="ios" src="icons/ios/icon-144_IP.png" width="144" />
         <icon height="152" platform="ios" src="icons/ios/icon-152_IP.png" width="152" />
         <icon height="1024" platform="ios" src="icons/ios/icon-1024_IP.png" width="1024" />
-   <!-- </platform>-->
+   </platform>
     <plugin name="cordova-plugin-battery-status" spec="~1.1.1" />
     <plugin name="cordova-plugin-camera" spec="~2.1.1" />
     <plugin name="cordova-plugin-media-capture" spec="~1.2.0" />
