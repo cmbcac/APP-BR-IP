@@ -35,7 +35,7 @@
         <icon src="icons/ios/57_IP.png" platform="ios" width="144" height="144"/>
         <icon src="icons/ios/57_IP.png" platform="ios" width="152" height="152"/>
         <icon src="icons/ios/57_IP.png" platform="ios" width="1024" height="1024"/>
-   <!--</platform>
+   </platform>
    
    <preference name="iosPersistentFileLocation" value = "Library"/>
    <preference name="BackupWebStorage" value = "none" />
