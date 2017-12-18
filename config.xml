@@ -2,7 +2,7 @@
 <widget id="iptvbrcac" version="1.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>IPTV BR CAC</name>
     <description>
-        Consulta els mapes de cobertures de les televisions IP així com ràdios i televisions.
+        Consulta els mapes de cobertures de ràdios, canals TDT i televisions IP.
     </description>
     <author email="cmb.cac@gmail.com" href="http://www.cac.cat">
         Consell de l'Audiovisual de Catalunya
@@ -10,49 +10,35 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-    <!--<platform name="android">
+    <<platform name="android">
         <icon density="ldpi" platform="android" src="icons/ios/57_IP.png" />
         <icon density="mdpi" platform="android" src="icons/ios/72_IP.png" />
         <icon density="hdpi" height="76" platform="android" src="icons/ios/76_IP.png" width="76" />
         <icon density="xhdpi" height="114" platform="android" src="icons/ios/114_IP.png" width="114" />
         <icon density="xxhdpi" height="120" platform="android" src="icons/ios/144_IP.png" width="120" />
         <icon density="xxxhdpi" height="152" platform="android" src="icons/ios/152_IP.png" width="152" />
-        <splash density="land-ldpi" platform="android" src="/icons/ios/logo-CACv.png" />
-        <splash density="land-mdpi" platform="android" src="icons/ios/logo-CACv.png" />
-        <splash density="land-hdpi" platform="android" src="icons/ios/logo-CACv.png" />
-        <splash density="land-xhdpi" platform="android" src="icons/ios/logo-CACv.png" />
-        <splash density="land-xxhdpi" platform="android" src="icons/ios/logo-CACv.png" />
-        <splash density="land-xxxhdpi" platform="android" src="icons/ios/logo-CACv.png" />
-        <splash density="port-ldpi" platform="android" src="icons/ios/logo-CACv.png" />
-        <splash density="port-mdpi" platform="android" src="icons/ios/logo-CACv.png" />
-        <splash density="port-hdpi" platform="android" src="icons/ios/logo-CACv.png" />
-        <splash density="port-xhdpi" platform="android" src="icons/ios/logo-CACv.png" />
-        <splash density="port-xxhdpi" platform="android" src="icons/ios/logo-CACv.png" />
-        <splash density="port-xxxhdpi" platform="android" src="icons/ios/logo-CACv.png" />
-    </platform>-->
-   <!-- <platform name="ios">
-        <icon height="57" platform="ios" src="icons/ios/icon-57_IP.png" width="57" />
+    </platform>
+   <platform name="ios">
+        <!--<icon height="57" platform="ios" src="icons/ios/icon-57_IP.png" width="57" />
         <icon height="72" platform="ios" src="icons/ios/icon-72_IP.png" width="72" />
         <icon height="76" platform="ios" src="icons/ios/icon-76_IP.png" width="76" />
         <icon height="114" platform="ios" src="icons/ios/icon-114_IP.png" width="114" />
         <icon height="120" platform="ios" src="icons/ios/icon-120_IP.png" width="120" />
         <icon height="144" platform="ios" src="icons/ios/icon-144_IP.png" width="144" />
         <icon height="152" platform="ios" src="icons/ios/icon-152_IP.png" width="152" />
-        <icon height="1024" platform="ios" src="icons/ios/icon-1024_IP.png" width="1024" />
-   </platform>-->
+        <icon height="1024" platform="ios" src="icons/ios/icon-1024_IP.png" width="1024" />-->
+        <icon src="icons/ios/57_IP.png" gap:platform="ios" width="57" height="57"/>
+        <icon src="icons/ios/57_IP.png" gap:platform="ios" width="72" height="72"/>
+        <icon src="icons/ios/57_IP.png" gap:platform="ios" width="76" height="76"/>
+        <icon src="icons/ios/57_IP.png" gap:platform="ios" width="114" height="114"/>
+        <icon src="icons/ios/57_IP.png" gap:platform="ios" width="120" height="120"/>
+        <icon src="icons/ios/57_IP.png" gap:platform="ios" width="144" height="144"/>
+        <icon src="icons/ios/57_IP.png" gap:platform="ios" width="152" height="152"/>
+        <icon src="icons/ios/57_IP.png" gap:platform="ios" width="1024" height="1024"/>
+   </platform>
    
    <preference name="iosPersistentFileLocation" value = "Library"/>
    <preference name="BackupWebStorage" value = "none" />
-   
-   <icon src="icons/ios/57_IP.png" gap:platform="ios" width="57" height="57"/>
-   <icon src="icons/ios/57_IP.png" gap:platform="ios" width="72" height="72"/>
-   <icon src="icons/ios/57_IP.png" gap:platform="ios" width="76" height="76"/>
-   <icon src="icons/ios/57_IP.png" gap:platform="ios" width="114" height="114"/>
-   <icon src="icons/ios/57_IP.png" gap:platform="ios" width="120" height="120"/>
-   <icon src="icons/ios/57_IP.png" gap:platform="ios" width="144" height="144"/>
-   <icon src="icons/ios/57_IP.png" gap:platform="ios" width="152" height="152"/>
-   <icon src="icons/ios/57_IP.png" gap:platform="ios" width="1024" height="1024"/>
-   
    
     <plugin name="cordova-plugin-battery-status" spec="~1.1.1" />
     <plugin name="cordova-plugin-camera" spec="~2.1.1" />
