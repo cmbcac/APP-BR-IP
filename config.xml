@@ -18,7 +18,7 @@
         <icon density="xxhdpi" height="120" platform="android" src="icons/ios/144_IP.png" width="120" />
         <icon density="xxxhdpi" height="152" platform="android" src="icons/ios/152_IP.png" width="152" />
     </platform>
-   <platform name="ios">
+   <!--<platform name="ios">-->
         <!--<icon height="57" platform="ios" src="icons/ios/icon-57_IP.png" width="57" />
         <icon height="72" platform="ios" src="icons/ios/icon-72_IP.png" width="72" />
         <icon height="76" platform="ios" src="icons/ios/icon-76_IP.png" width="76" />
@@ -35,7 +35,7 @@
         <icon src="icons/ios/57_IP.png" gap:platform="ios" width="144" height="144"/>
         <icon src="icons/ios/57_IP.png" gap:platform="ios" width="152" height="152"/>
         <icon src="icons/ios/57_IP.png" gap:platform="ios" width="1024" height="1024"/>
-   </platform>
+   <!--</platform>-->
    
    <preference name="iosPersistentFileLocation" value = "Library"/>
    <preference name="BackupWebStorage" value = "none" />
