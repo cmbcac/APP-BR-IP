@@ -10,7 +10,7 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-    <<platform name="android">
+    <platform name="android">
         <icon density="ldpi" platform="android" src="icons/ios/57_IP.png" />
         <icon density="mdpi" platform="android" src="icons/ios/72_IP.png" />
         <icon density="hdpi" height="76" platform="android" src="icons/ios/76_IP.png" width="76" />
