@@ -39,11 +39,12 @@
         <icon height="80" platform="ios" src="www/res/icon/ios/icon-40@2x.png" width="80" />
         <icon height="120" platform="ios" src="www/res/icon/ios/icon-40@3x.png" width="120" />
         <icon height="1024" platform="ios" src="www/res/icon/ios/icon-32@32x.png" width="1024" />
+        <!--
         <splash height="568" platform="ios" src="www/res/screen/ios/Default-i5.png" width="320" />
         <splash height="480" platform="ios" src="www/res/screen/ios/Default.png" width="320" />
         <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x.png" width="640" />
         <splash height="1024" platform="ios" src="www/res/screen/ios/Default-Portrait.png" width="768" />
-        <splash height="768" platform="ios" src="www/res/screen/ios/Default-Landscape.png" width="1024" />
+        <splash height="768" platform="ios" src="www/res/screen/ios/Default-Landscape.png" width="1024" />-->
     </platform>
     <preference name="iosPersistentFileLocation" value="Library" />
     <preference name="BackupWebStorage" value="none" />
