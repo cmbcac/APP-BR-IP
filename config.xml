@@ -4,8 +4,8 @@
     <description>
         Consulta els mapes de cobertures de ràdios, canals TDT i televisions IP.
     </description>
-    <author email="cmb.cac@gmail.com" href="http://www.cac.cat">
-        Consell de l'Audiovisual de Catalunya
+    <author email="cmb.cac@gmail.com" href="">
+        Carles Martin
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
