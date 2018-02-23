@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="iptvbrcac" version="1.1.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="iptvbrcac" version="1.1.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>IPTV BR CAC</name>
     <description>
         Consulta els mapes de cobertures de ràdios, canals TDT i televisions IP.
     </description>
-    <author email="cmb.cac@gmail.com" href="">
-        Carles Martin
+    <author email="cmartinb.cac@gencat.cat" href="www.cac.cat">
+        Consell de l'Audiovisual de Catalunya
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
