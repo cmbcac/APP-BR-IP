@@ -102,6 +102,8 @@ var canals = [];
 var pobles = [];
 var markclusterer;	
 
+var maplatlongs = new Map();
+
 var todo = true;
 
 var im;
@@ -182,6 +184,21 @@ function controlaInformacio(data,nom){
 		//ubicacio
 		try{[latfield, lonfield] = getLatLang(entry)}
 		catch(e){break;}
+    var latlon = latfield.toString() + lonfield.toString();
+    var valuemap = maplatlongs.get(latlon) == undefined ? 0 : maplatlongs.get(latlon);
+    valuemap = valuemap + 1;
+    maplatlongs.set(latlon, valuemap);
+
+    var lng_radius = 0.0003;
+    lat_to_lng = latfield / lonfield,
+    step = 2 * Math.PI / 8,
+    angle = 0.5 + (step * valuemap),
+    lat_radius = lng_radius / lat_to_lng;
+    lonfield = lonfield + (Math.cos(angle) * lng_radius);
+    latfield = latfield + (Math.sin(angle) * lat_radius);
+
+
+
 		myLatLng = {lat: latfield, lng: lonfield};
 
 		//marker
