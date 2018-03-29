@@ -1,0 +1,113 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+::-webkit-scrollbar{
+	display: none;
+}
+
+body{
+	overflow: scroll;
+	font-family: 'Scope One', serif;
+}
+
+
+/* titol */
+h1{
+	color:#FF6B6B;
+}
+
+#titol-principal{
+	text-align:center;
+}
+
+/*antic wrapcontent*/
+
+.gran{
+	width: 100%;
+}
+/* mapa */
+
+#map_form{
+	min-height: 150px;
+}
+
+/* canals/emissores dividit en dos columnes, */
+
+#llistat{
+	max-height: 200px;
+	min-height:100px;
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+	overflow: scroll;
+}
+
+#noms{
+	width:50%;
+}
+#valors{
+	min-width: 50%;
+}
+
+#observacions{
+	max-height: 80px;
+}
+.top{
+	background-color: #FF6B6B;
+}
+
+.iel{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.el{
+	background-size: : 22px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#list1{
+	white-space: nowrap;
+}
+textarea{
+	width: 100%;
+}
+
+#progressbar {
+  margin: 0px;
+  width: 100%;
+  height: 8px;
+}
+
+@media screen and (max-width: 284px){
+	#titol-principal{
+		font-size: 1em;
+	}
+}
+@media screen and (max-width: 568px) and (min-width: 284px) {
+	#titol-principal{
+		font-size: 1.1em;
+	}
+	#radios{
+		font-size: 0.7em;
+	}
+	#tvs{
+		font-size:0.7em;
+	}
+	#others{
+		font-size:0.7em;
+	}
+
+}
+@media screen and (max-width: 852px) and (min-width: 568px) {
+	#titol-principal{
+		font-size: 1.4em;
+	}
+}
+@media screen and (max-width: 1136px) and (min-width: 852px) {
+	#titol-principal{
+		font-size: 1.7em;
+	}
+}

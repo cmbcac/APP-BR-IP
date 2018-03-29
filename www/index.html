@@ -27,39 +27,43 @@
 	<meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; media-src *; img-src *; script-src * 'unsafe-inline' 'unsafe-eval'">
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+    <!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
+
+	<!--  titol -->
     <title>CAC Mapping</title>
 </head>
 
 
 <body>
-	  <a href="formularis.html">
-	  <section id="top" class = "one-third">
-	  <h1 id="op2">Formularis </h1>
-	  </section>
-	  </a>
 	  
-	  <a href="mapes.html">
-	  <section id="mid" class = "one-third">
-		<h1 id="title">Veure Mapes</h1>
-	  </section>
-	  </a>
+	<section id="top" class = "one-third">
+		<a href="broadcast_form.html">
+			<h1 id = "f1" class = "tt" >Formulari Broadcasting </h1>
+		</a>
+		<a href="ott_form.html">
+			<h1 id = "f2" class = "tt" >Formulari OTTs</h1>
+		</a>
+	</section>
+	<section id="mid" class = "one-third">
+		<a href="broadcast_map.html">
+			<h1 id = "m1" class = "tt" >Plànol Broadcasting </h1>
+		</a>
+		<a href="ott_map.html">
+			<h1 id = "m2" class = "tt">Plànol OTTs</h1>
+		</a>
+	</section>
+	<section id="bot" >
+		<a id = "cont" href="index_contacte.html">
+			<h1 id="op3" class = "tt">Contacte</h1>
+		</a>
+	 </section>
+	 
+      
 	  
-	  <a href="contacte.html">
-	  <section id="bot" class = "one-third">
-	  <h1 id="op3">Contacte</h1>
-	  </section>
-	  </a>
-      <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div><!DOCTYPE html>
+	  <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 	<!--  other -->
 	 <!-- the stub for Cordova/Phonegap; this file doesn't exist but this entry must be here -->
     <script type="text/javascript" src="cordova.js"></script>

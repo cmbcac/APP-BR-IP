@@ -1,8 +1,7 @@
-
 (function() {
   //body & trigger
   var $body = document.body;
-  var $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
+  var $menu_trigger = $body.getElementsByClassName('polsador-menu')[0];
 
   if (typeof $menu_trigger !== 'undefined') {
     $menu_trigger.addEventListener("click", function() {
