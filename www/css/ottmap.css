@@ -24,9 +24,6 @@ h1{
 
 
 .embolcall{
-	display:grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 0.1fr 0.9fr;
 	width: 100vw;
 	height: 100vh;
 }
@@ -34,9 +31,12 @@ h1{
 
 
 .gran{
-	display:grid;
-	grid-template-rows: 1fr 1fr;
-
+    display: block;
+    width: calc(100vw*0.9);
+    height: calc(100vh*0.9);
+    left: calc(100vw*0.05);
+    position: absolute;
+    top: calc(100vh*0.05);
 }
 
 .five2x {
@@ -46,7 +46,9 @@ h1{
 
 #fiveinfo1{
 	min-width: 0;
+	background-color:#f3f3f3;
 	max-height: 100%;
+	display: none;
 }
 
 .fiveinfocontent{
@@ -58,10 +60,6 @@ h1{
 	min-height:0px;
 	display:grid;
 	grid-template-columns: 1fr 1fr;
-}
-#fiveinfo1{
-	background-color:#f3f3f3;
-	max-height: 100%;
 }
 
 #radios{
@@ -77,6 +75,85 @@ ul{
 #others.fiveinfocontent{
 	grid-template-columns: 1fr;
 }
+
+#pinmap{
+	top: 23px;
+}
+
+.pin.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 2px;
+  width: 12px;
+  height: 12px;
+  border: solid 1px currentColor;
+  border-radius: 7px 7px 7px 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.pin.icon:before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 4px;
+  height: 4px;
+  border: solid 1px currentColor;
+  border-radius: 3px;
+}
+
+/* get the styles for both icon*/
+@import "http://cssicon.space/css/icons.css";
+.arrow-left.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 3px;
+  margin-top: 10px;
+  width: 16px;
+  height: 1px;
+  background-color: currentColor;
+}
+.arrow-left.icon:before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+.arrow-right.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 2px;
+  margin-top: 10px;
+  width: 16px;
+  height: 1px;
+  background-color: currentColor;
+}
+.arrow-right.icon:before {
+  content: '';
+  position: absolute;
+  right: 1px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.icon, .icon:before, .icon:after, .icon i, .icon i:before, .icon i:after { 
+  transition: all 0.4s ease;
+}
+
+
+
 
 @media screen and (max-width: 284px){
 	#titol-principal{

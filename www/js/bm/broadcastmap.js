@@ -1049,6 +1049,8 @@ var typemap = "";
 var styledMapType;
 var styledMapType2;
 
+var colorprevi = "red";
+
 var inProgress;
 
 inProgress = setValorInProgress();
@@ -1064,7 +1066,7 @@ var bar = new ProgressBar.Line(progressbar, {
 });
 
 
-
+window.onload = load;
 
 
 //si el mapa ja esta fet
@@ -1099,7 +1101,11 @@ function handleBefore() {
 function handleComplete(name) {
 	--inProgress;
 	var valor = (1-(inProgress/setValorInProgress()));
-	bar.animate(valor);
+	bar.animate(valor, function(){
+		if(bar.value() == 1){
+			bar.path.setAttribute("stroke", "#6bff6b");
+		}
+	});
 
 	if (!inProgress) {
 		// do what's in here when all requests have completed.
@@ -1161,8 +1167,7 @@ function controlaInformacio(data,nom){
 		//infowindows
 		(function(marker, poble){
 			google.maps.event.addListener(marker, 'click', function(e){
-				infoWindow.setContent(poble.poble);// + "  "+poble.descripcio[0].titol + " ");
-				//infoWindow.setContent("<strong>" + poble.poble+ "</strong><br>" + poble.setContent());
+				infoWindow.setContent(poble.poble);
 				infoWindow.open(map,marker);
 				
 				var radtitols = [];
@@ -1181,7 +1186,6 @@ function controlaInformacio(data,nom){
 				$('ul#list3').children().remove();
 				$('ul#list4').children().remove();
 				$('ul#list5').children().remove();
-				//$('ul#list6').children().remove();
 				
 				
 				for(var i = 0;  i < mapdet.size; i++){
@@ -1189,30 +1193,57 @@ function controlaInformacio(data,nom){
 					var t = n.value;
 					var c = mapdet.get(t);
 					if(c=="") c = "sense informació";
-					if(c==undefined) c = "--";
-					
+					if(c==undefined) c = "--";					
 					if("TELEVISIÓ NACIONAL"  == t) bg = false; 
 					if("ALTRES FORMES DE COMUNICACIÓ 1" == t) end = true;
 					if(bg){
-						$('ul#list1').append('<li>'+t+'</li>');
-						
-						$('ul#list2').append('<li>'+c+'</li>');
-						
+
+						if(c=="--"){
+							t = '<li class ="blanc">' + t + '</li>'
+							c = '<li class ="blanc">' + c + '</li>'
+
+							$('ul#list1').append(t);
+							$('ul#list2').append(c);
+						}
+						else{
+							$('ul#list1').append('<li>'+t+'</li>');
+							$('ul#list2').append('<li>'+c+'</li>');
+						}
 					}
 					if(!bg && !end){
-						$('ul#list3').append('<li>'+t+'</li>');
-						$('ul#list4').append('<li>'+c+'</li>');
+						if(c=="--"){
+							t = '<li class ="blanc">' + t + '</li>'
+							c = '<li class ="blanc">' + c + '</li>'
+
+							$('ul#list3').append(t);
+							$('ul#list4').append(c);
+						}
+						else{
+							$('ul#list3').append('<li>'+t+'</li>');
+							$('ul#list4').append('<li>'+c+'</li>');
+						}
 
 					}
 					if(end){
 						$('ul#list5').append('<li>'+t+":\t"+c +'</li>');
-						//$('ul#list6').append('<li>'+c+'</li>');
 					}
 				}
-				//document.getElementById("radios").innerText = radtitols.toString()//poble.getRadiosHTML();
-				//document.getElementById("tvs").innerText = poble.getTVSHTML();
-				//document.getElementById("others").innerText = poble.getOthersHTML();
-				
+
+				if(marker.getIcon() == "http://maps.google.com/mapfiles/ms/icons/green-dot.png"){
+					togglemapform();
+				}
+				else{
+					for(var i = 0; i < array.length; i++){
+						if (array[i].getIcon() == 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'){
+							if(array[i].title.includes("Ajuntament"))
+								array[i].setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+							else{
+								array[i].setIcon('http://maps.google.com/mapfiles/ms/icons/yellow-dot.png');
+							}
+						}
+					}
+					marker.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png");	
+				}		
 			})
 		})(marker, pobles[pobles.length-1]);
 		
@@ -1229,6 +1260,18 @@ function returnDataParsed(data){
 	var JSONText = data.slice(start,end);
 	JParsedText = JSON.parse(JSONText);
 	return JParsedText;
+}
+
+function togglemapform(){
+	$("#fivemap").slideToggle()
+	$("#fiveinfo1").slideToggle()
+}
+
+function load(){
+	$("#pinmap").click(function(){
+		togglemapform();
+	});
+	console.log("carregat");
 }
 
 //mira de totes les entries quina és latfield i quina és lonfield
@@ -1261,9 +1304,15 @@ function getLatLang(entry){
 //retorna el marker	
 function setMarker(comarca, myLatLng, entry, map, array){
 	if(comarca !="usuaris" && comarca != ""){
+		var igroc = 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png';
+		var ired = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+		var mun = entry['gsx$indiqueuelmunicipidesdonompliuelformulari'].$t;
+		var ic = mun.includes("Ajuntament") ? ired : igroc;
+
 		var marker = new google.maps.Marker({
 			position: myLatLng,
-			title: entry['gsx$indiqueuelmunicipidesdonompliuelformulari'].$t,
+			title: mun,
+			icon: ic,
 			map: map
 		});
 	}

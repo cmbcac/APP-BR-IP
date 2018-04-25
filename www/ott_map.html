@@ -15,6 +15,7 @@
 
 	<link rel = "stylesheet" href = "css/menu-desplegable.css">
 	<link rel = "stylesheet" href = "css/ottmap.css">
+	<link rel = "stylesheet" href = "css/buttons.css">
 
 	<!-- fonts -->
 
@@ -34,7 +35,7 @@
 
 	<nav id="menu-desplegable">
 	  <ul>
-		<li class = "contingut-menu"><a href = "index.html">Índex</a></li>
+		<li class = "contingut-menu"><a href = "index.html">Inici</a></li>
 		<li class = "contingut-menu"><a href = "ott_form.html">Formulari OTTs</a></li>
 		<li class = "contingut-menu"><a href = "ott_map.html">Plànol OTTs</a></li>
 		<li class = "contingut-menu"> <a href = "ott_contacte.html">Contacte</a></li>
@@ -46,8 +47,8 @@
 		<div class="embolcall">
 
 			<div class = "petit">
-				<div class ="polsador-menu"></div>		<!-- trigger -->
-				<h1 id = "titol-principal"><strong>Cobertures Ràdios i Televisions de Catalunya</strong></h1>			
+				<div class ="arrow-right icon polsador-menu2"></div>		<!-- trigger -->
+				<h1 id = "titol-principal"><strong>Plànol Televisions IP - OTTs Catalunya</strong></h1>			
 			</div>
 
 			<div class = "gran">
@@ -64,6 +65,7 @@
 						</div>
 				</div>
 			</div>
+			<div id = "pinmap" class="tv icon"></div>
 		</div>
 	</div>
 	
@@ -77,6 +79,19 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqa-2L_YRe22lkHLFDasHHDaXkAokWVFE&callback=initMap">
     </script>
+
+    <script>
+		$('.polsador-menu2').click(function(){
+			$(this)
+				.toggleClass('arrow-right')
+			    .toggleClass('arrow-left');
+			})
+		$('.tv').click(function(){
+			$(this)
+				.toggleClass('tv')
+			    .toggleClass('map');
+			})	
+	</script>
 	
 </body>
 	

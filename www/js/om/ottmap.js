@@ -3,7 +3,7 @@
 /*configura la icona*/
 function setIcon(){
 	im = {
-		url: 'img/logo-IPTV2.png',
+		url: 'img/logo-IPTV3.png',
 		scaledSize: new google.maps.Size(30, 26),
 	};
 	
@@ -12,7 +12,8 @@ function setIcon(){
 /*petició ajax*/
 function cargaDatosSegonsID(map){
 
-	var data_IPTV = '1scC17IE0nbBGIihkBBSD9IPv2AJE-hec9s7-9d8gH34';
+	//var data_IPTV = '1scC17IE0nbBGIihkBBSD9IPv2AJE-hec9s7-9d8gH34';
+	var data_IPTV = '14hj60kgxzQvGsONYW--1Q7y4wxycAvoe7lDJxzBH-sA';
 	executaAJAX(map,"",data_IPTV);
 }
 
@@ -25,7 +26,7 @@ function setValorInProgress(){
 function afegeixPoble(comarca, pobles, entry){
 	
 	var p = new Poble(entry['gsx$entitat'].$t);
-	p.descripcio.push(new Detall("Entitat", entry['gsx$entitat'].$t));
+	/*p.descripcio.push(new Detall("Entitat", entry['gsx$entitat'].$t));
 	p.descripcio.push(new Detall("Tipus entitat", entry['gsx$tipusentitat'].$t));
 	p.descripcio.push(new Detall("Nom comercial", entry['gsx$nomcomercial'].$t));
 	p.descripcio.push(new Detall("URL", entry['gsx$url'].$t));
@@ -34,7 +35,17 @@ function afegeixPoble(comarca, pobles, entry){
 	p.descripcio.push(new Detall("Xarxa", entry['gsx$xarxa'].$t));
 	p.descripcio.push(new Detall("Youtube", entry['gsx$youtube'].$t));
 	p.descripcio.push(new Detall("Població", entry['gsx$població'].$t));
-	p.descripcio.push(new Detall("Observacions", entry['gsx$observacions'].$t));		
+	p.descripcio.push(new Detall("Observacions", entry['gsx$observacions'].$t));*/
+	p.descripcio.push(new Detall("Entitat", entry['gsx$entitat'].$t));
+	p.descripcio.push(new Detall("Tipus", entry['gsx$tipus'].$t));
+	p.descripcio.push(new Detall("Directe URL", entry['gsx$directeurl'].$t));
+	p.descripcio.push(new Detall("A la Carta", entry['gsx$cartaurl'].$t));
+	p.descripcio.push(new Detall("Youtube", entry['gsx$youtubeurl'].$t));
+	p.descripcio.push(new Detall("XipTV", entry['gsx$xiptvurl'].$t));
+	p.descripcio.push(new Detall("Nom comercial", entry['gsx$nomcomercial'].$t));
+	p.descripcio.push(new Detall("Municipi", entry['gsx$municipi'].$t));
+	p.descripcio.push(new Detall("TDT", entry['gsx$canaltdt'].$t));
+
 	pobles.push(p);
 	
 	
@@ -98,89 +109,6 @@ class Poble{
 	setTitol(titol){
 		this.titol=titol;
 	}
-	getRadiosHTML(){
-		var ready = true;
-		var filterend = "TELEVISIÓ NACIONAL";
-		var s="";
-		for(var i = 0;  i <this.descripcio.length; i++){
-			s = s 
-			var t = this.descripcio[i].getTitol();
-			if(t == filterend) ready = false;
-			if(ready){
-				var c = this.descripcio[i].getContingut();
-				if (c != "" && c != undefined){
-					s = s + t + ": " + c;
-				}
-				else{
-					if ( c == undefined){
-						s = s + t;
-					}
-					if (c == ""){
-						s = s + t;
-					}
-				}
-				s = s+ "\n"
-			}
-
-		}
-		return s
-	}
-	getTVSHTML(){
-		var ready = false;
-		var filter = "TELEVISIÓ NACIONAL";
-		var filterend = "ALTRES FORMES DE COMUNICACIÓ 1";
-		var s="";
-		for(var i = 0;  i <this.descripcio.length; i++){
-			s = s ;
-			var t = this.descripcio[i].getTitol();
-			if(t == filter) ready = true;
-			if(t == filterend) ready = false;
-			if(ready){
-				var c = this.descripcio[i].getContingut();
-				if (c != "" && c != undefined){
-					s = s + t + ": " + c;
-				}
-				else{
-					if ( c == undefined){
-						s = s +  t ;
-					}
-					if (c == ""){
-						s = s + t;
-					}
-				}
-				s = s+ "\n"
-			}
-
-		}
-		return s;
-	}
-	getOthersHTML(){
-		var ready = false;
-		var filter = "ALTRES FORMES DE COMUNICACIÓ 1"
-		var s="";
-		for(var i = 0;  i <this.descripcio.length; i++){
-			s = s; 
-			var t = this.descripcio[i].getTitol();
-			if(t == filter) ready = true;
-			if(ready){
-				var c = this.descripcio[i].getContingut();
-				if (c != "" && c != undefined){
-					s = s + t + ": " + c;
-				}
-				else{
-					if ( c == undefined){
-						s = s +  t ;
-					}
-					if (c == ""){
-						s = s + t;
-					}
-				}
-				s = s+ "\n";
-	
-			}
-		}
-		return s;
-	}
 	
 	getMapDetalls(){
 		var s = new Map();
@@ -243,6 +171,21 @@ var inProgress;
 
 inProgress = setValorInProgress();
 
+window.onload = load;
+
+
+function togglemapform(){
+	$("#fivemap").slideToggle()
+	$("#fiveinfo1").slideToggle()
+
+}
+
+function load(){
+	$("#pinmap").click(function(){
+		togglemapform();
+	});
+	console.log("carregat");
+}
 
 
 
@@ -338,8 +281,8 @@ function controlaInformacio(data,nom){
 		//infowindows
 		(function(marker, poble){
 			google.maps.event.addListener(marker, 'click', function(e){
-				infoWindow.setContent(poble.poble);// + "  "+poble.descripcio[0].titol + " ");
-				//infoWindow.setContent("<strong>" + poble.poble+ "</strong><br>" + poble.setContent());
+				var titoliw = poble.poble == "" ? poble.descripcio[6] : poble.poble ;
+				infoWindow.setContent(poble.poble);
 				infoWindow.open(map,marker);
 				
 				var radtitols = [];
@@ -372,7 +315,9 @@ function controlaInformacio(data,nom){
 					if("ALTRES FORMES DE COMUNICACIÓ 1" == t) end = true;
 					if(bg){
 						$('ul#list1').append('<li>'+t+'</li>');
-						
+						if(c.includes("http") || c.includes("www")){
+							c = '<a href="'+c+'">'+c;
+						}
 						$('ul#list2').append('<li>'+c+'</li>');
 						
 					}
@@ -386,9 +331,26 @@ function controlaInformacio(data,nom){
 						//$('ul#list6').append('<li>'+c+'</li>');
 					}
 				}
-				//document.getElementById("radios").innerText = radtitols.toString()//poble.getRadiosHTML();
-				//document.getElementById("tvs").innerText = poble.getTVSHTML();
-				//document.getElementById("others").innerText = poble.getOthersHTML();
+				if(marker.getIcon().url == "img/logo-IPTV2.png"){
+					togglemapform();
+					$("#pinmap").toggleClass("tv").toggleClass("map");
+				}
+				else{
+					for(var i = 0; i < array.length; i++){
+						if (array[i].getIcon().url == 'img/logo-IPTV2.png'){
+							im = {
+								url: 'img/logo-IPTV3.png',
+								scaledSize: new google.maps.Size(30, 26),
+							};
+							array[i].setIcon(im);
+						}
+					}
+					im = {
+						url: 'img/logo-IPTV2.png',
+						scaledSize: new google.maps.Size(30, 26),
+					};
+					marker.setIcon(im);	
+				}
 				
 			})
 		})(marker, pobles[pobles.length-1]);

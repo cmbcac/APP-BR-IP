@@ -22,65 +22,86 @@ h1{
 }
 
 .embolcall{
-	display:grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 0.05fr 0.95fr;
 	width: 100vw;
 	height: 100vh;
 }
-.five{
-	display:grid;
-	grid-template-rows: 1fr 1fr;
+
+#fivemap{
+	min-height: 150px;
+	position: absolute;
+	width: calc(100vw * 0.9);
+	height: calc(100vh * 0.9);
+	left: calc(100vw * 0.05);
+	top: calc(100vh * 0.05);
+	display: none;
+  border-radius: 10px;
 }
 
-.five2x {
-	height:100%;
+#gform{
+	position: absolute;
+	width: calc(100vw * 0.9);
+	height: calc(100vh * 0.9);
+	left: calc(100vw * 0.05);
+	top: calc(100vh * 0.05);
 	border-radius: 10px;
-}
-
-#formzone{
-	display: grid;
-	grid-template-rows: 1fr;
-}
-
-.fiveinfo1{
-	display: grid;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
+  overflow: auto;
 }
 
 .top{
 	background-color: #FF6B6B;
 }
-#dadesEntitat{
-	display: grid;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-#ubicacio{
-	display: grid;
 
-	grid-template-rows:1fr 2fr;
+textarea{
+  width:100%;
 }
-#ubicacio .recipientinputs{
-	display: grid;
-	grid-template-rows: 1fr 1fr;
+
+/* get the styles for both icon*/
+@import "http://cssicon.space/css/icons.css";
+.arrow-left.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 3px;
+  margin-top: 10px;
+  width: 16px;
+  height: 1px;
+  background-color: currentColor;
 }
-#plataformes{
-	display:grid;
-	grid-template-rows: 0.2fr 0.8fr;
-	
+.arrow-left.icon:before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
-.urls{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+.arrow-right.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 2px;
+  margin-top: 10px;
+  width: 16px;
+  height: 1px;
+  background-color: currentColor;
 }
-.caixaUrl{
-	display: grid;
-	grid-template-rows: 1fr 1fr;
-	text-align: center;
+.arrow-right.icon:before {
+  content: '';
+  position: absolute;
+  right: 1px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
-#observacions{
-	display: grid;
-	grid-auto-flow: 1fr 2fr;
+
+.icon, .icon:before, .icon:after, .icon i, .icon i:before, .icon i:after { 
+  transition: all 0.4s ease;
 }
 
 

@@ -27,21 +27,110 @@ class Comarca{
 		this.canals = [];
 		this.idget = "";
 		this.linkpost = link;
+		this.iframe = "";
+		this.municipis = [];
 	}
 }
 
 /*			FUNCIONS			*/
 
 
+/*	Formularis GOOOGLE*/
+function embeddFormulari(comarca, id){
+	var index = dict_comarques.get(comarca);
+	comarques[index].iframe = id;
+}
+
+function ompleEmbedsComarques(){
+	embeddFormulari("altcamp", 'https://docs.google.com/forms/d/e/1FAIpQLSc3yEI2iKxuAVZID2alYLr_nQkd5HDOtLYd5uiMkMeDcVKhbg/viewform?embedded=true');
+	embeddFormulari("altemporda", 'https://docs.google.com/forms/d/e/1FAIpQLSciitIA3SJ1Hav3Eu5MjNd6cekmbHXKtElZlU6L2xbtsc8klA/viewform?embedded=true');
+	embeddFormulari("altpanades", 'https://docs.google.com/forms/d/e/1FAIpQLSfHbRfPUknKgu-Xatk8SmWcgoCtivHOp-7wuc8Ibzgjo6JvsQ/viewform?embedded=true');
+	embeddFormulari("alturgell", 'https://docs.google.com/forms/d/e/1FAIpQLSdUsYrAvE43OOHPt91g3I_rDxdmm8YfihDk1-BFcOT7wCNzYQ/viewform?embedded=true');
+	embeddFormulari("altaribagorca", 'https://docs.google.com/forms/d/e/1FAIpQLSfGyt2-5_XExOD7muryjexOI8jRrACKxAXY-5AHh__ddG014A/viewform?embedded=true');
+	embeddFormulari("anoia", 'https://docs.google.com/forms/d/e/1FAIpQLSfrHzOnpne9lLDxAtYGlz9-bGFYJwneIa4hR0CNFawYpQvk4A/viewform?embedded=true');
+	embeddFormulari("aran", 'https://docs.google.com/forms/d/e/1FAIpQLSc8GdaHjCQZNe_qtmd0tB6JdMts4lzRd5UEUisahdrXRmuzsQ/viewform?embedded=true');
+	embeddFormulari("bagues", 'https://docs.google.com/forms/d/e/1FAIpQLSfmIXuL_jaCbUdcQpL7rZcOiwo9MGqo6aj2F9EWfo-PDARJ1A/viewform?embedded=true');
+	embeddFormulari("baixcamp", 'https://docs.google.com/forms/d/e/1FAIpQLScEZXpFu85RQ9ZuCs2udE3mb3lCbtSdLd3tYJG8D7UV-AV7xA/viewform?embedded=true');
+	embeddFormulari("baixebre", 'https://docs.google.com/forms/d/e/1FAIpQLScg3urfsiZhDuzyEnPV01AIqDFJqQJJrxV5AAifCT8OCo7EYw/viewform?embedded=true');
+	embeddFormulari("baixemporda", 'https://docs.google.com/forms/d/e/1FAIpQLSckvcsAhQT7qnq3sYfWaReC6xq7euc7jxKXqLgFuwHailp0Ag/viewform?embedded=true');
+	embeddFormulari("baixllobregat", 'https://docs.google.com/forms/d/e/1FAIpQLSdX1CdR4Fs7wa8H-frQlb8KxcgdZB98FE8wVvQrsyrkL0BTCg/viewform?embedded=true');
+	embeddFormulari("baixpanades", 'https://docs.google.com/forms/d/e/1FAIpQLSdjmdj-Y6ZWKNa0D1krbc0FopMzasSzF4wgkSeaFqtqy00AYw/viewform?embedded=true');
+	embeddFormulari("barcelones", 'https://docs.google.com/forms/d/e/1FAIpQLSfw8uAcngZtNnOwALww_sqwoyNL8nMzzmW25dQ-IJg4offQLA/viewform?embedded=true');
+	embeddFormulari("bergueda", 'https://docs.google.com/forms/d/e/1FAIpQLSfsMpFqPkth3ZGAhthTIUp9frWCKGUfvrqUegO71t6ZISViqw/viewform?embedded=true');
+	embeddFormulari("cerdanya", 'https://docs.google.com/forms/d/e/1FAIpQLSf067zjBaevqbxQVIPns3cazYrEVICifnZ7CRlnJz3z3OvbMg/viewform?embedded=true');
+	embeddFormulari("concadebarbera", 'https://docs.google.com/forms/d/e/1FAIpQLSc6rrg33WomtYigXqddZ2J2u_pgLFRiPYXEFjKhiAzHTKHzUA/viewform?embedded=true');
+	embeddFormulari("garraf",'https://docs.google.com/forms/d/e/1FAIpQLScKg-ehumUpPf5ist-gjSiPkbc266AT7Ie4iw3byfAN4J-TWA/viewform?embedded=true');
+	embeddFormulari("garrigues", 'https://docs.google.com/forms/d/e/1FAIpQLSfe4xMjLbSzwhhQYlyDDhawUe06SH4-n-kzqjWTxaujGnR8PQ/viewform?embedded=true');
+	embeddFormulari("garrotxa", 'https://docs.google.com/forms/d/e/1FAIpQLSfPY1eOjKrN5oXoW9VBQYMtinAiB4UoNZm9U7cq0SoyIcw8ZA/viewform?embedded=true');
+	embeddFormulari("girones", 'https://docs.google.com/forms/d/e/1FAIpQLScggMOQX3hpiZjH_z7uHseTR-0OktuvUqin0Cik03NMK5Z1Ig/viewform?embedded=true');
+	embeddFormulari("lanoguera", 'https://docs.google.com/forms/d/e/1FAIpQLSfLD23CG08lQhCsRomURa2zgPf11V-9g1eb9fxooPI7wck4Mg/viewform?embedded=true');
+	embeddFormulari("maresme", 'https://docs.google.com/forms/d/e/1FAIpQLSfxf6Z_cEprneCbp61CcYYaSmJTMnIGQpPLND4ftYFnjjCYwA/viewform?embedded=true');
+	embeddFormulari("montsia", 'https://docs.google.com/forms/d/e/1FAIpQLSfN471JABmPfM8B8xb54MGY3Qc5rpxvVO5YmCOXfv8UfFrEcw/viewform?embedded=true');
+	embeddFormulari("osona", 'https://docs.google.com/forms/d/e/1FAIpQLSdW7l3mvx3rNUKl_WdXLP4WSeEw6IAqZjgUF06dpFNrpkWsaQ/viewform?embedded=true');
+	embeddFormulari("pallarsjussa", 'https://docs.google.com/forms/d/e/1FAIpQLScTPHckhmBLBv9sjXDvX9Ckm8iLQic_BGXDqLblbOcFv3797w/viewform?embedded=true');
+	embeddFormulari("pallarssobira", 'https://docs.google.com/forms/d/e/1FAIpQLScwX9Rh9M9bgXONxmX7sACSpnF_IQAEE7Jaa_arMIRklPW2uA/viewform?embedded=true');
+	embeddFormulari("pladestany", 'https://docs.google.com/forms/d/e/1FAIpQLSfzpRRC1jCnwgASyrOuE8HRIOzOs8eDJmLtFTNcRB10QuIgpg/viewform?embedded=true');
+	embeddFormulari("pladurgell", 'https://docs.google.com/forms/d/e/1FAIpQLScisxDqRCAZosNDk5Wj7H6M1fkzmq6_yNaFv3itUyMM1-kYww/viewform?embedded=true');
+	embeddFormulari("priorat", 'https://docs.google.com/forms/d/e/1FAIpQLSelPqojacb4ElyL-P_qJmXvgw-5ewh71EuU7c1HGvAiuOhlmg/viewform?embedded=true');
+	embeddFormulari("riberadebre", 'https://docs.google.com/forms/d/e/1FAIpQLSeFVkN8AC-QtQWhvZOc-u_RoyRWssBtSH59Pq_-_NeGFMZiEA/viewform?embedded=true');
+	embeddFormulari("ripolles", 'https://docs.google.com/forms/d/e/1FAIpQLSd5rx1WOUBbrvpDrIv0lm09orFCeUHsTO2fQtuIMC3qDVCw5w/viewform?embedded=true');
+	embeddFormulari("segarra", 'https://docs.google.com/forms/d/e/1FAIpQLSfZGTVKWqyvJUzLxbL8vAJj8Tsnuu15Wr7sWub7f-4_If_hSA/viewform?embedded=true');
+	embeddFormulari("segria", 'https://docs.google.com/forms/d/e/1FAIpQLScslzbqRE3-5tEP0JAM6dCeTCnwkLLsLzy3H2mOIN_Mxjrkmg/viewform?embedded=true');
+	embeddFormulari("selva", 'https://docs.google.com/forms/d/e/1FAIpQLSeAIWJrfUbHhTwWTy-pm7-arSxp_yw1yCiGBJaTIyTTOg_5rA/viewform?embedded=true');
+	embeddFormulari("solsones", 'https://docs.google.com/forms/d/e/1FAIpQLSdsN1eGR6msPhu_bcSiJuwwoJV50PfwI5BDHe-vHtOGs7OwXA/viewform?embedded=true');
+	embeddFormulari("tarragones", 'https://docs.google.com/forms/d/e/1FAIpQLSchzbDVs9hwb9z4isZ1W5OPGu4yji42WT2sqEFDPfJXcu5EzA/viewform?embedded=true');
+	embeddFormulari("terraalta", 'https://docs.google.com/forms/d/e/1FAIpQLSe3fpn6mYFqNFQHLYqEjeS3vj-nDhSzNgh-KvzyGB1NCO3o9w/viewform?embedded=true');
+	embeddFormulari("urgell", 'https://docs.google.com/forms/d/e/1FAIpQLSfY644XYbJQl3N-Cb-wf9PtsoaAWpYhV4kWFGdqrahVkTBipw/viewform?embedded=true');
+	embeddFormulari("vallesoccidental", 'https://docs.google.com/forms/d/e/1FAIpQLSfAxyLunaQwAATF28gaoArGPoMvjuyE6pUnPE7w4WTbAK0KzQ/viewform?embedded=true');
+	embeddFormulari("vallesoriental", 'https://docs.google.com/forms/d/e/1FAIpQLSfR3aZvf39-AK7lO07XBp-nc-DVsCg4zuc10dWH1P0caJkAgQ/viewform?embedded=true');	
+}
+
+
+/* Botons Formulari*/
+
+function afegeixBotonsCobertures(n, i){
+	/*
+	n: nom de la emissora
+	i: index
+	*/
+	
+	var notAppendList = ["Altres emisores de ràdio 1", "Altres emisores de ràdio 2", "Altres emisores de ràdio 3", 
+	"RÀDIO LOCAL", "TELEVISIÓ NACIONAL", "TELEVISIÓ LOCAL", "TELEVISIÓ ESTATAL",
+	"Altres canals de TV 1", "Altres canals de TV 2", "Altres canals de TV 3", "ALTRES FORMES DE COMUNICACIÓ 1", "ALTRES FORMES DE COMUNICACIÓ 2",
+	"Nom comercial del servei", "ALTRES FORMES DE COMUNICACIÓ", "OBSERVACIÓNS"];
+
+	var t = n;
+	if(notAppendList.indexOf(t) == -1){
+		$("ul#list1").append('<li class = "nel" id = "'+i+'">'+ t+ '</li>');
+		var startli = '<li class = "iel">';
+		var title = 'title = no arriba';
+		var id = " ["+t+"]";
+		var name = id;
+		var iput = '<input type ="radio" id="'+id+'" name = "'+name+'" ';
+		var nastring = iput+'value = "Sense Senyal" title = "Sense Senyal" class = "na el ' +i+ '-example-class">';
+		var rstring = iput+'value = "Dolenta" title = " Senyal Dolenta" class = "r el ' +i+ '-example-class">';
+		var ostring = iput+'value = "Regular" title = "Senyal Regular" class = "o el ' +i+ '-example-class">';
+		var gstring = iput+'value = "Bona" title = "Senyal Bona" class = "g el ' +i+ '-example-class">';
+		var endli = '</li>';
+		var string = startli+nastring+rstring+ostring+gstring+endli;
+		$('ul#list2').append(string);
+	}
+	
+}
+
+/* Càrrega informació aportada pels ajuntaments ---- to remove */
+
 function setValorInProgress(){
 	return 42;
 }
 
 
+/* AJUNTAMENTS PROPERS*/
 
+/* maplatlongs: obtenir la lat i long de cada ajt/resposta del formulari obtinguda*/
+/* marker: */
 function nomClosestAjuntament(maplatlongs, marker, ajuntaments){
-		/* maplatlongs: obtenir la lat i long de cada ajt/resposta del formulari obtinguda*/
-	/* marker: */
+	
 	var dist = 1000;
 	var nom = "";
 	var it = maplatlongs.entries()
@@ -88,9 +177,7 @@ function closestAjuntament(maplatlongs, marker, ajuntaments){
 	return ajt;
 }
 
-
-
-
+/* ASSOCIACIO NOM INDEX*/
 
 function ompleDiccionariComarques(){
 	dict_comarques.set("altaribagorca",0);
@@ -137,6 +224,8 @@ function ompleDiccionariComarques(){
 	dict_comarques.set("usuaris",41);
 }
 
+/*	PARSE DATA TO JSONText*/
+
 //treiem els primers caracters i ultims per poder parsejar
 //fem el parsing i ho retornem
 function returnDataParsed(data){
@@ -159,6 +248,38 @@ function ompleArrayCanals(data){
 		canals.push(new Detall(locnom, locjson));
 	}
 }
+
+function comparastring(value, key, map) {
+	if(rln.includes(key)){
+		c1 = value;
+	}
+}
+
+function omplemunicipis(value, key, map) {
+	Municipis.push(new Detall(value.municipi, value.comarca));
+	revMap.set(value.municipi.split(',')[0], value.comarca);
+}
+
+function associaCPComarques(data){
+	var data = returnDataParsed(data);
+	for(var i = 0 ; i < data.feed.entry.length; i++){
+		var nom = data.feed.entry[i].gsx$codipostal.$t;
+		var cp = {
+			comarca : data.feed.entry[i].gsx$comarca.$t,
+			municipi : data.feed.entry[i].gsx$nommunicipi.$t
+		}
+		codipostal_comarca.set(nom, cp);
+	}
+
+	codipostal_comarca.forEach(omplemunicipis);
+	
+	
+}
+
+/*OBTE ELS CANALS DE LES COMARQUES */
+// de cada entry es mira si pertany a la comarca
+// si pertany es fa el pushs a entries (es un index)
+// 
 
 function omple_canalscomarca(data){
 	var data = returnDataParsed(data);
@@ -317,10 +438,14 @@ function handleBefore() {
 function handleComplete(name) {
 	--inProgress;
 	var valor = (1-(inProgress/setValorInProgress()));
-	bar.animate(valor);
-
+	bar.animate(valor, function(){
+		if(bar.value() == 1){
+			bar.path.setAttribute("stroke", "#6bff6b");
+		}
+	});
 	if (!inProgress) {
 		// do what's in here when all requests have completed.
+		
 		console.log(inProgress);
 		markerCluster = new MarkerClusterer(map, array,
             {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' , ignoreHidden:true});
@@ -436,6 +561,50 @@ function cargaDatosSegonsID(map){
 	executaAJAX(map,"usuaris",data_usuaris);
 }
 
+
+function ompletraductor(){
+	maptraductor.set("Alta Ribagorça","altaribagorca");
+	maptraductor.set("Alt Camp","altcamp");
+	maptraductor.set("Alt Empordà","altemporda");
+	maptraductor.set("Alt Penedès","altpanades");
+	maptraductor.set("Alt Urgell","alturgell");
+	maptraductor.set("Anoia","anoia");
+	maptraductor.set("Aran","aran");
+	maptraductor.set("Bages","bagues");
+	maptraductor.set("Baix Camp","baixcamp");
+	maptraductor.set("Baix Ebre","baixebre");
+	maptraductor.set("Baix Empordà","baixemporda");
+	maptraductor.set("Baix Llobregat","baixllobregat");
+	maptraductor.set("Baix Penedès","baixpanades");
+	maptraductor.set("Barcelonès","barcelones");
+	maptraductor.set("Berguedà","bergueda");
+	maptraductor.set("Cerdanya","cerdanya");
+	maptraductor.set("Conca de Barberà","concadebarbera");
+	maptraductor.set("Garraf","garraf");
+	maptraductor.set("Garrigues","garrigues");
+	maptraductor.set("Garrotxa","garrotxa");
+	maptraductor.set("Gironès","girones");
+	maptraductor.set("Noguera","lanoguera");
+	maptraductor.set("Maresme","maresme");
+	maptraductor.set("Montsià","montsia");
+	maptraductor.set("Osona","osona");
+	maptraductor.set("Pallars Jussà","pallarsjussa");
+	maptraductor.set("Pallars Sobirà","pallarssobira");
+	maptraductor.set("Pla de l'Estany","pladestany");
+	maptraductor.set("Pla d'Urgell","pladurgell");
+	maptraductor.set("Priorat","priorat");
+	maptraductor.set("Ribera d'Ebre","riberadebre");
+	maptraductor.set("Ripollès","ripolles");
+	maptraductor.set("Segarra","segarra");
+	maptraductor.set("Segrià","segria");
+	maptraductor.set("Selva","selva");
+	maptraductor.set("Solsonès","solsones");
+	maptraductor.set("Tarragonès","tarragones");
+	maptraductor.set("Terra Alta","terraalta");
+	maptraductor.set("Urgell","urgell");
+	maptraductor.set("Vallès Occidental","vallesoccidental");
+	maptraductor.set("Vallès Oriental","vallesoriental");
+}
 
 //es posa la url segons la id, es diu que es vol obtenir
 //si tot va bé, vol dir que tenim info i la administrem
@@ -630,8 +799,7 @@ function obtenEntrys(ajuntaments, ajt, entry, canalscomarca){
 				ajt.descripcio.push(new Detall(canalscomarca[i].titol, entry[tosearch].$t));
 			}
 		}
-		catch(err){
-			
+		catch(err){			
 			console.log(ajt);
 			console.log(i + "  " + canalscomarca.length);
 			console.log(canalscomarca[i])
@@ -644,37 +812,159 @@ function obtenEntrys(ajuntaments, ajt, entry, canalscomarca){
 	ajuntaments.push(ajt);
 }
 
+// un cop carregada la pagina prepara què fer quan facin click sobre el pin i la senyal de cobertura
 
-function afegeixBotonsCobertures(n, i){
-	/*
-	n: nom de la emissora
-	i: index
-	*/
-	
-	var notAppendList = ["Altres emisores de ràdio 1", "Altres emisores de ràdio 2", "Altres emisores de ràdio 3", 
-	"RÀDIO LOCAL", "TELEVISIÓ NACIONAL", "TELEVISIÓ LOCAL", "TELEVISIÓ ESTATAL",
-	"Altres canals de TV 1", "Altres canals de TV 2", "Altres canals de TV 3", "ALTRES FORMES DE COMUNICACIÓ 1", "ALTRES FORMES DE COMUNICACIÓ 2",
-	"Nom comercial del servei", "ALTRES FORMES DE COMUNICACIÓ", "OBSERVACIÓNS"];
+var textTitol;
 
-	var t = n;
-	if(notAppendList.indexOf(t) == -1){
-		$("ul#list1").append('<li class = "nel" id = "'+i+'">'+ t+ '</li>');
-		var startli = '<li class = "iel">';
-		var title = 'title = no arriba';
-		var id = " ["+t+"]";
-		var name = id;
-		var iput = '<input type ="radio" id="'+id+'" name = "'+name+'" ';
-		var nastring = iput+'value = "Sense Senyal" title = "Sense Senyal" class = "na el ' +i+ '-example-class">';
-		var rstring = iput+'value = "Dolenta" title = " Senyal Dolenta" class = "r el ' +i+ '-example-class">';
-		var ostring = iput+'value = "Regular" title = "Senyal Regular" class = "o el ' +i+ '-example-class">';
-		var gstring = iput+'value = "Bona" title = "Senyal Bona" class = "g el ' +i+ '-example-class">';
-		var endli = '</li>';
-		var string = startli+nastring+rstring+ostring+gstring+endli;
-		$('ul#list2').append(string);
-	}
+function load(){
 	
+	
+	$("#pinmap").click(function(){
+		$(this)
+			    .toggleClass('map')
+			    .toggleClass('import');			  
+		$("#sigico").toggleClass('signal').toggleClass('pin');
+		$("div#map_form").slideToggle();	
+		$(".formulari").slideToggle();
+	});
+	
+	// quan fas click al símbol de cobertura 
+	$("#sigico").click(function(){
+
+		//si esta a l'icona de senyal
+		if($("#sigico").attr("Class") == "icon signal"){
+
+			//si has fet senyala click i el llistat es veu, vol dir que canvies cap a no veure i per tan col·loques el nom de nou
+			if($("#llistat").css("display") == "grid"){
+				$("#titol-principal")[0].innerText = textTitol;
+			}
+			else{
+
+			// si no està configurat encara com a grid vol dir que està com a block? 
+				textTitol = $("#titol-principal")[0].innerText;
+				$("#titol-principal")[0].innerText = "Llistat emissores";
+			}
+
+
+			// fés el Toggle entre pestanyes.
+			$(".embolcall-info").slideToggle();	
+			$("#llistat").slideToggle();
+
+
+
+			// si està com a block, posa el display a grid
+			if($("#llistat").css("display") == "block"){
+				$("#llistat").css("display","grid");
+
+			}
+			$('.el').css('height', $('.nel').innerHeight());
+		}
+		if($("#sigico").attr("Class") == "icon pin"){
+			navigator.geolocation.getCurrentPosition(function(position) {
+  				if (marker != undefined) marker.setMap(null);
+					marker = new google.maps.Marker({
+						position: {lat:position.coords.latitude, lng:position.coords.longitude},
+						map: map,
+						icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+					});
+					geocodeLatLng(geocoder, map, infoWindow, marker);
+					document.getElementById('Latitud').value = (marker.getPosition().lat());
+					document.getElementById('Longitud').value =(marker.getPosition().lng());
+			});
+		}
+
+	});
+
+
+	console.log("carregat");
 }
 
+// Toggle 
+
+function togglemapform(){
+	$("div#map_form").toggle();
+	$("fomr#gform.formulari").toggle();
+
+}
+
+function insertaiframe(iframe){
+	$("iframe.formulari").attr('src', iframe)
+}
+
+
+
+/*GEOLOCALITZACIÓ*/
+				function getzipcode(results){
+					for(var i = 0; i < results[0].address_components.length; i++){
+						var text = results[0].address_components[i].long_name; 
+						if( text.length == 5){
+							if(parseInt(text[0]) && parseInt(text[1]) && parseInt(text[2]) && parseInt(text[3]) && parseInt(text[4]))
+								return text;
+						}
+					}
+					return ""
+				}
+
+				function geocodeLatLng(geocoder, map, infowindow, marker) {
+					var latlng = {lat:marker.getPosition().lat(), lng: marker.getPosition().lng()};
+					var com = "";
+					geocoder.geocode({'location': latlng}, function(results, status) {
+						if (status === 'OK') {
+							
+							if (results[0]) {
+								var c1 = ""; 
+								var c2 = ""; 
+								var l = results[0].address_components.length;
+								var r0 = results[0].address_components;
+								for(var i = 0; i < l  ; i++){
+									rln = r0[i].long_name;
+									c1 = revMap.get(rln);
+									c2 = codipostal_comarca.get(rln);
+									if(c1 == undefined){
+										revMap.forEach(comparastring);
+										console.log("foreach");
+									}
+									if(c1 != undefined || c2 != undefined){
+										
+										if(c1 != undefined){
+											com = c1;
+											document.getElementById('Municipi').value = rln;
+										
+										}
+										if(c2 != undefined) com = c2.comarca;
+										console.log("com found: " + com);
+										$("#titol-principal")[0].innerText = "Registre cobertura al : " + com;
+										llistat(com);
+										break;
+									}
+								}
+							  infowindow.setContent(results[0].formatted_address );
+							  infowindow.open(map, marker);
+
+
+							} else {
+							  window.alert('No results found');
+							}
+						} else {
+						window.alert('Geocoder failed due to: ' + status);
+						}
+					});
+				}
+
+				function geocodeAddress(geocoder, resultsMap) {
+					var address = document.getElementById('address').value;
+					geocoder.geocode({'address': address}, function(results, status) {
+						if (status === 'OK') {
+							resultsMap.setCenter(results[0].geometry.location);
+							var marker = new google.maps.Marker({
+							  map: resultsMap,
+							  position: results[0].geometry.location
+							});
+						} else {
+						alert('Geocode was not successful for the following reason: ' + status);
+						}
+					});
+				}
 
 /*				VARIABLES 				*/
 
@@ -686,7 +976,7 @@ var JParsedText;
 var map;
 var array = []; 				// array de marcadors, dels formularis
 var infoWindow;					// per crear la finestra d'informació de cada formulari. 
-
+var geocoder;
 
 var canals = [];				// es guardaran totes les emissores que hi han amb el seu nom json, per a poder extreure'n la informació dels formularis. 
 var ajuntaments = [];				// es refereix als formularis omplerts, inicialment només ho havien omplert ajuntaments per tan cada punt era un ajt diferent (i uns quants usuaris deixant les seves observacions)
@@ -697,15 +987,17 @@ var done_cc = false;
 ompleArrayComarques();
 var idemissores = "1T-sCSgblXVc3R7oEuKK-Fm9p-pkjGFt0cCnwERGON50";
 var id_comarquescanals = '1p_2jhSOWnop5TkdFxmNhzMk16uWbkv22CggAvUg0YyM';
-//executaAJAX3(id_comarquescanals, omple_canalscomarca, string);
+var id_cpcomarques = '1buewNhQVAmy_lEdH_T1iAeZMeQFclPyy0BHa_rOOU7Y';
 
-
-
+var codipostal_comarca = new Map(); //on guardar els codis postals i la seva info associada
+var maptraductor = new Map();
+ompletraductor();
 var markerCluster;	
 
 var maplatlongs = new Map();	// per a que no hi hagin dos marcadors en la mateixa ubicació. 
 
 var todo = true;				// si la càrrega d'informació està per fer quan estigui online es recarregarà la pàgina, per a que es faci. 
+var mapaactiu = true;
 
 var im;							// per a guardar l'icona del marcador
 var typemap = "";
@@ -713,14 +1005,18 @@ var typemap = "";
 var styledMapType;				// disseny del mapa de dia
 var styledMapType2;				// disseny del mapa de nit
 
+
 var inProgress;					// quantes peticions ajax s'han de fer (de cada document, n'hi ha 41 + usuaris en el cas de broadcasting)
 
 inProgress = setValorInProgress();
 
 var ajuntament;
+var Municipis = [];
+var revMap = new Map();
 
 var dict_comarques = new Map();	//hi guarda de cada comarca l'index. 
 ompleDiccionariComarques();
+ompleEmbedsComarques();
 
 var bar = new ProgressBar.Line(progressbar, {
   strokeWidth: 4,
@@ -732,11 +1028,82 @@ var bar = new ProgressBar.Line(progressbar, {
   svgStyle: {width: '100%', height: '100%'}
 });
 
+var rln = "";
+textTitol = $("#titol-principal")[0].innerText;
+window.onload = load;
+executaAJAX3(id_cpcomarques, associaCPComarques, "");
+
+function llistat(com){
+	com = maptraductor.get(com);
+	var icom = dict_comarques.get(com);								// 	index de la comarca
+	var numdet = comarques[icom].canals.length;						// 	quants detalls te
+
+	// LLISTAT DE BOTONS DE COBERTURES
+	
+	$('#gform').attr('action', 'https://script.google.com/macros/s/'+comarques[icom].linkpost+'/exec');
+	
+	$('ul#list1').children().remove();
+	$('ul#list2').children().remove();
+	
+	for(var i = 0; i < numdet; i++){
+		var n ;
+		if(comarques[icom].canals[i] != undefined){
+			n = comarques[icom].canals[i].titol;							//nom de cada detall/canal/emissora que te
+		}
+		else{
+			break;
+		}
+		
+		afegeixBotonsCobertures(n,i);
+		
+		
+		$('.el').css('height', $('.nel').innerHeight());				//tamany de la caixa
+
+		try{
+			$("[class*=example-class]").hover(function(){
+				var c = this.className.match(/(\d+)-example-class/)[1];//in hover
+				var val = this.value;
+				var ss = "#86BBD8"
+				var sd = "#F26419";
+				var sr = "#F6AE2D";
+				var sb = "#AEE062";
+				var col;
+				if(val == "Regular")
+					col = sr;
+				else if(val == "Dolenta")
+					col = sd;
+				else if(val == "Bona")
+					col = sb;
+				else if(val == "Sense Senyal")
+					col = ss;
+				else{
+					col = "#fcf4eb"
+				}
+
+				$('#'+c).css('background-color', col);
+			}, function(){
+				var c = this.className.match(/(\d+)-example-class/)[1];		//out hover
+				$('#'+c).css('background-color', '#ffffff');
+			});
+		}
+		catch(e){
+			alert(e);
+		}
+		
+		$('.el').on('click', function(event){
+			event.stopImmediatePropagation();
+			var c = this.className.match(/(\d+)-example-class/)[1];
+		});
+	}
+	
+}
+
 function initMap() {
 		todo = !todo;
 		try{
 			var catalunya = {lat: 41.385900681193434, lng: 2.1711516380310063};
-				infoWindow = new google.maps.InfoWindow({pixelOffset: new google.maps.Size(0, 45)});
+				infoWindow = new google.maps.InfoWindow();
+				geocoder =new google.maps.Geocoder;
 				map = new google.maps.Map(document.getElementById('map_form'), {
 				center: catalunya,
 				zoom: 8,
@@ -747,83 +1114,30 @@ function initMap() {
 			    rotateControl: false,
 			    fullscreenControl: false
 			});
-			//cargaDatosSegonsID(map);
 			executaAJAX3(idemissores, ompleArrayCanals, "canals");
 			google.maps.event.addListener(map, 'click', function(event){
 					if (marker != undefined) marker.setMap(null);
 					marker = new google.maps.Marker({
 						position: event.latLng,
-						map: map
+						map: map,
+						icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
 					});
-					
-
-					
 					
 					console.log(marker.getPosition().lat());
 					console.log(marker.getPosition().lng());
-					if(ajuntamentsDescarregats){
+					document.getElementById('Latitud').value = (marker.getPosition().lat());
+					document.getElementById('Longitud').value =(marker.getPosition().lng());
+					geocodeLatLng(geocoder, map, infoWindow, marker);
 
-						var pob = closestAjuntament(maplatlongs, marker, ajuntaments);	//	ajuntament més proper
-						var com = pob.comarca;										//	nom de la comarca en la que pertany
-						var icom = dict_comarques.get(com);							// 	index de la comarca
-						var numdet = comarques[icom].canals.length;						// 	quants detalls te
-						
-						
-						$("#titolComarca")[0].innerHTML = "Emissores disponibles a: <strong>" + com +'</strong>';
-						
-						
-						(function(marker){ google.maps.event.addListener(marker, 'click', function(e){
-								infoWindow.setContent(com);
-								infoWindow.open(map,marker);
-								
-							})
-						})(marker);
-						
-						
-						//modifica link
-						
-						$('#gform').attr('action', 'https://script.google.com/macros/s/'+comarques[icom].linkpost+'/exec');
-						
-						$('ul#list1').children().remove();
-						$('ul#list2').children().remove();
-						
-						for(var i = 0; i < numdet; i++){
-							var n ;
-							if(comarques[icom].canals[i] != undefined){
-								n = comarques[icom].canals[i].titol;							//nom de cada detall/canal/emissora que te
-							}
-							else{
-								break;
-							}
-							
-							afegeixBotonsCobertures(n,i);
-							
-							
-							$('.el').css('height', $('.nel').innerHeight());				//tamany de la caixa
-	
-							try{
-								$("[class*=example-class]").hover(function(){
-									var c = this.className.match(/(\d+)-example-class/)[1];		//in hover
-									$('#'+c).css('background-color', '#fcf4eb');
-								}, function(){
-									var c = this.className.match(/(\d+)-example-class/)[1];		//out hover
-									$('#'+c).css('background-color', '#ffffff');
-								});
-							}
-							catch(e){
-								alert(e);
-							}
-							
-							$('.el').on('click', function(event){
-								event.stopImmediatePropagation();
-								var c = this.className.match(/(\d+)-example-class/)[1];
-							});
+					// LISTENER DEL MAPA
 
-						}
-					}
-				document.getElementById('Latitud').value = (marker.getPosition().lat());
-				document.getElementById('Longitud').value =(marker.getPosition().lng());
-				
+					(function(marker){ google.maps.event.addListener(marker, 'click', 
+						function(e){
+							marker.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png");
+							//setTimeout(togglemapform, 500);
+						})
+					})(marker);
+
 			});			
 		}
 		catch(err){

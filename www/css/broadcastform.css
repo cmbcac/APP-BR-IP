@@ -7,9 +7,14 @@
 	display: none;
 }
 
+html{
+	height:100%;
+}
+
 body{
-	overflow: scroll;
+	overflow-y: scroll;
 	font-family: 'Scope One', serif;
+
 }
 
 
@@ -17,68 +22,85 @@ body{
 h1{
 	color:#FF6B6B;
 }
+.top{
+  color: #FF6B6B;
+}
+.top2{
+  color:#ff9c9c;
+}
+
 
 #titol-principal{
 	text-align:center;
 }
 
+.embolcall{
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
 /*antic wrapcontent*/
 
 .gran{
-	width: 100%;
+  display: block;
+  width: calc(100vw*0.9);
+  height: calc(100vh*0.9);
+  left: calc(100vw*0.05);
+  position: absolute;
+  top: calc(100vh*0.05);
 }
 /* mapa */
 
 #map_form{
-	min-height: 150px;
+  position: absolute;
+  height: 100%;
+  width:100%;
+  border-radius: 10px;
+  display:none;
 }
 
-/* canals/emissores dividit en dos columnes, */
-
-#llistat{
-	max-height: 200px;
-	min-height:100px;
-	display:grid;
-	grid-template-columns: 1fr 1fr;
-	width: 100%;
-	overflow: scroll;
-}
-
-#noms{
-	width:50%;
-}
-#valors{
-	min-width: 50%;
-}
-
-#observacions{
-	max-height: 80px;
-}
-.top{
-	background-color: #FF6B6B;
-}
-
-.iel{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.el{
-	background-size: : 22px;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-#list1{
-	white-space: nowrap;
-}
-textarea{
-	width: 100%;
-}
 
 #progressbar {
   margin: 0px;
   width: 100%;
   height: 8px;
+  position: absolute;
+  bottom:8px;
+}
+
+form{
+  display: block;
+}
+form#gform.formulari{
+  display: block;
+}
+
+input{
+  width:100%;
+}
+
+.embolcall-info{
+  height: calc(100vh*0.9);
+  overflow: scroll;
+}
+
+#llistat{
+  display: none;
+  min-width: 100%;
+  overflow: scroll;
+  height: calc(100vh*0.9);
+  grid-template-columns: 1fr 1fr;
+
+}
+
+#noms{
+  min-width:50%;
+  white-space:nowrap;
+}
+#valors{
+  min-width:50%;
 }
 
 @media screen and (max-width: 284px){
@@ -89,15 +111,6 @@ textarea{
 @media screen and (max-width: 568px) and (min-width: 284px) {
 	#titol-principal{
 		font-size: 1.1em;
-	}
-	#radios{
-		font-size: 0.7em;
-	}
-	#tvs{
-		font-size:0.7em;
-	}
-	#others{
-		font-size:0.7em;
 	}
 
 }

@@ -101,6 +101,9 @@ var dict_comarques = new Map();	//hi guarda de cada comarca l'index.
 ompleDiccionariComarques();
 var comarques = [];
 ompleArrayComarques();
+carregaComarques2018();
+
+
 
 function carregaComarques2018(){
 	for(var i = 0; i < comarques.length; i++){
@@ -147,16 +150,19 @@ function funcio(data, nom){
 	/*parseja text*/
 
 	data = returnDataParsed(data);
-	console.log(nom);
-	console.log(data);
+	funcio2(data);
 }
-function funcio2(nom){
+function funcio2(data){
 	/*inicialitza variables*/
 	var myLatLng;
 	var features = [], latfield, lonfield;
 	if (!data || !data.feed) return features;
 	
 	/*busca markers*/
+
+	if(data.feed.entry == undefined)
+		return;
+
 	for (var i = 0; i < data.feed.entry.length; i++){
 		
 		//entry
@@ -224,19 +230,36 @@ function funcio2(nom){
 					var t = n.value;
 					var c = mapdet.get(t);
 					if(c=="") c = "sense informació";
-					if(c==undefined) c = "--";
-					
+					if(c==undefined) c = "--";					
 					if("TELEVISIÓ NACIONAL"  == t) bg = false; 
 					if("ALTRES FORMES DE COMUNICACIÓ 1" == t) end = true;
+
 					if(bg){
-						$('ul#list1').append('<li>'+t+'</li>');
-						
-						$('ul#list2').append('<li>'+c+'</li>');
+						if(c=="--"){
+							t = '<li class ="blanc">' + t + '</li>'
+							c = '<li class ="blanc">' + c + '</li>'
+
+							$('ul#list1').append(t);
+							$('ul#list2').append(c);
+						}
+						else{
+							$('ul#list1').append('<li>'+t+'</li>');
+							$('ul#list2').append('<li>'+c+'</li>');
+						}
 						
 					}
 					if(!bg && !end){
-						$('ul#list3').append('<li>'+t+'</li>');
-						$('ul#list4').append('<li>'+c+'</li>');
+						if(c=="--"){
+							t = '<li class ="blanc">' + t + '</li>'
+							c = '<li class ="blanc">' + c + '</li>'
+
+							$('ul#list3').append(t);
+							$('ul#list4').append(c);
+						}
+						else{
+							$('ul#list3').append('<li>'+t+'</li>');
+							$('ul#list4').append('<li>'+c+'</li>');
+						}
 
 					}
 					if(end){
@@ -244,9 +267,24 @@ function funcio2(nom){
 						//$('ul#list6').append('<li>'+c+'</li>');
 					}
 				}
-				//document.getElementById("radios").innerText = radtitols.toString()//poble.getRadiosHTML();
-				//document.getElementById("tvs").innerText = poble.getTVSHTML();
-				//document.getElementById("others").innerText = poble.getOthersHTML();
+
+				if(marker.getIcon() == "http://maps.google.com/mapfiles/ms/icons/green-dot.png"){
+					togglemapform();
+				}
+				else{
+					for(var i = 0; i < array.length; i++){
+						if (array[i].getIcon() == 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'){
+							if(array[i].title.includes("Ajuntament"))
+								array[i].setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+							else{
+								array[i].setIcon('http://maps.google.com/mapfiles/ms/icons/yellow-dot.png');
+							}
+						}
+					}
+
+					marker.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png");	
+				}	
+
 				
 			})
 		})(marker, pobles[pobles.length-1]);

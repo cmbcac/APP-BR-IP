@@ -26,8 +26,8 @@
 
 		<nav id = "menu-desplegable">
 			<ul>
-				<li class = "contingut-menu"> <a href = "index.html"> Índex </a> </li>
-				<li class = "contingut-menu"> <a href = "broadcast_form.html"> Formulari Broadcast </a> 
+				<li class = "contingut-menu"> <a href = "index.html"> Inici </a> </li>
+				<li class = "contingut-menu"> <a href = "broadcast_form.html"> Registre Cobertura Broadcast </a> 
 				<li class = "contingut-menu"> <a href = "broadcast_map.html"> Plànol Broadcast </a> </li>
 				</li>
 				<li class = "contingut-menu"> <a href = "broadcast_contacte.html"> Contacte </a> </li>
@@ -45,89 +45,54 @@
 			<div class = "embolcall"> <!-- class = "wrapper" -->
 
 				<div class = "petit" > <!-- class = "one" -->
-					<div class = "polsador-menu"> </div> 												<!-- class = "menu-trigger" : canviar-ho del css--> 
-					<h1 id = "titol-principal"> <strong> Registre de noves cobertures </strong> </h1> 	<!-- id= "maintitle" -->
+					<div class="arrow-right icon polsador-menu2"></div>												
+					<h1 id = "titol-principal"> <strong> Registre d'una cobertura Broadcast </strong> </h1> 	<!-- id= "maintitle" -->
 				</div>
-
-
 				<div class = "gran" > <!-- class = wrapcontent" -->
-
-					<div class = "text"> <!-- es simbolic, per a no veure form i div, sino div i div -->
-
-						<form id = "gform" method = "POST" class = "pure-form pure-form-stacked" > <!-- el action es definira via jquery segons l'ajuntament mes proxim -->						
-							<div id = "dades"> 	<!-- id = "form" -->
-								<div id = "embolcall-text-dades">
-									<div id = "dadespersonals">
-										<div class = "top"> Dades personals </div>
-										<div class = "recipientinputs">
-											<div>
-												<label for = "name"> Nom * </label>
-												<input id = "Nom i cognoms:" name = "Nom i cognoms:" value = "" required />
-											</div>
-											<div>
-												<label for = "Telèfon"> Telèfon </label>
-												<input id = "Telèfon/s" name = "Telèfon/s" placeholder = "ex. 612345678" />
-											</div>
-											<div>
-												<label for = "email"> Correu electrònic* </label>
-												<input id = "Correu electrònic " name = "Correu electrònic " type = "email" value = "" required placeholder="nom@email.com"/>
-											</div>
-
-									</div>
-									<div id = "ubicacio">
-										<div class = "top"> Ubicació </div>
-										<div class = "recipientinputs">
-											<div>
-												<label for = "Direcció"> Direcció </label>
-												<input id = "Direcció" name = "Direcció" />
-											</div>
-											<div>
-												<label for = "Latitud">Latitud* </label>
-												<input id = "Latitud" name = "Latitud" value = "" required placeholder = "Click al mapa" data-mini = "true"/>
-											</div>
-											<div>
-												<label for = "Longitud">Longitud* </label>
-												<input id = "Longitud" name = "Longitud" value "" required placeholder = "Click al mapa" data-mini = "true"/>
-											</div>
-
-										</div>
-
-									</div>
-									<div id = "observacions">
-										<div class = "top"> Observacions </div>
-										<div class = "recipientinputs">
-											<textarea id = "Observacions (Espai dedicat a incloure aquelles mancances, deficiències en relació als mitjans de comunicació que es reben al municipi)" name = "Observacions (Espai dedicat a incloure aquelles mancances, deficiències en relació als mitjans de comunicació que es reben al municipi)" value = "" placeholder = "Introdueixi les observacions que trobi adients"></textarea>
-										</div>
-										
-									</div>
-
-								</div>
-								<button style="background-color:#295E86;color:white"> <i></i>&nbsp;Envia</button>
-
-							</div>
-							<div id = "titolComarca"class = "top"> Emissores disponibles a: <strong>*Premi sobre una regió del mapa*</strong></div>
-							<div id = "llistat"> <!-- id = "list" -->
-								<div id = "noms"> <ul id = "list1"> </ul> </div>
-								<div id = "valors"> <ul id = "list2"> </ul> </div>
-							</div>
-
-
-						</form>
-
-					</div>
-						<div style="display:none;" id="thankyou_message">
-						<h2 style="color:green">Les teves dades s'han transmès correctament! Moltes gràcies! </h2>
-						<img src="img/CAC.png" align="middle" style="width:20%;display:block;margin-left: auto;margin-right: auto">
-					</div>
-					<div class = "mapa" id = "map_form"></div>
-
-
+					<div class = "contenidormapa" id = "map_form"></div>
+					<form id = "gform" method = "POST" class = "formulari"">
+						<div class = "embolcall-info">
+							<div class = "top"> Dades personals </div>
+							<input placeholder = "Nom i Cognoms" name = "Nom i cognoms:" value = "" required/>	
+							<input placeholder = "Telèfon" name = "Telèfon/s"
+							value = ""	/>
+							<input placeholder="Correu Electrònic" name = "Correu electrònic " value = "">
+							<div class = "top"> Noms d'altres emissores de ràdio </div>
+							<input placeholder = "Altres emissores de ràdio 1" name = "Altres emissores de ràdio 1" value = ""/>
+							<input placeholder = "Altres emissores de ràdio 2" name = "Altres emissores de ràdio 2" value = ""/>
+							<input placeholder = "Altres emissores de ràdio 3" name = "Altres emissores de ràdio 3" value = ""/>
+							<div class = "top"> Noms d'altres canals de televisió </div>
+							<input placeholder = "Altres canals de TV 1" name = "Altres canals de TV 1" value = ""/>
+							<input placeholder = "Altres canals de TV 2" name = "Altres canals de TV 2" value = ""/>
+							<input placeholder = "Altres canals de TV 3" name = "Altres canals de TV 3" value = ""/>
+							<div class = "top2">Altre formes de comunicació local 1</div>
+							<input placeholder = "Nom del servei" name = "Altres formes de comunicació local 1" value = ""/>
+							<input placeholder = "Descripció" name = "Descripció 1" value = ""/>
+							<input placeholder = "Difusió" name = "Difusió 1" value = ""/>
+							<input placeholder = "Forma d'accés" name = "Accés 1" value = ""/>
+							<div class = "top2">Altre formes de comunicació local 2</div>
+							<input placeholder = "Nom del servei" name = "Altres formes de comunicació local 2" value = ""/>
+							<input placeholder = "Descripció" name = "Descripció 2" value = ""/>
+							<input placeholder = "Difusió" name = "Difusió 2" value = ""/>
+							<input placeholder = "Forma d'accés" name = "Accés 2" value = ""/>
+							<div class = "top"> Observacions </div>
+							<input placeholder = "" name = "Observacions (Espai dedicat a incloure aquelles mancances, deficiències en relació als mitjans de comunicació que es reben al municipi)" value = "" />
+							<div class = "top"> Ubicació (cliqui sobre el mapa o activi geolocalització)"</div>
+							<input placeholder = "Latitud" name = "Latitud" value = "" id ="Latitud" required/>
+							<input placeholder = "Longitud" name = "Longitud" value = "" id = "Longitud" required/>
+							<input placeholder = "Municipi" name = "Indiqueu el municipi des d’on ompliu el formulari:" value = "" id = "Municipi"/>
+							<button style="background-color:#295E86;color:white"> <i></i>&nbsp;Envia</button>
+						</div>
+						<div id = "llistat"> <!-- id = "list" -->
+							<div id = "noms"> <ul id = "list1"> </ul> </div>
+							<div id = "valors"> <ul id = "list2"> </ul> </div>
+						</div>
+						
+					</form>
 				</div>
+				<div id = "pinmap" class="map icon"></div>
+				<div id = "sigico" class="signal icon"></div>
 				<div id = "progressbar"></div>
-
-
-
-
 			</div>
 
 			<!-- aqui sobre va tot -->
@@ -151,9 +116,16 @@
 
 		<!-- estil -->
 		<script type = "text/javascript" src = "js/menu-desplegable.js"></script>
+		<script>
+			$('.polsador-menu2').click(function(){
+			  $(this)
+			    .toggleClass('arrow-right')
+			    .toggleClass('arrow-left');
+			})
+
+		</script>			
 		<!-- formulari -->
 			<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script> 
-
 
 	</body>
 

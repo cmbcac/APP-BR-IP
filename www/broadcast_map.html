@@ -10,7 +10,7 @@
 
 	<link rel = "stylesheet" href = "css/menu-desplegable.css">
 	<link rel = "stylesheet" href = "css/broadcastmap.css">
-
+	<link rel = "stylesheet" href = "css/buttons.css">
 	<!-- fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
 	
@@ -26,9 +26,9 @@
 	<!-- MENU -->
 	<nav id="menu-desplegable">
 	  <ul>
-		<li class="contingut-menu"><a href = "index.html">Índex</a></li>
-		<li class = "contingut-menu"><a href = "broadcast_form.html">Formulari Broadcast</a></li>
-		<li class="contingut-menu"><a href = "broadcast_map.html">Plànols Broadcast</a></li>
+		<li class="contingut-menu"><a href = "index.html">Inici</a></li>
+		<li class = "contingut-menu"><a href = "broadcast_form.html">Registre Broadcast</a></li>
+		<li class="contingut-menu"><a href = "broadcast_map.html">Plànol Broadcast</a></li>
 		<li class = "contingut-menu"> <a href = "broadcast_contacte.html">Contacte</a></li>
 	  </ul>
 	</nav>
@@ -38,12 +38,11 @@
 	<div class = "cos">
 		<div class="embolcall">
 			<div class = "petit">
-				<div class ="polsador-menu"></div>
+				<div class ="arrow-right icon polsador-menu2"></div>
 				<h1 id = "titol-principal"><strong>Cobertures Ràdios i Televisions de Catalunya</strong></h1>
 			</div>
 			<div class = "five">
-				<div class = "five2x" id = "fivemap">
-				</div>
+				<div class = "five2x" id = "fivemap"></div>
 				<div class = "five2x" id = "fiveinfo1">
 						<div class = "fiveinfocontent" id = "radios">
 							<div>
@@ -68,7 +67,7 @@
 						</div>
 				</div>
 			</div>
-
+			<div id = "pinmap" class="signal icon"></div>
 			<div id = "progressbar" style = "height: 12px"></div>
 		</div>
 	</div>
@@ -94,15 +93,16 @@
 	<script type="text/javascript" src="js/menu-desplegable.js"></script>
 	
 	<script>
-	function setstyle(){
-		$('.fiveinfocontent').css('max-height', $('.five').innerHeight()*0.33);
-	}
-
-	$(document).ready(setstyle);
-	$(window).resize(setstyle);
-
-	
-	
+		$('.polsador-menu2').click(function(){
+			$(this)
+				.toggleClass('arrow-right')
+			    .toggleClass('arrow-left');
+			})	
+		$('.signal').click(function(){
+			$(this)
+				.toggleClass('signal')
+			    .toggleClass('map');
+			})	
 	</script>
 
 
