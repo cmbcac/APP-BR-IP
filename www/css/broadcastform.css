@@ -47,7 +47,7 @@ h1{
   display: block;
   width: calc(100vw*0.9);
   height: calc(100vh*0.9);
-  left: calc(100vw*0.05);
+  left: calc(100vw*0.06);
   position: absolute;
   top: calc(100vh*0.05);
 }

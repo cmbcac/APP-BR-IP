@@ -834,6 +834,8 @@ function load(){
 		//si esta a l'icona de senyal
 		if($("#sigico").attr("Class") == "icon signal"){
 
+			// TITOL 
+
 			//si has fet senyala click i el llistat es veu, vol dir que canvies cap a no veure i per tan col·loques el nom de nou
 			if($("#llistat").css("display") == "grid"){
 				$("#titol-principal")[0].innerText = textTitol;
@@ -846,10 +848,13 @@ function load(){
 			}
 
 
+			// TOGGLE
+
 			// fés el Toggle entre pestanyes.
 			$(".embolcall-info").slideToggle();	
 			$("#llistat").slideToggle();
 
+			// CSS
 
 
 			// si està com a block, posa el display a grid
@@ -873,6 +878,15 @@ function load(){
 			});
 		}
 
+	});
+
+	$(".ubi").click(function(){
+		$("#pinmap")
+			    .toggleClass('map')
+			    .toggleClass('import');			  
+		$("#sigico").toggleClass('signal').toggleClass('pin');
+		$("div#map_form").slideToggle();	
+		$(".formulari").slideToggle();
 	});
 
 

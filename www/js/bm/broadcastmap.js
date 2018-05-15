@@ -567,7 +567,7 @@ function vallesoriental(){
 
 
 function setValorInProgress(){
-	return 42;
+	return 41;
 }
 
 function cargaDatosSegonsID(map){
@@ -613,7 +613,7 @@ function cargaDatosSegonsID(map){
 	var data_usuaris = '1mTRB-z51LqajrD5h6bNyNg5ZNhFuFjpQ6O0r3oYF498';
 	var data_vallesoccidental = '1WCIpcQTYJ3_xr8vJFvTtoVLdQ_7qT7rHC7Tg9JzXoQ4';
 	var data_vallesoriental = '1NU4L0FKxogRbWrt6jqXuAJlxOkvEq9XkxIPKVn5IWlc';
-	var data_usuaris = '1mTRB-z51LqajrD5h6bNyNg5ZNhFuFjpQ6O0r3oYF498'
+	//var data_usuaris = '1mTRB-z51LqajrD5h6bNyNg5ZNhFuFjpQ6O0r3oYF498'
 	executaAJAX(map,"altaribagorca",data_altaribagorca);
 	executaAJAX(map,"altcamp",data_altcamp);
 	executaAJAX(map,"altemporda",data_altemporda);
@@ -655,7 +655,7 @@ function cargaDatosSegonsID(map){
 	executaAJAX(map,"urgell",data_urgell);
 	executaAJAX(map,"vallesoccidental",data_vallesoccidental);
 	executaAJAX(map,"vallesoriental",data_vallesoriental);
-	executaAJAX(map,"usuaris",data_usuaris);
+	//executaAJAX(map,"usuaris",data_usuaris);
 }
 
 function setIcon(){
@@ -1167,72 +1167,85 @@ function controlaInformacio(data,nom){
 		//infowindows
 		(function(marker, poble){
 			google.maps.event.addListener(marker, 'click', function(e){
-				infoWindow.setContent(poble.poble);
-				infoWindow.open(map,marker);
-				
-				var radtitols = [];
-				var radcontinguts = [];
-				var tvtitols = [];
-				var tvcontinguts = [];
-				var othtitols = [];
-				var othcontinguts = [];
-				
-				var bg = true;
-				var end = false;
-				var mapdet = poble.getMapDetalls();
-				var it = mapdet.keys();
-				$('ul#list1').children().remove();
-				$('ul#list2').children().remove();
-				$('ul#list3').children().remove();
-				$('ul#list4').children().remove();
-				$('ul#list5').children().remove();
-				
-				
-				for(var i = 0;  i < mapdet.size; i++){
-					var n = it.next();
-					var t = n.value;
-					var c = mapdet.get(t);
-					if(c=="") c = "sense informació";
-					if(c==undefined) c = "--";					
-					if("TELEVISIÓ NACIONAL"  == t) bg = false; 
-					if("ALTRES FORMES DE COMUNICACIÓ 1" == t) end = true;
-					if(bg){
-
-						if(c=="--"){
-							t = '<li class ="blanc">' + t + '</li>'
-							c = '<li class ="blanc">' + c + '</li>'
-
-							$('ul#list1').append(t);
-							$('ul#list2').append(c);
-						}
-						else{
-							$('ul#list1').append('<li>'+t+'</li>');
-							$('ul#list2').append('<li>'+c+'</li>');
-						}
-					}
-					if(!bg && !end){
-						if(c=="--"){
-							t = '<li class ="blanc">' + t + '</li>'
-							c = '<li class ="blanc">' + c + '</li>'
-
-							$('ul#list3').append(t);
-							$('ul#list4').append(c);
-						}
-						else{
-							$('ul#list3').append('<li>'+t+'</li>');
-							$('ul#list4').append('<li>'+c+'</li>');
-						}
-
-					}
-					if(end){
-						$('ul#list5').append('<li>'+t+":\t"+c +'</li>');
-					}
-				}
-
+				var content = '<span id="contentInsideMap">' + poble.poble + '</span>'
+				infoWindow.setContent(content);
+				infoWindow.open(map,marker);		
+				$('#contentInsideMap').bind('click', function() {
+					togglemapform();
+				});
 				if(marker.getIcon() == "http://maps.google.com/mapfiles/ms/icons/green-dot.png"){
 					togglemapform();
 				}
 				else{
+
+					var radtitols = [];
+					var radcontinguts = [];
+					var tvtitols = [];
+					var tvcontinguts = [];
+					var othtitols = [];
+					var othcontinguts = [];
+					
+					var bg = true;
+					var end = false;
+					var mapdet = poble.getMapDetalls();
+					var it = mapdet.keys();
+
+					/* borra els llistats */
+
+					$('ul#list1').children().remove();
+					$('ul#list2').children().remove();
+					$('ul#list3').children().remove();
+					$('ul#list4').children().remove();
+					$('ul#list5').children().remove();
+					
+					$('ul#list1').append('<li class ="blanc"> RÀDIO NACIONAL </li>');
+					$('ul#list2').append('<li class = "blanc"> -- </li>');
+					
+					for(var i = 0;  i < mapdet.size; i++){
+						var n = it.next();
+						var t = n.value;
+						var c = mapdet.get(t);
+						if(c=="") c = "sense informació";
+						if(c==undefined) c = "--";					
+						if("TELEVISIÓ NACIONAL"  == t) bg = false; 
+						if("ALTRES FORMES DE COMUNICACIÓ 1" == t) end = true;
+						if("SER" == t){
+							$('ul#list1').append('<li class = "blanc"> RÀDIO ESTATAL </li>');
+							$('ul#list2').append('<li class = "blanc"> -- </li>');
+						}
+						if(bg){
+
+							if(c=="--"){
+								t = '<li class ="blanc">' + t + '</li>'
+								c = '<li class ="blanc">' + c + '</li>'
+
+								$('ul#list1').append(t);
+								$('ul#list2').append(c);
+							}
+							else{
+								$('ul#list1').append('<li>'+t+'</li>');
+								$('ul#list2').append('<li>'+c+'</li>');
+							}
+						}
+						if(!bg && !end){
+							if(c=="--"){
+								t = '<li class ="blanc">' + t + '</li>'
+								c = '<li class ="blanc">' + c + '</li>'
+
+								$('ul#list3').append(t);
+								$('ul#list4').append(c);
+							}
+							else{
+								$('ul#list3').append('<li>'+t+'</li>');
+								$('ul#list4').append('<li>'+c+'</li>');
+							}
+
+						}
+						if(end){
+							$('ul#list5').append('<li>'+t+":\t"+c +'</li>');
+						}
+					}
+
 					for(var i = 0; i < array.length; i++){
 						if (array[i].getIcon() == 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'){
 							if(array[i].title.includes("Ajuntament"))

@@ -32,7 +32,7 @@ h1{
     display: block;
     width: calc(100vw*0.9);
     height: calc(100vh*0.9);
-    left: calc(100vw*0.05);
+    left: calc(100vw*0.06);
     position: absolute;
     top: calc(100vh*0.05);
 
@@ -184,7 +184,7 @@ li.blanc{
 }
 @media screen and (max-width: 568px) and (min-width: 284px) {
 	#titol-principal{
-		font-size: 1.0em;
+		font-size: 0.8em;
 	}
 	#radios{
 		font-size: 0.7em;
@@ -199,12 +199,12 @@ li.blanc{
 }
 @media screen and (max-width: 852px) and (min-width: 568px) {
 	#titol-principal{
-		font-size: 1.4em;
+		font-size: 1.0em;
 	}
 }
 @media screen and (max-width: 1136px) and (min-width: 852px) {
 	#titol-principal{
-		font-size: 1.7em;
+		font-size: 1.4em;
 	}
 }
 

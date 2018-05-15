@@ -18,7 +18,7 @@
 	<nav id="menu-desplegable">
 	  <ul>
 		<li class="contingut-menu"><a href = "index.html">Inici</a></li>
-		<li class = "contingut-menu"><a href = "ott_form.html">Formulari OTTs</a></li>
+		<li class = "contingut-menu"><a href = "ott_form.html">Registre OTTs</a></li>
 		<li class="contingut-menu"><a href = "ott_map.html">Plànol OTTs</a></li>
 		<li class = "contingut-menu"> <a href = "ott_contacte.html">Contacte</a></li>
 	  </ul>
@@ -45,16 +45,16 @@
 							<div class="top"><h4>Ubicació</h4></div>
 							<div class = "recipientinputs">
 								<div>
-									<label for="Latitud">Latitud* </label>
-									<input id="Latitud" name="Latitud" value="" required/ placeholder="Click al mapa" data-mini="true"/>
+									<label class = "ubi" for="Latitud">Latitud* </label>
+									<input class = "ubi" id="Latitud" name="Latitud" value="" required placeholder="Click al mapa" data-mini="true" readonly/>
 								</div>
-								<div>
-									<label for="Longitud">Longitud* </label>
-									<input id="Longitud" name="Longitud" value="" required/ placeholder="Click al mapa" data-mini="true" />
+								<div >
+									<label class = "ubi" for="Longitud">Longitud* </label>
+									<input class = "ubi" id="Longitud" name="Longitud" value="" required placeholder="Click al mapa" data-mini="true" readonly/>
 								</div>
 								<div>
 									<label for="Municipi">Municipi* </label>
-									<input id = "Municipi" name = "Municipi" value="" requiered/ placeholder="Municipi">
+									<input id = "Municipi" name = "Municipi" value="" required placeholder="Municipi">
 								</div>
 							</div>
 						</div>
@@ -127,6 +127,18 @@
 		$("#pinmap").click(function(){
 			$("div#fivemap").slideToggle();
 			$("iframe.formulari").slideToggle();
+
+		});
+
+		$(".ubi").click(function(event){
+			if($("div#fivemap").css("display") == "none"){
+				$("div#fivemap").slideToggle();
+				$("iframe.formulari").slideToggle();
+				$("#pinmap")
+					.toggleClass('map')
+				    .toggleClass('import');
+			}
+
 		});
 		console.log("carregat");
 	}	

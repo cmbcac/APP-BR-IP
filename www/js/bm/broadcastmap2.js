@@ -202,76 +202,93 @@ function funcio2(data){
 		//infowindows
 		(function(marker, poble){
 			google.maps.event.addListener(marker, 'click', function(e){
-				infoWindow.setContent(poble.poble);// + "  "+poble.descripcio[0].titol + " ");
-				//infoWindow.setContent("<strong>" + poble.poble+ "</strong><br>" + poble.setContent());
+				var content = '<span id="contentInsideMap">' + poble.poble + '</span>'
+				infoWindow.setContent(content);
 				infoWindow.open(map,marker);
-				
-				var radtitols = [];
-				var radcontinguts = [];
-				var tvtitols = [];
-				var tvcontinguts = [];
-				var othtitols = [];
-				var othcontinguts = [];
-				
-				var bg = true;
-				var end = false;
-				var mapdet = poble.getMapDetalls();
-				var it = mapdet.keys();
-				$('ul#list1').children().remove();
-				$('ul#list2').children().remove();
-				$('ul#list3').children().remove();
-				$('ul#list4').children().remove();
-				$('ul#list5').children().remove();
-				//$('ul#list6').children().remove();
-				
-				
-				for(var i = 0;  i < mapdet.size; i++){
-					var n = it.next();
-					var t = n.value;
-					var c = mapdet.get(t);
-					if(c=="") c = "sense informació";
-					if(c==undefined) c = "--";					
-					if("TELEVISIÓ NACIONAL"  == t) bg = false; 
-					if("ALTRES FORMES DE COMUNICACIÓ 1" == t) end = true;
-
-					if(bg){
-						if(c=="--"){
-							t = '<li class ="blanc">' + t + '</li>'
-							c = '<li class ="blanc">' + c + '</li>'
-
-							$('ul#list1').append(t);
-							$('ul#list2').append(c);
-						}
-						else{
-							$('ul#list1').append('<li>'+t+'</li>');
-							$('ul#list2').append('<li>'+c+'</li>');
-						}
-						
-					}
-					if(!bg && !end){
-						if(c=="--"){
-							t = '<li class ="blanc">' + t + '</li>'
-							c = '<li class ="blanc">' + c + '</li>'
-
-							$('ul#list3').append(t);
-							$('ul#list4').append(c);
-						}
-						else{
-							$('ul#list3').append('<li>'+t+'</li>');
-							$('ul#list4').append('<li>'+c+'</li>');
-						}
-
-					}
-					if(end){
-						$('ul#list5').append('<li>'+t+":\t"+c +'</li>');
-						//$('ul#list6').append('<li>'+c+'</li>');
-					}
-				}
-
+				$('#contentInsideMap').bind('click', function() {
+					togglemapform();
+				});
 				if(marker.getIcon() == "http://maps.google.com/mapfiles/ms/icons/green-dot.png"){
 					togglemapform();
 				}
 				else{
+				
+					/* declaracio de variables */
+
+					var radtitols = [];
+					var radcontinguts = [];
+					var tvtitols = [];
+					var tvcontinguts = [];
+					var othtitols = [];
+					var othcontinguts = [];
+					
+					/*  bools que indicaran principi i final de cada seccio - radios, tv, altres*/
+
+					var bg = true;
+					var end = false;
+					var mapdet = poble.getMapDetalls();
+					var it = mapdet.keys();
+
+					/* borra els llistats */
+
+					$('ul#list1').children().remove();
+					$('ul#list2').children().remove();
+					$('ul#list3').children().remove();
+					$('ul#list4').children().remove();
+					$('ul#list5').children().remove();
+
+					$('ul#list1').append('<li class ="blanc"> RÀDIO NACIONAL </li>');
+					$('ul#list2').append('<li class = "blanc"> -- </li>');
+					
+					
+					for(var i = 0;  i < mapdet.size; i++){
+						var n = it.next();
+						var t = n.value;
+						var c = mapdet.get(t);
+						if(c=="") c = "sense informació";
+						if(c==undefined) c = "--";					
+						if("TELEVISIÓ NACIONAL"  == t) bg = false; 
+						if("ALTRES FORMES DE COMUNICACIÓ 1" == t) end = true;
+						if("SER" == t){
+							$('ul#list1').append('<li class = "blanc"> RÀDIO ESTATAL </li>');
+							$('ul#list2').append('<li class = "blanc"> -- </li>');
+						}
+						if(bg){
+							if(c=="--"){
+								t = '<li class ="blanc">' + t + '</li>'
+								c = '<li class ="blanc">' + c + '</li>'
+
+								$('ul#list1').append(t);
+								$('ul#list2').append(c);
+							}
+							else{
+								$('ul#list1').append('<li>'+t+'</li>');
+								$('ul#list2').append('<li>'+c+'</li>');
+							}
+							
+						}
+						if(!bg && !end){
+							if(c=="--"){
+								t = '<li class ="blanc">' + t + '</li>'
+								c = '<li class ="blanc">' + c + '</li>'
+
+								$('ul#list3').append(t);
+								$('ul#list4').append(c);
+							}
+							else{
+								$('ul#list3').append('<li>'+t+'</li>');
+								$('ul#list4').append('<li>'+c+'</li>');
+							}
+
+						}
+						if(end){
+							$('ul#list5').append('<li>'+t+":\t"+c +'</li>');
+							//$('ul#list6').append('<li>'+c+'</li>');
+						}
+					}
+
+					/* canviar el color dels marcadors, l'anterior i el nou*/
+
 					for(var i = 0; i < array.length; i++){
 						if (array[i].getIcon() == 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'){
 							if(array[i].title.includes("Ajuntament"))
@@ -283,7 +300,11 @@ function funcio2(data){
 					}
 
 					marker.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png");	
-				}	
+				}
+
+				
+
+	
 
 				
 			})

@@ -282,8 +282,13 @@ function controlaInformacio(data,nom){
 		(function(marker, poble){
 			google.maps.event.addListener(marker, 'click', function(e){
 				var titoliw = poble.poble == "" ? poble.descripcio[6] : poble.poble ;
-				infoWindow.setContent(poble.poble);
+				var content = '<span id="contentInsideMap">' + titoliw + '</span>'
+				infoWindow.setContent(content);
 				infoWindow.open(map,marker);
+
+				$('#contentInsideMap').bind('click', function() {
+					togglemapform();
+				});
 				
 				var radtitols = [];
 				var radcontinguts = [];
@@ -301,7 +306,6 @@ function controlaInformacio(data,nom){
 				$('ul#list3').children().remove();
 				$('ul#list4').children().remove();
 				$('ul#list5').children().remove();
-				//$('ul#list6').children().remove();
 				
 				
 				for(var i = 0;  i < mapdet.size; i++){
