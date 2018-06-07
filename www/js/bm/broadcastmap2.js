@@ -205,6 +205,12 @@ function funcio2(data){
 				var content = '<span id="contentInsideMap">' + poble.poble + '</span>'
 				infoWindow.setContent(content);
 				infoWindow.open(map,marker);
+
+				document.getElementById("Latitud").value = (marker.position.lat());
+				document.getElementById("Longitud").value = (marker.position.lng());
+				document.getElementById("Municipi").value = (poble.poble);
+				document.getElementById("Comarca").value = (poble.comarca);
+
 				$('#contentInsideMap').bind('click', function() {
 					togglemapform();
 				});

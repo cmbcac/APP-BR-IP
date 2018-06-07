@@ -9,7 +9,7 @@
 body{
 	min-width: 319px;
 	min-height:319px;
-	overflow:scroll;
+	overflow:hidden;
 	font-family: 'Scope One', serif;
 }
 
@@ -30,12 +30,16 @@ h1{
 
 .five{
     display: block;
-    width: calc(100vw*0.9);
-    height: calc(100vh*0.9);
-    left: calc(100vw*0.06);
+    width: calc(100vw);
+    height: calc(100vh*0.7);
     position: absolute;
     top: calc(100vh*0.05);
-
+    width: calc(100vw*0.9);
+    left: calc(100vw*0.05);
+    /*
+    
+    height: calc(100vh*0.9);
+    */
 }
 
 .five2x {
@@ -50,6 +54,19 @@ h1{
 	position: absolute;
 }
 
+#gform{
+  min-width:0;
+  width: calc(100vw * 0.6);
+  display:none;
+  position: absolute;
+  background-color: #fff7f2;
+  left: calc(100vw * 0.15);
+  overflow: scroll;
+  top:50%;
+  border-radius: 10px;
+  transform: translateY(-50%);
+}
+/*
 .fiveinfocontent{
 	text-align:center;
 	border-radius: 10px;
@@ -60,7 +77,19 @@ h1{
 	grid-template-columns: 1fr 1fr;
 	height:33%;
 	max-height: 33%;
+}*/
+.fiveinfocontent{
+  text-align:center;
+  border-radius: 10px;
+  overflow-y:scroll;
+  min-width: 0px;
+  min-height:0px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  height:50%;
+  max-height: 50%;
 }
+
 #fiveinfo1{
 	background-color:#f3f3f3;
 	max-height: 100%;
@@ -76,17 +105,21 @@ h1{
 	background-color:#e6f5ff;
 	white-space: nowrap;
 }
+
+/*
 #others{
 	background-color: #feffd3;
 }
-
+*/
 ul{
 	list-style-type: none;	
 }
+
+/*
 #others.fiveinfocontent{
 	grid-template-columns: 1fr;
 }
-
+*/
 li.blanc{
   background-color: white;
   color:#FF6B6B;
@@ -101,7 +134,8 @@ li.blanc{
 }
 
 #pinmap{
-	top: 23px;
+	top: calc(100vh*0.8);
+  left:calc(100vw*0.25);
 }
 
 .pin.icon {
@@ -206,5 +240,21 @@ li.blanc{
 	#titol-principal{
 		font-size: 1.4em;
 	}
+}
+
+@media screen and (orientation: landscape){
+  .fiveinfocontent{
+    text-align:center;
+    border-radius: 10px;
+    overflow-y:scroll;
+    min-width: 0px;
+    min-height:0px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    width:50%;
+    max-width: 50%;
+    height:100%;
+    max-height: 100%;
+  }
 }
 

@@ -60,14 +60,47 @@
 							<ul id = "list4"></ul>
 							</div>
 						</div>
+						<!--
 						<div class = "fiveinfocontent" id = "others">
 							<div>
 							<ul id = "list5"></ul>
 							</div>
 						</div>
+					-->
 				</div>
+
+				<form id = "gform" class = "" action = "https://script.google.com/macros/s/AKfycbwroU5TBP0K3bd3FommglRZgOM6OKw8TWmG9PwQ8BR5SnwEVd4/exec">
+					<div class = "top"><h4>Comentaris Cobertura </h4></div>
+					<div class = "recipientinputs">
+						<input placeholder = "Nom i Cognoms*" name = "Nom i cognoms" value = "" required />
+						<input placeholder = "Telèfon" name = "Telèfon" value = ""/>
+						<input placeholder = "Correu Electrònic*" name = "Correu" value = "" required>
+						<div>
+							<label for = "Latitud"> Latitud* </label>
+							<input id="Latitud" name = "Latitud" value = "" required/ placeholder = "Click al mapa" data-mini = "true" readonly>
+						</div>
+						<div>
+							<label for="Longitud">Longitud* </label>
+							<input id="Longitud" name="Longitud" value = "" required/ placeholder = "Click al mapa" data-mini = "true" readonly>
+						</div>
+						<div>
+							<label for = "Municipi">Municipi* </label>
+							<input id="Municipi" name = "Municipi" value = "" required/ placeholder = "Municipi" readonly>
+						</div>
+						<div>
+							<label for="Comarca">Comarca* </label>
+							<input id="Comarca" name="Comarca" value = "" required/ placeholder = "Comarca" readonly>
+						</div>
+						<div>
+							<label for="Comentari">Comentari </label>
+							<input id="Comentari" name="Comentari" value = "" required/ placeholder = "">
+						</div>
+					</div>
+					<button style="background-color:#295E86; color:white"> <i></i>&nbsp;Envia</button>
+				</form>
 			</div>
 			<div id = "pinmap" class="signal icon"></div>
+			<div id = "comico" class="keyboard icon"></div>
 			<div id = "progressbar" style = "height: 12px"></div>
 		</div>
 	</div>
@@ -77,7 +110,7 @@
 	<!-- js -->
 
 
-	<script type = "text/javascript" src = "js/progressbar.js"></script>
+	<script type="text/javascript" src = "js/progressbar.js"></script>
 	<script type="text/javascript" src="js/markerclusterer.js"></script>
 	<script type="text/javascript" src="js/bm/broadcastmap.js"></script>
 	<script type="text/javascript" src="js/bm/broadcastmap2.js"></script>
@@ -105,7 +138,7 @@
 			})	
 	</script>
 
-
+	<script data-cfasync="false" type = "text/javascript" src = "js/form-submission-handler.js"></script>
 
 	
 </body>

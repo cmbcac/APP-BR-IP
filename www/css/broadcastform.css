@@ -12,7 +12,9 @@ html{
 }
 
 body{
-	overflow-y: scroll;
+	overflow-y: hidden;
+  overflow-x: hidden;
+  position: fixed;
 	font-family: 'Scope One', serif;
 
 }
@@ -40,8 +42,17 @@ h1{
 }
 
 
+.gran{
+  display: block;
+  width: calc(100vw*0.9);
+  height: calc(100vh*0.7);
+  left: calc(100vw*0.06);
+  position: absolute;
+  top: calc(100vh*0.05);
+}
 
-/*antic wrapcontent*/
+
+/*antic wrapcontent
 
 .gran{
   display: block;
@@ -51,6 +62,7 @@ h1{
   position: absolute;
   top: calc(100vh*0.05);
 }
+*/
 /* mapa */
 
 #map_form{
@@ -82,7 +94,7 @@ input{
 }
 
 .embolcall-info{
-  height: calc(100vh*0.9);
+  height: calc(100vh*0.7);
   overflow: scroll;
 }
 
@@ -90,7 +102,7 @@ input{
   display: none;
   min-width: 100%;
   overflow: scroll;
-  height: calc(100vh*0.9);
+  height: calc(100vh*0.7);
   grid-template-columns: 1fr 1fr;
 
 }

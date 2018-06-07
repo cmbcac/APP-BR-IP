@@ -1169,7 +1169,13 @@ function controlaInformacio(data,nom){
 			google.maps.event.addListener(marker, 'click', function(e){
 				var content = '<span id="contentInsideMap">' + poble.poble + '</span>'
 				infoWindow.setContent(content);
-				infoWindow.open(map,marker);		
+				infoWindow.open(map,marker);
+
+				document.getElementById("Latitud").value = (marker.position.lat());
+				document.getElementById("Longitud").value = (marker.position.lng());
+				document.getElementById("Municipi").value = (poble.poble);
+				document.getElementById("Comarca").value = (poble.comarca);
+
 				$('#contentInsideMap').bind('click', function() {
 					togglemapform();
 				});
@@ -1196,7 +1202,7 @@ function controlaInformacio(data,nom){
 					$('ul#list2').children().remove();
 					$('ul#list3').children().remove();
 					$('ul#list4').children().remove();
-					$('ul#list5').children().remove();
+					//$('ul#list5').children().remove();
 					
 					$('ul#list1').append('<li class ="blanc"> RÀDIO NACIONAL </li>');
 					$('ul#list2').append('<li class = "blanc"> -- </li>');
@@ -1242,7 +1248,7 @@ function controlaInformacio(data,nom){
 
 						}
 						if(end){
-							$('ul#list5').append('<li>'+t+":\t"+c +'</li>');
+							//$('ul#list5').append('<li>'+t+":\t"+c +'</li>');
 						}
 					}
 
@@ -1275,15 +1281,26 @@ function returnDataParsed(data){
 	return JParsedText;
 }
 
+
 function togglemapform(){
 	$("#fivemap").slideToggle()
-	$("#fiveinfo1").slideToggle()
+	$("#fiveinfo1").slideToggle(function(){
+		if(window.innerWidth > window.innerHeight){
+			if ($("#fiveinfo1").is(':visible')){
+				$("#fiveinfo1").css("display", "flex");	
+			}
+			
+		}
+	})
 }
 
 function load(){
 	$("#pinmap").click(function(){
 		togglemapform();
 	});
+	$("#comico").click(function(){
+		$("#gform").toggle("slow");
+	})
 	console.log("carregat");
 }
 

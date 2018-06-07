@@ -28,10 +28,12 @@ li{
 
 
 #pinmap{
-  top: 30px;
+  top: calc(100vh*0.8);
+  left: calc(100vw*0.25);
 }
 #sigico{
-  top: 60px;
+  top: calc(100vh*0.8);
+  left: calc(100vw*0.75);
 }
 
 
@@ -269,36 +271,41 @@ li{
           transform: rotate(135deg);
 }
 
+.keyboard.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 1px;
+  margin-top: 4px;
+  width: 17px;
+  height: 11px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+.keyboard.icon:before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 1px;
+  height: 1px;
+  border: 1px solid transparent;
+  box-shadow: -2px 0 0 -1px currentColor,  2px 0 0 -1px currentColor,  0 -2px 0 -1px currentColor,  0 2px 0 -1px currentColor,  -6px 0 0 -1px currentColor,  6px 0 0 -1px currentColor,  -4px -2px 0 -1px currentColor,  -4px 2px 0 -1px currentColor,  4px -2px 0 -1px currentColor,  4px 2px 0 -1px currentColor;
+}
+.keyboard.icon:after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 4px;
+  width: 9px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+#comico{
+  left:calc(100vw*0.75);
+  top:calc(100vh*0.8);
+}
+
 .icon, .icon:before, .icon:after, .icon i, .icon i:before, .icon i:after { 
   transition: all 0.4s ease;
 }
-
-/*
-@media screen and (max-width: 700px){
-      input[type='radio']:after {
-      width: 20px;
-    height: 20px;
-    border-radius: 15px;
-    top: -2px;
-    left: 9px;
-    position: relative;
-    background-color: #d1d3d1;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-    }
-    input[type='radio']:checked:after{
-      width: 20px;
-    height: 20px;
-    border-radius: 15px;
-    top: -2px;
-    left: 9px;
-    position: relative;
-    background-color: #ffa500;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-  }
-}*/
