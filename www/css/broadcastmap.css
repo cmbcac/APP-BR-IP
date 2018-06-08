@@ -138,6 +138,67 @@ li.blanc{
   left:calc(100vw*0.25);
 }
 
+.llegenda{
+  position: absolute;
+  font-size: 0.7em;
+  width: calc(100vw);
+  /*left: calc(100vw*0.5 - 2em);*/
+  background-color:#fff6ef;
+  text-align: center;
+}
+#ll1{
+  top:calc(100vh*0.75);
+}
+#ll2{
+  top:calc(100vh*0.875);
+}
+.infico{
+  position: absolute;
+  top:calc(100vh*0.77);
+  font-size: 0.7em;
+}
+#textmapllist.infico{
+  left:calc(100vw*0.25 - 2em);
+}
+#textcomentari.infico{
+  left:calc(100vw*0.75 - 1em);
+}
+
+.info{
+  position: absolute;
+  top:calc(100vh*0.9);
+  font-size: 0.7em;
+}
+.info:before{
+  content:"";
+  width:32px;
+  height:32px;
+  top: 16px;
+  left:2em;
+  position: absolute;
+  display: inline-block;
+}
+
+#aj{
+  left:calc(100vw*0.25 - 2em);
+}
+#aj.info:before{
+  background: url('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+  background-size:16px 16px;
+  background-repeat: no-repeat;
+}
+#us{
+  left:calc(100vw*0.75 - 1em);
+}
+
+#us.info:before{
+  background: url('http://maps.google.com/mapfiles/ms/icons/yellow-dot.png');
+  background-size:16px 16px;
+  background-repeat: no-repeat;
+  left:1em;
+  right:1em;
+}
+
 .pin.icon {
   color: #000;
   position: absolute;
