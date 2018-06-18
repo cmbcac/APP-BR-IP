@@ -640,6 +640,7 @@ function controlaInformacio(data,nom){
 	
 	comarca = nom
 	/*parseja text*/
+	if(nom == "usuaris") return;
 
 	data = returnDataParsed(data);
 	

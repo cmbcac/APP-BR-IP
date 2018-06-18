@@ -26,51 +26,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; media-src *; img-src *; script-src * 'unsafe-inline' 'unsafe-eval'">
+	<!--<meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; media-src *; img-src *; script-src * 'unsafe-inline' 'unsafe-eval'">-->
+	<script src="libs/p5.min.js"></script>
+    <script src="libs/addons/p5.dom.min.js"></script>
+    <script src="libs/addons/p5.sound.min.js"></script>
+    <!-- css -->
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-
     <!-- fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
-
 	<!--  titol -->
-    <title>CAC Mapping</title>
+    <title>Índex Aplicacions CAC</title>
 </head>
 
-
 <body>
-	  
-	<section id="top" class = "one-third">
-		<a href="broadcast_form.html">
-			<h1 id = "f1" class = "tt" >Registre Broadcasting </h1>
-		</a>
-		<a href="ott_form.html">
-			<h1 id = "f2" class = "tt" >Registre OTTs</h1>
-		</a>
-	</section>
-	<section id="mid" class = "one-third">
-		<a href="broadcast_map.html">
-			<h1 id = "m1" class = "tt" >Plànol Broadcasting </h1>
-		</a>
-		<a href="ott_map.html">
-			<h1 id = "m2" class = "tt">Plànol OTTs</h1>
-		</a>
-	</section>
-	<section id="bot" >
-		<a id = "cont" href="index_contacte.html">
-			<h1 id="op3" class = "tt">Contacte</h1>
-		</a>
-	 </section>
-	 
-      
-	  
-	  <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-	<!--  other -->
-	 <!-- the stub for Cordova/Phonegap; this file doesn't exist but this entry must be here -->
-    <script type="text/javascript" src="cordova.js"></script>
+
+	<a href = "broadcast_map.html" style = "
+		background: url('img/1024_BR.png'); 
+		background-size:calc(100vw * .125) calc(100vw * .125); 
+		position: absolute; 
+		top: calc(100vh * 0.25 - 100vw*.0625); 
+		left: calc(100vw * 0.5 - 100vw*.0625); 
+		width: calc(100vw * .125); 
+		height: calc(100vw* .125); 
+		background-repeat: no-repeat; border-radius: 30px;"></a>
+
+	<a href = "ott_map.html" style = "
+		background: url('img/1024_IP.png'); 
+		background-size:calc(100vw * .125) calc(100vw * .125); 
+		position: absolute; 
+		top: calc(100vh * 0.75 - 100vw*.0625); 
+		left: calc(100vw * 0.5 - 100vw*.0625); 
+		width: calc(100vw * .125); 
+		height: calc(100vw* .125); 
+		background-repeat: no-repeat; border-radius: 30px;"></a>
 
 	
-    <!--<script type="text/javascript" src="js/index.js"></script>-->
 
+	<!--  other -->
+
+    <script type="text/javascript" src="cordova.js"></script>
+    
+	
 	
 	
 </body>

@@ -18,7 +18,7 @@
 	<nav id="menu-desplegable">
 	  <ul>
 		<li class="contingut-menu"><a href = "index.html">Inici</a></li>
-		<li class = "contingut-menu"><a href = "ott_form.html">Registre OTTs</a></li>
+		<li class = "contingut-menu"><a href = "ott_form.html">Nova OTT</a></li>
 		<li class="contingut-menu"><a href = "ott_map.html">Plànol OTTs</a></li>
 		<li class = "contingut-menu"> <a href = "ott_contacte.html">Contacte</a></li>
 	  </ul>
@@ -103,7 +103,9 @@
 						<img src="img/CAC.png" align="middle" style="width:20%;display:block;margin-left: auto;margin-right: auto">
 					</div>
 			<div class = "five2x" id = "fivemap"></div>
-			<div id = "pinmap" class="map icon"></div>
+			<div id = "pinmap2" class="map icon"></div>
+			<div class = "llegenda" id = "ll1">Botons</div>
+			<div class  = "infico" id = "textmapllist">Mapa/Formulari</div>
 		</div>
 	</div>
 	
@@ -124,7 +126,7 @@
 	}
 
 	function load(){
-		$("#pinmap").click(function(){
+		$("#pinmap2").click(function(){
 			$("div#fivemap").slideToggle();
 			$("iframe.formulari").slideToggle();
 
@@ -134,7 +136,7 @@
 			if($("div#fivemap").css("display") == "none"){
 				$("div#fivemap").slideToggle();
 				$("iframe.formulari").slideToggle();
-				$("#pinmap")
+				$("#pinmap2")
 					.toggleClass('map')
 				    .toggleClass('import');
 			}

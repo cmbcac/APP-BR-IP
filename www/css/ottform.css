@@ -48,11 +48,30 @@ h1{
 }
 
 .top{
-	background-color: #FF6B6B;
+	color: #FF6B6B;
 }
 
 textarea{
   width:100%;
+}
+.llegenda{
+  position: absolute;
+  font-size: 0.7em;
+  width: calc(100vw);
+  /*left: calc(100vw*0.5 - 2em);*/
+  background-color:#fff6ef;
+  text-align: center;
+}
+#ll1{
+  top:calc(100vh*0.77);
+}
+.infico{
+  position: absolute;
+  top:calc(100vh*0.82);
+  font-size: 0.7em;
+}
+#textmapllist.infico{
+  left:calc(100vw*0.5 - 2.5em);
 }
 
 /* get the styles for both icon*/
@@ -104,6 +123,10 @@ textarea{
   transition: all 0.4s ease;
 }
 
+#pinmap2{
+  top: calc(100vh*0.85);
+  left: calc(100vw*0.5 - .5em);
+}
 
 @media screen and (max-width: 284px){
 	#titol-principal{

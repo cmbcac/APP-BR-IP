@@ -199,6 +199,18 @@ li.blanc{
   right:1em;
 }
 
+#clic{
+  left:calc(100vw*0.5 - 1em);
+}
+
+#clic.info:before{
+  background: url('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
+  background-size:16px 16px;
+  background-repeat: no-repeat;
+  left:1em;
+  right:1em;
+}
+
 .pin.icon {
   color: #000;
   position: absolute;
