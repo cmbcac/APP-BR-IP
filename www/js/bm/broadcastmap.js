@@ -908,89 +908,7 @@ class Poble{
 	setTitol(titol){
 		this.titol=titol;
 	}
-	getRadiosHTML(){
-		var ready = true;
-		var filterend = "TELEVISIÓ NACIONAL";
-		var s="";
-		for(var i = 0;  i <this.descripcio.length; i++){
-			s = s 
-			var t = this.descripcio[i].getTitol();
-			if(t == filterend) ready = false;
-			if(ready){
-				var c = this.descripcio[i].getContingut();
-				if (c != "" && c != undefined){
-					s = s + t + ": " + c;
-				}
-				else{
-					if ( c == undefined){
-						s = s + t;
-					}
-					if (c == ""){
-						s = s + t;
-					}
-				}
-				s = s+ "\n"
-			}
 
-		}
-		return s
-	}
-	getTVSHTML(){
-		var ready = false;
-		var filter = "TELEVISIÓ NACIONAL";
-		var filterend = "ALTRES FORMES DE COMUNICACIÓ 1";
-		var s="";
-		for(var i = 0;  i <this.descripcio.length; i++){
-			s = s ;
-			var t = this.descripcio[i].getTitol();
-			if(t == filter) ready = true;
-			if(t == filterend) ready = false;
-			if(ready){
-				var c = this.descripcio[i].getContingut();
-				if (c != "" && c != undefined){
-					s = s + t + ": " + c;
-				}
-				else{
-					if ( c == undefined){
-						s = s +  t ;
-					}
-					if (c == ""){
-						s = s + t;
-					}
-				}
-				s = s+ "\n"
-			}
-
-		}
-		return s;
-	}
-	getOthersHTML(){
-		var ready = false;
-		var filter = "ALTRES FORMES DE COMUNICACIÓ 1"
-		var s="";
-		for(var i = 0;  i <this.descripcio.length; i++){
-			s = s; 
-			var t = this.descripcio[i].getTitol();
-			if(t == filter) ready = true;
-			if(ready){
-				var c = this.descripcio[i].getContingut();
-				if (c != "" && c != undefined){
-					s = s + t + ": " + c;
-				}
-				else{
-					if ( c == undefined){
-						s = s +  t ;
-					}
-					if (c == ""){
-						s = s + t;
-					}
-				}
-				s = s+ "\n";
-	
-			}
-		}
-		return s;
-	}
 	
 	getMapDetalls(){
 		var s = new Map();
@@ -1202,7 +1120,6 @@ function controlaInformacio(data,nom){
 					$('ul#list2').children().remove();
 					$('ul#list3').children().remove();
 					$('ul#list4').children().remove();
-					//$('ul#list5').children().remove();
 					
 					$('ul#list1').append('<li class ="blanc"> RÀDIO NACIONAL </li>');
 					$('ul#list2').append('<li class = "blanc"> -- </li>');
@@ -1291,7 +1208,8 @@ function togglemapform(){
 			}
 			
 		}
-	})
+	});
+	$("#llegenda-mapa").slideToggle();
 }
 
 function load(){
@@ -1300,6 +1218,7 @@ function load(){
 	});
 	$("#comico").click(function(){
 		$("#gform").toggle("slow");
+		$("#textcomentari")[0].innerText = $("#textcomentari")[0].innerText == "Comenta" ? "Amaga Comentari" : "Comenta";
 	})
 	console.log("carregat");
 }

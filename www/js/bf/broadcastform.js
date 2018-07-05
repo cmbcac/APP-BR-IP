@@ -827,6 +827,8 @@ function load(){
 		$("#sigico").toggleClass('signal').toggleClass('pin');
 		$("div#map_form").slideToggle();	
 		$(".formulari").slideToggle();
+		$("#textmapllist")[0].innerText = $("#textmapllist")[0].innerText == "Mostra Mapa" ? "Torna al formulari" : "Mostra Mapa";
+		$("#textcomentari")[0].innerText = $("#textcomentari")[0].innerText == "Mostra Cobertures" ? "Geolocalització" : "Mostra Cobertures";
 	});
 	
 	// quan fas click al símbol de cobertura 
@@ -864,6 +866,8 @@ function load(){
 
 			}
 			$('.el').css('height', $('.nel').innerHeight());
+
+			$("#textcomentari")[0].innerText = $("#textcomentari")[0].innerText == "Mostra Cobertures" ? "Amaga Cobertures" : "Mostra Cobertures";
 		}
 		if($("#sigico").attr("Class") == "icon pin"){
 			navigator.geolocation.getCurrentPosition(function(position) {

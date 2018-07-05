@@ -25,8 +25,7 @@
 
 	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 			<!-- jquery -->
 	<script type = "text/javascript" src="js/markerclusterer.js"></script> 								<!-- agrupar marcadors -->
-	<script type = "text/javascript" src="js/Detall.js"></script>
-	<script type = "text/javascript" src="js/Poble.js"></script>
+	<script type = "text/javascript" src="js/classes.js"></script>
 	<script type = "text/javascript" src="js/funcionalitats.js"></script>
 	<script type = "text/javascript" src="js/om/ottmap.js"></script> 									<!-- script per carregar les dades -->
 </head>
@@ -69,20 +68,20 @@
 						</div>
 				</div>
 				<form id = "gform" class = "" action = "https://script.google.com/macros/s/AKfycbzvJSmWHdK6sZHboTTtw_hQZfBDM_JcBPjlkW-R1xIsyB5x3bTL/exec">
-					<div class = "top"><h4>Comenta la OTT seleccionada</h4></div>
+					<div class = "top"><h4>Comentaris</h4></div>
 					<div class = "recipientinputs">
 						<input placeholder = "Nom i Cognoms" name = "Nom i cognoms" value = "" required/>
 						<input placeholder = "Telèfon" name = "Telèfon" value = "" />
 						<input placeholder = "Correu Electrònic*" name = "Correu" value = "" required>
-						<div style = "display: none">
+						<div>
 							<label for = "Latitud">Latitud* </label>
 							<input id = "Latitud" name = "latitud" value = "" required/ placeholder="Click al mapa" data-mini="true" readonly>
 						</div>
-						<div style = "display: none">
+						<div>
 							<label for = "Longitud">Longitud* </label>
 							<input id = "Longitud" name = "Longitud" value = "" required/ placeholder="Click al mapa" data-mini = "true" readonly>
 						</div>
-						<div style = "display: none">
+						<div>
 							<label for = "Municipi">Municipi* </label>
 							<input id = "Municipi" name = "Municipi" value = "" required/ placeholder="Municipi" readonly>
 						</div>
@@ -93,30 +92,22 @@
 					</div>
 					<button = style = "background-color:#295E86; color:white"><i></i>&nbsp; Envia </button>
 				</form>
-				
-				<div class = "" id = "llegenda-mapa" style = "position:absolute; width: 100px; height:100px; bottom:calc(1vh); right:calc(1vw); background-color:white; border-radius:10px; opacity: 50%; display:grid; grid-template-row: 1fr 2fr 2fr">
-					<div style = "font-size: 0.7em"> Llegenda </div>
-					<div>
-						<div  class = "info" id = "aj"> Sense clicar</div>
-						<div style = " background: url('img/logo-IPTV3.png');background-size:16px 16px; background-repeat: no-repeat; height:16px; width: 16px;margin-left:3px"></div>
-					</div>
-					<div>
-						<div  class = "info" id = "us"> Clicada </div>
-						<div style = " background: url('img/logo-IPTV2.png');background-size:16px 16px; background-repeat: no-repeat; height:16px; width: 16px; margin-left:3px"></div>
-					</div>
-				</div>
-
-
-
  			</div>
 
-			<div class  = "infico" id = "textmapllist">Mostra detalls OTT</div>
-			<div id = "pinmap" class="tv icon"></div>
-			<div class = "infico" id = "textcomentari">Comenta</div>
-			<div id = "comico" class ="keyboard icon"></div>
-					
-			
 
+			<div class = "llegenda" id = "ll1">Botons</div>
+			<div class = "12" id = "1">
+				<div class  = "infico" id = "textmapllist">Mostra detalls OTT</div>
+				<div id = "pinmap" class="tv icon"></div>
+			</div>
+			<div class = "12" id = "2">
+				<div class = "infico" id = "textcomentari">Comenta</div>
+				<div id = "comico" class ="keyboard icon"></div>
+			</div>
+			<!--
+			<div class = "llegenda" id = "ll2">Llegenda mapa</div>
+			<div  class = "info" id = "aj"> Sense clicar</div>
+			<div  class = "info" id = "us"> Clicada </div>-->
 		</div>
 	</div>
 	

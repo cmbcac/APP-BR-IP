@@ -1,0 +1,219 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+body{
+	min-width: 319px;
+	min-height:319px;
+	overflow:scroll;
+	font-family: 'Scope One', serif;
+}
+
+/* titol */
+h1{
+	color:#FF6B6B;
+}
+
+.top{
+  color: #FF6B6B;
+}
+
+#titol-principal{
+	text-align:center;
+}
+
+
+.embolcall{
+	width: 100vw;
+	height: 100vh;
+}
+
+.gran{
+    display: block;
+    width: calc(100vw*0.9);
+    height: calc(100vh*0.7);
+    left: calc(100vw*0.06);
+    position: absolute;
+    top: calc(100vh*0.05);
+}
+
+.five2x {
+	height:100%;
+	border-radius: 10px;
+}
+
+#fiveinfo1{
+	min-width: 0;
+	max-height: 100%;
+  /*background-color:#f3f3f3;*/
+	display: none;
+  height:100%;
+  width:100%;
+}
+
+.fiveinfocontent{
+	text-align:center;
+	border-radius: 10px;
+	overflow-y:scroll;
+	max-height:206px;
+	min-width: 0px;
+	min-height:0px;
+	display:grid;
+}
+
+#radios{
+	height:100%;
+	max-height: 100%;
+}
+
+ul{
+	list-style-type: none;	
+	white-space: nowrap
+}
+
+a.url {
+  text-decoration: none;
+}
+a.url:link, a.url:visited {
+    color: #b46bff;
+}
+a.url:hover {
+    color: red;
+}
+
+#others.fiveinfocontent{
+	grid-template-columns: 1fr;
+}
+
+
+#gform{
+  min-width: 0;
+  width: calc(100vw * 0.6);
+  display: none;
+  position: absolute;
+  background-color:#fff7f2;
+  left: calc(100vw * 0.15);
+  overflow: scroll;
+  top: 50%;
+  border-radius: 10px;
+  transform: translateY(-50%);
+}
+
+.llegenda{
+  position: absolute;
+  font-size: 0.7em;
+  width: calc(100vw);
+  /*left: calc(100vw*0.5 - 2em);*/
+  background-color:#fff6ef;
+  text-align: center;
+}
+#ll1{
+  top:calc(100vh*0.75);
+}
+
+#ll2{
+  top:calc(100vh*0.875);
+}
+.infico{
+  position: absolute;
+  top:calc(100vh*0.77);
+  font-size: 0.7em;
+}
+#textmapllist.infico{
+  left:calc(100vw*0.25 - 2em);
+}
+#textcomentari.infico{
+  left:calc(100vw*0.75 - 1em);
+}
+
+.info{
+  position: absolute;
+  top:calc(100vh*0.9);
+  font-size: 0.7em;
+}
+.info:before{
+  content:"";
+  width:32px;
+  height:32px;
+  top: 16px;
+  left:2em;
+  position: absolute;
+  display: inline-block;
+}
+
+#aj{
+  left:calc(100vw*0.25 - 2em);
+}
+#aj.info:before{
+  background: url('../img/logo-IPTV3.png');
+  background-size:16px 16px;
+  background-repeat: no-repeat;
+}
+#us{
+  left:calc(100vw*0.75 - 1em);
+}
+
+#us.info:before{
+  background: url('../img/logo-IPTV2.png');
+  background-size:16px 16px;
+  background-repeat: no-repeat;
+  left:1em;
+  right:1em;
+}
+
+
+.pin.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 2px;
+  width: 12px;
+  height: 12px;
+  border: solid 1px currentColor;
+  border-radius: 7px 7px 7px 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.pin.icon:before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 4px;
+  height: 4px;
+  border: solid 1px currentColor;
+  border-radius: 3px;
+}
+
+.icon, .icon:before, .icon:after, .icon i, .icon i:before, .icon i:after { 
+  transition: all 0.4s ease;
+}
+
+
+
+
+@media screen and (max-width: 284px){
+	#titol-principal{
+		font-size: 0.7em;
+	}
+}
+@media screen and (max-width: 568px) and (min-width: 284px) {
+	#titol-principal{
+		font-size: 0.8em;
+	}
+}
+@media screen and (max-width: 852px) and (min-width: 568px) {
+	#titol-principal{
+		font-size: 1.2em;
+	}
+}
+@media screen and (max-width: 1136px) and (min-width: 852px) {
+	#titol-principal{
+		font-size: 1.4em;
+	}
+}
+

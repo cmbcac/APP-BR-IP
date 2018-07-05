@@ -104,8 +104,7 @@
 					</div>
 			<div class = "five2x" id = "fivemap"></div>
 			<div id = "pinmap2" class="map icon"></div>
-			<div class = "llegenda" id = "ll1">Botons</div>
-			<div class  = "infico" id = "textmapllist">Mapa/Formulari</div>
+			<div class  = "infico" id = "textmapllist">Mostra Mapa</div>
 		</div>
 	</div>
 	
@@ -139,6 +138,7 @@
 				$("#pinmap2")
 					.toggleClass('map')
 				    .toggleClass('import');
+				$("#textmapllist")[0].innerText = $("#textmapllist")[0].innerText == "Amaga Mapa" ? "Mostra Mapa" : "Amaga Mapa";
 			}
 
 		});
@@ -191,6 +191,7 @@
 		$(this)
 				.toggleClass('map')
 			    .toggleClass('import');
+		$("#textmapllist")[0].innerText = $("#textmapllist")[0].innerText == "Amaga Mapa" ? "Mostra Mapa" : "Amaga Mapa";
 	})	
 
 	window.onload = load;

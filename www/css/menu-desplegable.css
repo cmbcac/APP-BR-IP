@@ -113,7 +113,7 @@ a:hover {
 
 
 
-/* get the styles for both icon*/
+/* get the styles for both icon
 @import "http://cssicon.space/css/icons.css";
 .arrow-left.icon {
   color: #000;
@@ -156,7 +156,7 @@ a:hover {
   border-right: solid 1px currentColor;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-}
+}*/
 
 .icon, .icon:before, .icon:after, .icon i, .icon i:before, .icon i:after { 
   transition: all 0.4s ease;
