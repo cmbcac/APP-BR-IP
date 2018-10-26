@@ -1219,7 +1219,12 @@ function load(){
 	$("#comico").click(function(){
 		$("#gform").toggle("slow");
 		$("#textcomentari")[0].innerText = $("#textcomentari")[0].innerText == "Comenta" ? "Amaga Comentari" : "Comenta";
-	})
+	});
+	$(".five").click(function(){
+		
+		$("#gform").hide();
+		$("#textcomentari")[0].innerText = $("#textcomentari")[0].innerText == "Comenta" ? "Amaga Comentari" : "Comenta";
+	});
 	console.log("carregat");
 }
 

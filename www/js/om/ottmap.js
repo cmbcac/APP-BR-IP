@@ -109,6 +109,12 @@ function load(){
 	});
 	$("#comico").click(function(){
 		$("#gform").toggle("slow");
+		$("#textcomentari")[0].innerText = $("#textcomentari")[0].innerText == "Comenta" ? "Amaga Comentari" : "Comenta";
+	});
+	$(".gran").click(function(){
+		
+		$("#gform").hide();
+		$("#textcomentari")[0].innerText = $("#textcomentari")[0].innerText == "Comenta" ? "Amaga Comentari" : "Comenta";
 	});
 	console.log("carregat");
 }
@@ -235,7 +241,6 @@ function omple_mapa_amb_data_de_comarca_nom(data){
 
 }
 
-
 function parseja_data(data){
 	
 	//treiem els primers caracters i ultims per poder parsejar
@@ -334,12 +339,10 @@ function peticioXMLHttp(id){
     xmlhttp.send();
 }
 
-
 function handleBefore() {
 	//innecessari de moment, comunica que hi ha un nou proces fent-se
 	inProgress++;
 };
-
 
 function handleComplete() {
 	//es diu que hi ha un proces menys i si no n'hi ha cap s'executa el clusteritzador
