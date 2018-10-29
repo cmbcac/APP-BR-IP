@@ -105,15 +105,16 @@ function alterna_vista_mapaformulari(){
 
 function load(){
 	$("#pinmap").click(function(){
-		alterna_vista_mapaformulari();
+		togglemapform();
 	});
 	$("#comico").click(function(){
 		$("#gform").toggle("slow");
+		
 		$("#textcomentari")[0].innerText = $("#textcomentari")[0].innerText == "Comenta" ? "Amaga Comentari" : "Comenta";
 	});
-	$(".gran").click(function(){
+	$("#gformback").click(function(){
+		$("#gform").toggle("slow");
 		
-		$("#gform").hide();
 		$("#textcomentari")[0].innerText = $("#textcomentari")[0].innerText == "Comenta" ? "Amaga Comentari" : "Comenta";
 	});
 	console.log("carregat");

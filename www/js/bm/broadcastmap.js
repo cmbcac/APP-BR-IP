@@ -565,7 +565,6 @@ function vallesoriental(){
 }
 
 
-
 function setValorInProgress(){
 	return 41;
 }
@@ -665,7 +664,6 @@ function setIcon(){
 
 	};
 }
-
 
 function afegeixUsuaris(pobles, entry){
 	var p = new Poble(entry['gsx$direcció'].$t);
@@ -849,7 +847,6 @@ function obtenEntrys(pobles, poble, entry, canals, canalscomarca){
 }
 
 
-
 //classes per guardar les dades
 class Detall{
 	constructor(titol, contingut){
@@ -1005,9 +1002,6 @@ function updateIndicator() {
 		}
 	}
 }
-
-
-
 
 
 //innecessari de moment, comunica que hi ha un nou proces fent-se
@@ -1212,17 +1206,20 @@ function togglemapform(){
 	$("#llegenda-mapa").slideToggle();
 }
 
+
+
 function load(){
 	$("#pinmap").click(function(){
 		togglemapform();
 	});
 	$("#comico").click(function(){
 		$("#gform").toggle("slow");
+		
 		$("#textcomentari")[0].innerText = $("#textcomentari")[0].innerText == "Comenta" ? "Amaga Comentari" : "Comenta";
 	});
-	$(".five").click(function(){
+	$("#gformback").click(function(){
+		$("#gform").toggle("slow");
 		
-		$("#gform").hide();
 		$("#textcomentari")[0].innerText = $("#textcomentari")[0].innerText == "Comenta" ? "Amaga Comentari" : "Comenta";
 	});
 	console.log("carregat");
