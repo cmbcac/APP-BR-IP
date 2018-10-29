@@ -159,7 +159,7 @@ html,body {/*  */
   animation: rotate 20s linear infinite;
 }
 
-@keyframes rotate {
+@-webkit- keyframes rotate {
   0% {
     background-position: 0%;
   }
