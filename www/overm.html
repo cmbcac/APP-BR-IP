@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset = 'utf-8'/>
+  <meta name = "viewport" content = "width=device-width, initiall-scale = 1, minimum-scale = 1, maximum-scale = 1, viewport-fit=cover">
+  <meta name = "mobile-web-app-capable" content = "yes">
+  <meta name = "apple-mobile-web-app-capable" content = "yes">
+
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/markerclusterer.js"></script>
+  <script src = "js/overm.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
+  <link rel = "stylesheet" type="text/css" href = "css/general.css"/>
+  <link rel = "stylesheet" type="text/css" href = "css/overm.css"/>
+
+  <title> Plànol Cobertures Ràdio i Televisió</title>
+</head>
+<body>
+  <nav class = "CaixaMenu minusOnLeft id" id = "menu-desplegable">
+    <ul>
+    <li class = ""><a href = "index.html">Inici</a></li>
+    <li class = ""><a href = "overf.html">Nova OTT</a></li>
+    <li class = ""><a href = "overm.html">Plànol OTTs</a></li>
+    <li class = ""><a href = "overc.html">Contacte</a></li>
+    </ul>
+  </nav>
+  <div class = "CaixaPetita onLeft">
+    <button type = "button" id = "Lateral">Menú</button>
+    <h1 id = "titol-principal">Plànol OTTs</h1>
+  </div>
+  <div class = "CaixaGran onLeft">
+
+    <div class = "Calgary88 shown" id = "Ubicacio">
+      <div class = "ContenidorMapa" id = "Mapa"></div>
+    </div>
+    <div class = "Calgary88 hidden" id = "Cobertures">
+      <div class = "BatiscafoKatiuscas" id = "Ràdios">
+        <div class = "WaYeah"> <ul id = "list1"> </ul> </div>
+      </div>
+    </div>
+    <form class = "Calgary88 hidden" id = "gform"  action = "https://script.google.com/macros/s/AKfycbzvJSmWHdK6sZHboTTtw_hQZfBDM_JcBPjlkW-R1xIsyB5x3bTL/exec">
+      <div class = "top"><h4>Comentaris</h4></div>
+      <div class = "recipientinputs">
+        <input placeholder = "Nom i Cognoms*" name = "Nom i cognoms" value = "" required />
+        <input placeholder = "Telèfon" name = "Telèfon" value = ""/>
+        <input placeholder = "Correu Electrònic*" name = "Correu" value = "" required>
+        <div style = "display:none">
+          <label for = "Latitud"> Latitud* </label>
+          <input id="Latitud" name = "Latitud" value = "" required/ placeholder = "Click al mapa" data-mini = "true" readonly>
+        </div>
+        <div style = "display:none">
+          <label for="Longitud">Longitud* </label>
+          <input id="Longitud" name="Longitud" value = "" required/ placeholder = "Click al mapa" data-mini = "true" readonly>
+        </div>
+        <div style = "display:none">
+          <label for = "Entitat">Municipi* </label>
+          <input id="Entitat" name = "Entitat" value = "" required/ placeholder = "Entitat" readonly>
+        </div>
+        <div style = "display:none">
+          <label for="Comarca">Comarca* </label>
+          <input id="Comarca" name="Comarca" value = "" required/ placeholder = "Comarca" readonly>
+        </div>
+        <div>
+
+          <input id="Comentari" name="Comentari" value = "" required/ placeholder = "Comentari">
+        </div>
+      </div>
+      <button id = "envia">Envia</button>
+    </form>
+
+  </div>
+  <div class = "CaixaGran onLeft" id = "thankyou_message">
+    <div class = "Calgary88 shown" >
+      El formulari s'ha enviat correctament
+    </div>
+  </div>
+  <dic class = "Botons">
+    <div class = "ContenidorDots onLeftDot">
+      <div class = "dot onPointer" id = "d0"></div>
+      <div class = "dot offPointer" id = "d1"></div>
+      <div class = "dot offPointer" id = "d2"></div>
+    </div>
+  </div>
+
+</body>
+<script data-cfasync="false" type = "text/javascript" src = "js/form-submission-handler.js"></script>
+<script async defer src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAqa-2L_YRe22lkHLFDasHHDaXkAokWVFE&callback=initMap"></script>
+</html>

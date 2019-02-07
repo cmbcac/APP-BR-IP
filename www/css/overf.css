@@ -1,0 +1,41 @@
+.ContenidorMapa {
+    position: relative;
+    width: 90vw;
+    height: 55vh;
+}
+#Contacte{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+textarea{
+  width: 100%;
+}
+select{
+  width:90%;
+  background: antiquewhite;
+}
+#Centre{
+  background-color: #9ce49fad;
+  position: relative;
+  top: calc(40vh - 50px);
+  width: 100px;
+  height: 100px;
+  left: calc(45.5vw - 50px);
+  border-radius: 50%;
+  cursor: pointer;
+}
+#Centre:hover{
+  background:#9ce49f;
+}
+
+#geo{
+  background: #9ce49fad;
+  cursor:pointer;
+}
+#geo:hover{
+  background: #9ce49f;
+}
+
+#d2{
+  display:none;
+}

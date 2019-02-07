@@ -22,12 +22,12 @@ function getFormData() {
     var str = ""; // declare empty string outside of loop to allow
                   // it to be appended to for each item in the loop
     if(elements[k].type === "checkbox"){ // special case for Edge's html collection
-      str = str + elements[k].checked + ", "; // take the string and append 
-                                              // the current checked value to 
-                                              // the end of it, along with 
+      str = str + elements[k].checked + ", "; // take the string and append
+                                              // the current checked value to
+                                              // the end of it, along with
                                               // a comma and a space
-      data[k] = str.slice(0, -2); // remove the last comma and space 
-                                  // from the  string to make the output 
+      data[k] = str.slice(0, -2); // remove the last comma and space
+                                  // from the  string to make the output
                                   // prettier in the spreadsheet
     }else if(elements[k].length){
       for(var i = 0; i < elements[k].length; i++){
@@ -58,7 +58,17 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         console.log( xhr.status, xhr.statusText )
         console.log(xhr.responseText);
         document.getElementById('gform').style.display = 'none'; // hide form
-        document.getElementById('thankyou_message').style.display = 'block';
+        $(".ContenidorDots").css('display','none')
+        if(xhr.status == 200){
+          //success
+          document.getElementById('thankyou_message').style.display = 'block';
+        }
+        else{
+          //not success
+          document.getElementById('thankyou_message').innerText = "Hi ha hagut un error, torni-ho a intentar després";
+          document.getElementById('thankyou_message').style.display = 'block';
+        }
+
         return;
     };
     // url encode form data for sending as post data
@@ -66,7 +76,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
     }).join('&')
     xhr.send(encoded);
-  
+
 }
 function loaded() {
   console.log('contact form submission handler loaded successfully');

@@ -1,0 +1,46 @@
+.ContenidorMapa {
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+    border-radius: 5px;
+}
+#Cobertures{
+  overflow: scroll;
+  height: calc(80vh);
+}
+
+.BatiscafoKatiuscas{
+  text-align:center;
+  border-radius: 10px;
+  overflow-y:scroll;
+  min-width: 0px;
+  min-height:0px;
+  height: 100%
+
+}
+
+#Ràdios{
+  background: aliceblue;
+}
+
+.blanc{
+  background:white;
+}
+
+#list1, #list3{
+  white-space: nowrap;
+}
+
+#envia{
+  background: #9ce49fad;
+  cursor:pointer;
+  width: 99%;
+}
+#envia:hover{
+  background:#9ce49f;
+}
+
+
+#d1, #d2{
+  display:none;
+}

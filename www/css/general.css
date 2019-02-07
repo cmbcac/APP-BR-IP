@@ -1,0 +1,186 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body{
+  width: 100vw;
+  height: 100vh;
+  overflow:hidden;
+  font-family: 'Scope One', serif;
+}
+
+#Lateral{
+  background-color: antiquewhite;
+  top: calc(0.5vh);
+  position: absolute;
+  left: calc(2vw);
+  border-radius:5px;
+  padding: 2px;
+  cursor:pointer
+}
+
+.CaixaMenu{
+  background-color: #fff6f3;
+  width: calc(40vw);
+  height: calc(100vh);
+  position: absolute;
+  padding-top: 20px;
+}
+
+.CaixaPetita{
+  position:absolute;
+  width: calc(100vw);
+  height: calc(10vh);
+  margin-top: 20px;
+}
+
+.CaixaGran{
+  position: absolute;
+  width: calc(100vw);
+  height: calc(90vh);
+  top: calc(10vh);
+  margin-top: 20px;
+}
+
+.minusOnLeft{
+  left:calc(-40vw);
+}
+
+.minusOnRight{
+  left:0;
+}
+
+.onLeft{
+  left:0;
+}
+
+.onRight{
+  left:calc(40vw);
+}
+
+.hidden{
+  display:none;
+}
+
+.shown{
+  display: block;
+}
+
+.top{
+  color: #FF6B6B;
+}
+
+.top2{
+  color:#ff9c9c;
+}
+
+h1, h4{
+  text-align: center;
+  color: #FF6B6B;
+}
+
+.Calgary88{
+  position:relative;
+  width:calc(90vw);
+  height: calc(80vh);
+  left:calc(5vw);
+}
+
+.onLeftDot{
+  left: calc(50vw - 50px);
+}
+
+.onRightDot{
+  right: calc(5vw - 50px);
+}
+
+.ContenidorDots{
+  position: absolute;
+  bottom: 0;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.onPointer{
+  background-color: #4853ff;
+}
+
+.offPointer{
+  background-color: #acb1ff;
+}
+
+
+li{
+	list-style-type: none;
+}
+
+input{
+  width:99%;
+}
+#thankyou_message{
+  display:none;
+}
+
+nav#menu-desplegable {
+  float: left;
+
+  -moz-transition: all 220ms;
+  -webkit-transition: all 220ms;
+  transition: all 220ms;
+}
+nav#menu-desplegable > ul {
+  display: block;
+  margin: 40px;
+  padding: 0;
+  list-style: none;
+
+  -moz-transition: all 220ms;
+  -webkit-transition: all 220ms;
+  transition: all 220ms;
+}
+nav#menu-desplegable > ul li {
+  padding: 6px 0;
+  cursor: pointer;
+}
+nav#menu-desplegable > ul li:hover {
+  color: #59e9df;
+}
+
+nav#menu-desplegable > ul li:before {
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+
+  margin-right: 12px;
+  text-align: center;
+  font-variant: normal;
+  font-size: 0.75em;
+  text-transform: none;
+  line-height: 1em;
+}
+/*per treure els links i la decoraciÃ³ i tot*/
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #FF6B6B;
+}
+
+a:hover {
+    color: red;
+}
+
+@media screen and(max-width: 199px){h1{ font-size: 0.7em;}}
+@media screen and (min-width: 200px) and (max-width: 320px){h1{font-size: 1.1em;}}
+@media screen and (min-width: 321px) and (max-width: 429px){h1{font-size: 1.3em;}}
+@media screen and (min-width: 430px) and (max-width: 590px){h1{font-size: 1.6em;}}

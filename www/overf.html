@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset = 'utf-8'/>
+  <meta name = "viewport" content = "width=device-width, initial-scale=1, minimum-scale = 1, maximum-scale = 1, viewport-fit=cover">
+  <meta name = "mobile-web-app-capable" content = "yes">
+  <meta name = "apple-mobile-web-app-capable" content = "yes">
+
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src = "js/overf.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
+  <link rel = "stylesheet" type="text/css" href = "css/general.css"/>
+  <link rel = "stylesheet" type="text/css" href = "css/overf.css"/>
+
+  <title> Registre d'una OTT </title>
+</head>
+<body>
+  <nav class = "CaixaMenu minusOnLeft" id = "menu-desplegable">
+    <ul>
+		<li class = ""><a href = "index.html">Inici</a></li>
+		<li class = ""><a href = "overf.html">Nova OTT</a></li>
+		<li class = ""><a href = "overm.html">Plànol OTTs</a></li>
+		<li class = ""><a href = "overc.html">Contacte</a></li>
+	  </ul>
+  </nav>
+  <div class = "CaixaPetita onLeft">
+    <button type = "button" id = "Lateral">Menú</button>
+    <h1 id = "titol-principal">Registre OTT</h1>
+  </div>
+  <form class = "CaixaGran onLeft" id = "gform">
+
+    <div class = "Calgary88 shown" id = "Ubicacio">
+      <h4> Mapa </h4>
+      <div class = "top"> Ubicació</div>
+      <input placeholder = "Latitud" class = "ubi" name = "Latitud" value = "" id ="Latitud" readonly/>
+      <input placeholder = "Longitud" class = "ubi" name = "Longitud" value = "" id = "Longitud" readonly/>
+      <input placeholder = "Municipi" name = "Indiqueu el municipi des d’on ompliu el formulari:" value = "" id = "Municipi"/>
+      <button type = "button"id = "geo"> Geolocalització </button>
+      <div class = "ContenidorMapa" id = "Mapa"></div>
+    </div>
+    <div class = "Calgary88 hidden" id = "Contacte">
+      <h4> Dades de contacte i canals </h4>
+      <div id="dadesEntitat">
+        <div class="top"><h4>Dades entitat</h4></div>
+        <input name = "Entitat" value ="" required/ placeholder="Nom Entitat" class="nomEntitat">
+        <input name = "Nom Comercial" value ="" required/ placeholder="Nom Comercial">
+        <select id = "Tipus" name = "Tipus">
+          <option value = "Pública">Pública</option>
+          <option value = "Privada">Privada</option>
+        </select>
+      </div>
+
+      <div id="plataformes">
+        <div class="top">Plataformes (indiqui mínim una)*</div>
+        <div class="urls">
+          <div id ="directe" class = "caixaUrl">
+            <div class = "top">Directe</div>
+            <input id="Directe URL" name = "Directe URL" placeholder="URL emissions en directe">
+          </div>
+          <div id = "carta" class = "caixaUrl">
+            <div class = "top">Carta</div>
+            <input id="CartaURL" name = "Carta URL" placeholder = "URL contingut a la carta">
+          </div>
+          <div id = "youtube" class = "caixaUrl">
+            <div class = "top">Youtube</div>
+            <input id= "Youtube URL" name = "Youtube URL" placeholder="URL Youtube">
+          </div>
+          <div id = "vimeo" class = "caixaUrl">
+            <div class = "top">Vimeo</div>
+            <input id = "VimeoURL" name = "Vimeo URL" placeholder="URL Vimeo">
+          </div>
+          <div id = "xiptv" class = "caixaUrl">
+            <div class = "top">XipTV</div>
+            <input id = "XiptvURL" name ="Xiptv URL" placeholder="URL XipTV">
+          </div>
+          <div id = "Altra" class = "caixaUrl">
+            <div class = "top">Altra</div>
+            <input id = "AltraURL" name = "Altra URL" placeholder="URL altra plataforma">
+          </div>
+          <div id = "Canal TDT" class = "caixaUrl">
+            <div class ="top">Canal TDT</div>
+            <input id = "CanalTDT" name = "Canal TDT" placeholder="Canal TDT">
+          </div>
+        </div>
+      </div>
+      <div id = "observacions">
+        <div class="top">Observacions</div>
+        <textarea id="Observacions" name="Observacions" value="" placeholder="Escrigui aqui si té alguna observació més"></textarea>
+      </div>
+    </div>
+    <div class = "Calgary88 hidden" id = "Send">
+      <button id = "Centre"> Envia</button>
+    </div>
+
+  </form>
+  <div class = "CaixaGran onLeft" id = "thankyou_message">
+    <div class = "Calgary88 shown" >
+      El formulari s'ha enviat correctament
+    </div>
+  </div>
+  <dic class = "Botons onLeft">
+    <div class = "ContenidorDots onLeftDot">
+      <div class = "dot onPointer" id = "d0"></div>
+      <div class = "dot offPointer" id = "d1"></div>
+      <div class = "dot offPointer" id = "d2"></div>
+    </div>
+
+  </div>
+</body>
+  <!-- google maps i formulari -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqa-2L_YRe22lkHLFDasHHDaXkAokWVFE&callback=initMap"> </script>
+  <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+
+</html>

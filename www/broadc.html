@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset = 'utf-8'/>
+  <meta name = "viewport" content = "width=device-width, initiall-scale = 1, minimum-scale = 1, maximum-scale = 1">
+  <meta name = "mobile-web-app-capable" content = "yes">
+  <meta name = "apple-mobile-web-app-capable" content = "yes">
+
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
+  <link rel = "stylesheet" type="text/css" href = "css/general.css"/>
+</head>
+
+<body>
+  <nav class = "CaixaMenu minusOnLeft id" id = "menu-desplegable">
+    <ul>
+    <li class = ""><a href = "index.html">Inici</a></li>
+    <li class = ""><a href = "broadf.html">Nova Cobertura</a></li>
+    <li class = ""><a href = "broadm.html">Plànol Cobertures</a></li>
+    <li class = ""><a href = "broadc.html">Contacte</a></li>
+    </ul>
+  </nav>
+
+  <div class = "CaixaPetita onLeft">
+    <button type = "button" id = "Lateral">Menú</button>
+    <h1 id = "titol-principal">Plànol Cobertures</h1>
+  </div>
+
+
+  <div class = "CaixaGran onLeft">
+    <div style="text-align:center">
+      <p><i>Tens algun dubte? Contacta'ns!</i></p>
+        <div >
+          <i style="width:30px"></i> Carrer dels Vergós, 36-42 - 08017 Barcelona<br>
+          <i style="width:30px"></i> Telèfon: 93 557 50 00<br>
+          <i style="width:30px"></i> Email: audiovisual@gencat.cat<br>
+        </div>
+        <!-- Automatic Slideshow Images -->
+        <img src="img/logo-CAC.png" style="width:80%">
+    </div>
+
+  </div>
+
+</body>
+<script>
+  document .addEventListener('keydown', (e) => {
+    if(e.key == "Escape"){
+      desplaça_components();
+    }
+  });
+  window.onload = load;
+  function load(){
+
+    // col·loca punts inferiors
+    $("#Lateral")[0].addEventListener('click', e =>{
+      desplaça_components();
+    });
+
+  }
+  function desplaça_components(){
+    $('.CaixaMenu').toggleClass('minusOnLeft').toggleClass('minusOnRight');
+    $('.CaixaPetita').toggleClass('onLeft').toggleClass('onRight');
+    $('.CaixaGran').toggleClass('onLeft').toggleClass('onRight');
+    $('.Botons').toggleClass('onLeft').toggleClass('onRight');
+    $('.ContenidorDots').toggleClass('onLeftDot').toggleClass('onRightDot');
+  }
+
+
+</script>
+
+</html>

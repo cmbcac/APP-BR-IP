@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset = 'utf-8'/>
+  <meta name = "viewport" content = "width=device-width, initial-scale=1, minimum-scale = 1, maximum-scale = 1, viewport-fit=cover">
+  <meta name = "mobile-web-app-capable" content = "yes">
+  <meta name = "apple-mobile-web-app-capable" content = "yes">
+
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src = "js/broadf.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
+  <link rel = "stylesheet" type="text/css" href = "css/general.css"/>
+  <link rel = "stylesheet" type="text/css" href = "css/broadf.css"/>
+
+  <title> Registre d'una Televisió IP o una OTT </title>
+</head>
+<body>
+  <nav class = "CaixaMenu minusOnLeft" id = "menu-desplegable">
+    <ul>
+		<li class = ""><a href = "index.html">Inici</a></li>
+		<li class = ""><a href = "broadf.html">Nova Cobertura</a></li>
+		<li class = ""><a href = "broadm.html">Plànol Cobertures</a></li>
+		<li class = ""><a href = "broadc.html">Contacte</a></li>
+	  </ul>
+  </nav>
+  <div class = "CaixaPetita onLeft">
+    <button type = "button" id = "Lateral">Menú</button>
+    <h1 id = "titol-principal">Registre Cobertura</h1>
+  </div>
+  <form class = "CaixaGran onLeft" id = "gform">
+
+    <div class = "Calgary88 shown" id = "Ubicacio">
+      <h4> Mapa </h4>
+      <div class = "top"> Ubicació</div>
+      <input placeholder = "Latitud" class = "ubi" name = "Latitud" value = "" id ="Latitud" readonly/>
+      <input placeholder = "Longitud" class = "ubi" name = "Longitud" value = "" id = "Longitud" readonly/>
+      <input placeholder = "Municipi" name = "Indiqueu el municipi des d’on ompliu el formulari:" value = "" id = "Municipi"/>
+      <button type = "button"id = "geo"> Geolocalització </button>
+      <div class = "ContenidorMapa" id = "Mapa"></div>
+    </div>
+    <div class = "Calgary88 hidden" id = "Contacte">
+      <h4> Dades de contacte i altres canals </h4>
+        <div class = "top"> Dades personals </div>
+        <input placeholder="Nom i cognoms:" name "Nom i Cognoms" value = "" >
+        <input placeholder="Telèfon de contacte" name="Telèfon/s" value = ""/>
+        <input placeholder="Correu Electrònic" name = "Correu electrònic " value "">
+        <div class = "top"> Noms d'altres emissores de ràdio </div>
+        <input placeholder = "Altres emissores de ràdio 1" name = "Altres emissores de ràdio 1" value = ""/>
+        <input placeholder = "Altres emissores de ràdio 2" name = "Altres emissores de ràdio 2" value = ""/>
+        <input placeholder = "Altres emissores de ràdio 3" name = "Altres emissores de ràdio 3" value = ""/>
+        <div class = "top"> Noms d'altres canals de televisió </div>
+        <input placeholder = "Altres canals de TV 1" name = "Altres canals de TV 1" value = ""/>
+        <input placeholder = "Altres canals de TV 2" name = "Altres canals de TV 2" value = ""/>
+        <input placeholder = "Altres canals de TV 3" name = "Altres canals de TV 3" value = ""/>
+        <div class = "top2">Altre formes de comunicació local 1</div>
+        <input placeholder = "Nom del servei" name = "Altres formes de comunicació local 1" value = ""/>
+        <input placeholder = "Descripció" name = "Descripció 1" value = ""/>
+        <input placeholder = "Difusió" name = "Difusió 1" value = ""/>
+        <input placeholder = "Forma d'accés" name = "Accés 1" value = ""/>
+        <div class = "top2">Altre formes de comunicació local 2</div>
+        <input placeholder = "Nom del servei" name = "Altres formes de comunicació local 2" value = ""/>
+        <input placeholder = "Descripció" name = "Descripció 2" value = ""/>
+        <input placeholder = "Difusió" name = "Difusió 2" value = ""/>
+        <input placeholder = "Forma d'accés" name = "Accés 2" value = ""/>
+        <div class = "top"> Observacions </div>
+        <input placeholder = "" name = "Observacions (Espai dedicat a incloure aquelles mancances, deficiències en relació als mitjans de comunicació que es reben al municipi)" value = "" />
+    </div>
+    <div class = "Calgary88 hidden" id = "Cobertures">
+      <div id = "noms"> <ul id = "list1"> </ul> </div>
+      <div id = "valors"> <ul id = "list2"> </ul> </div>
+    </div>
+    <div class = "Calgary88 hidden" id = "Send">
+      <button id = "Centre"> Envia</button>
+    </div>
+
+  </form>
+  <div class = "CaixaGran onLeft" id = "thankyou_message">
+    <div class = "Calgary88 shown" >
+      El formulari s'ha enviat correctament
+    </div>
+  </div>
+  <dic class = "Botons onLeft">
+    <div class = "ContenidorDots onLeftDot">
+      <div class = "dot onPointer" id = "d0"></div>
+      <div class = "dot offPointer" id = "d1"></div>
+      <div class = "dot offPointer" id = "d2"></div>
+      <div class = "dot offPointer" id = "d3"></div>
+    </div>
+
+  </div>
+
+</body>
+<script data-cfasync="false" type = "text/javascript" src = "js/form-submission-handler.js"></script>
+<script async defer src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAqa-2L_YRe22lkHLFDasHHDaXkAokWVFE&callback=initMap"></script>
+
+</html>

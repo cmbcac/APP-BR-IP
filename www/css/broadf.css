@@ -1,0 +1,59 @@
+
+#Contacte{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.ContenidorMapa {
+    position: relative;
+    width: 90vw;
+    height: 55vh;
+}
+#Cobertures{
+  overflow: scroll;
+  height: calc(70vh);
+  grid-template-rows; 1fr 99fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid{
+  display: grid;
+}
+
+#noms{
+  min-width:50%;
+  white-space:nowrap;
+}
+#valors{
+  min-width:50%;
+}
+
+.iel{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#Centre{
+  background-color: #9ce49fad;
+  position: relative;
+  top: calc(40vh - 50px);
+  width: 100px;
+  height: 100px;
+  left: calc(45.5vw - 50px);
+  border-radius: 50%;
+  cursor: pointer;
+}
+#Centre:hover{
+  background:#9ce49f;
+}
+#geo{
+  background: #9ce49fad;
+  cursor:pointer;
+}
+#geo:hover{
+  background: #9ce49f;
+}
+
+#d2, #d3{
+  display: none;
+}
