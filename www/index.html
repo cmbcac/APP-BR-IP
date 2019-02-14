@@ -80,17 +80,15 @@
 		var link= document.getElementById('linkbr');
 		var menu=document.getElementById('openmenu');
 		
-		 document.getElementById('labelbr').style.display = 'none';
 		 document.getElementById('showbr').style.display = 'inline';
-		
+		 document.getElementById('showott').style.display='none';
 
         menu.style.animationDuration = "1s";
 		menu.style.background= "gray";
 		menu.style.webkitTransform= 'translate3d(0,-100%,0) scale(0.5)';
 		
 		link.style.visibility = "visible";
-		link.style.animationDuration = "3s";
-		
+		document.getElementById('linkott').style.visibility = "hidden";
 	 }	 
 	 function expandott(){
 	 
@@ -99,15 +97,14 @@
 		
 		 
 		 document.getElementById('showott').style.display = 'inline';
-		 document.getElementById('labelott').style.display = 'none';
-
+		 document.getElementById('showbr').style.display = 'none';
+		
         menu.style.animationDuration = "1s";
 		menu.style.background= "gray";
 		menu.style.webkitTransform= 'translate3d(0,-100%,0) scale(0.5)';
 		
 		link.style.visibility = "visible";
-		link.style.animationDuration = "3s";
-	
+		document.getElementById('linkbr').style.visibility = "hidden";
 
 	 }
 	 function reset(){
