@@ -35,114 +35,30 @@
 	<!--  titol -->
     <title>IPTV CAC	</title>
 </head>
-
-<body style="background: url('img/bg.png');">
-	<p class="fadeinfadeout" id="ins1">Toca el món</p>
+	<script src="js/index.js"></script>
+<body onload="adjust()" onresize="adjust()">
 	<p class="fadeinfadeout" id="ins2">Selecciona una opció</p>
-	<div id="earth" style="background: url('img/MAP.JPG');background-size: cover;"></div>
 	<nav class="menu">
-	<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
-	<label class="menu-open-button"  onclick="reset()" id="openmenu" for="menu-open">
-    <span class="hamburger hamburger-1"></span>
-    <span class="hamburger hamburger-2"></span>
-    <span class="hamburger hamburger-3"></span>
-	</label>
-		
-		<label class="menu-item" id="labelbr" style=
-		"background: url('img/radio-icon2.png');
-		background-size:calc(15vw) calc(15vw);
-		background-repeat: no-repeat;" onclick=expandbr()></label>
-		
-		<label class="menu-item" id="labelott" style=
-		"background: url('img/Television-icon.png');
-		background-size:calc(15vw) calc(15vw);
-		background-repeat: no-repeat;" onclick=expandott()></label>
+	
+		<!--<label  class="linklabel" id="labelbr" ></label>-->
+		<div class="BroadPart" id="BroadPart">
+			<label id="showbr" style="top:17%; position:relative">Mapa de senyals i cobertura de ràdio a Catalunya</label>
+		</div>
+		<a href = "broadm.html" class="linklabel" id= "labelbr" class="menu-item"></a>
 		
 		
-		<a href = "broadm.html" id= "linkbr"  class="menu-item" style = "background: url('img/radio-icon2.png');
-		background-size:calc(15vw) calc(15vw);
-		background-repeat: no-repeat;  visibility: hidden;"></a>
+		<!--<label class="linklabel" id="labelott"></label>	-->
+		<div class="OTTPart" id="OTTPart">
+			<label id="showott" style="top:17%; position:relative">Mapa de senyals i cobertura de televisió a Catalunya</label>
+		</div>
+		<a href = "overm.html"  class="linklabel" id="labelott" class="menu-item"></a>	
 		
-		<a href = "overm.html"  id="linkott" class="menu-item" style = "
-		background: url('img/Television-icon.png');
-		background-size:calc(15vw) calc(15vw);
-		background-repeat: no-repeat;   visibility: hidden;"></a>
-			
-		<label id="showbr" style="font-size: 8vw; color:white; display:none; width:80vw; top:70%; left:50%; transform: translateX(-50%); text-align:center; position:absolute;">Mapa de senyals i cobertura de ràdio a Catalunya</label>
-		<label id="showott" style="font-size: 8vw; color:white; display:none; width:80vw; top:70%; left:50%; transform: translateX(-50%); text-align:center; position:absolute;">Mapa de senyals i cobertura de televisió a Catalunya</label>
+		
 		
 	</nav>
-	<!--  other -->
-	<script>
-
-	 function expandbr(){
-	 
-		var link= document.getElementById('linkbr');
-		var menu=document.getElementById('openmenu');
-		
-		 document.getElementById('showbr').style.display = 'inline';
-		 document.getElementById('showott').style.display='none';
-
-        menu.style.animationDuration = "1s";
-		menu.style.background= "gray";
-		menu.style.webkitTransform= 'translate3d(0,-100%,0) scale(0.5)';
-		
-		link.style.visibility = "visible";
-		document.getElementById('linkott').style.visibility = "hidden";
-	 }	 
-	 function expandott(){
-	 
-		var link= document.getElementById('linkott');
-		var menu=document.getElementById('openmenu');
-		
-		 
-		 document.getElementById('showott').style.display = 'inline';
-		 document.getElementById('showbr').style.display = 'none';
-		
-        menu.style.animationDuration = "1s";
-		menu.style.background= "gray";
-		menu.style.webkitTransform= 'translate3d(0,-100%,0) scale(0.5)';
-		
-		link.style.visibility = "visible";
-		document.getElementById('linkbr').style.visibility = "hidden";
-
-	 }
-	 function reset(){
-	 
-		 var menu=document.getElementById('openmenu');
-		 var br=document.getElementById('labelbr');
-		 var ott=document.getElementById('labelott');
-		 if(br.style.display=='none'||ott.style.display=='none'){
-		
-		
-		 document.getElementById('labelbr').style.display = 'inline';
-		 document.getElementById('labelott').style.display = 'inline';
-		 document.getElementById('linkbr').style.visibility = 'hidden';
-		 document.getElementById('linkott').style.visibility = 'hidden';
-		 document.getElementById('openmenu').style.display = 'inline';
-		 document.getElementById('showott').style.display = 'none';
-		 document.getElementById('showbr').style.display = 'none';
-		 document.getElementById('ins1').style.display = 'inline';
-		 document.getElementById('ins2').style.display = 'none';
-		  
-		 }
-		 if(!document.getElementById('menu-open').checked){
-			 document.getElementById('ins2').style.display = 'inline';
-				document.getElementById('ins1').style.display = 'none';
-		 }else{
-			 document.getElementById('ins2').style.display = 'none';
-			document.getElementById('ins1').style.display = 'inline';
-		 }
-		 menu.style.animationDuration = "1s";
-			menu.style.webkitTransform= 'translate3d(0,0,0) scale(1)';
-			menu.style.background= "#000033";
-	 }
-	</script>
-  <script type="text/javascript" src="cordova.js"></script>
 	
-
-
-
+	<!--  other -->
+  <!--<script type="text/javascript" src="cordova.js"></script> -->
 </body>
-
+	
 </html>
