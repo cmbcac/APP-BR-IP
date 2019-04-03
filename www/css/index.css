@@ -118,18 +118,18 @@ z-index:10;
 		left:81vw;
 		
 		z-index:11;
-		background: url("radio-icon2.png");
+		 
 		background-size:10vw 10vw;
-		background-repeat: no-repeat; 
+		  
 	}	
 	#labelott{
 		position:absolute;		
 		top:62.5vh;
 		left:10vw;
 			
-		background: url("Television-icon.png");
+		 
 		background-size:calc(10vw) calc(10vw);
-		background-repeat: no-repeat;
+		 
 		z-index:11;
 	}
 }
@@ -180,18 +180,18 @@ z-index:10;
 		left:87vw;
 		
 		z-index:11;
-		background: url("radio-icon2.png");
+		 
 		background-size:10vh 10vh;
-		background-repeat: no-repeat; 
+		  
 	}	
 	#labelott{
 		position:absolute;		
 		top:60vh;
 		left:7vw;
 			
-		background: url("Television-icon.png");
+		 
 		background-size:calc(10vh) calc(10vh);
-		background-repeat: no-repeat;
+		 
 		z-index:11;
 	}
 }
@@ -249,7 +249,7 @@ z-index:10;
 		z-index:11;
 		background: url("img/radio-icon2.png");
 		background-size:10vw 10vw;
-		background-repeat: no-repeat; 
+		  
 	}	
 	#labelott{
 		position:absolute;		
@@ -258,7 +258,7 @@ z-index:10;
 			
 		background: url("img/Television-icon.png");
 		background-size:calc(10vw) calc(10vw);
-		background-repeat: no-repeat;
+		 
 		z-index:11;
 	}
 }
@@ -309,18 +309,18 @@ z-index:10;
 		left:87vw;
 		
 		z-index:11;
-		background: url("radio-icon2.png");
+		 
 		background-size:10vh 10vh;
-		background-repeat: no-repeat; 
+		  
 	}	
 	#labelott{
 		position:absolute;		
 		top:60vh;
 		left:7vw;
 			
-		background: url("Television-icon.png");
+		 
 		background-size:calc(10vh) calc(10vh);
-		background-repeat: no-repeat;
+		 
 		z-index:11;
 	}
 }
@@ -377,18 +377,18 @@ z-index:10;
 		left:78vw;
 		
 		z-index:11;
-		background: url("radio-icon2.png");
+		 
 		background-size:10vw 10vw;
-		background-repeat: no-repeat; 
+		  
 	}	
 	#labelott{
 		position:absolute;		
 		top:62.5vh;
 		left:10vw;
 			
-		background: url("Television-icon.png");
+		 
 		background-size:calc(10vw) calc(10vw);
-		background-repeat: no-repeat;
+		 
 		z-index:11;
 	}
 	#showbr{
@@ -445,18 +445,18 @@ z-index:10;
 		left:87vw;
 		
 		z-index:11;
-		background: url("radio-icon2.png");
+		 
 		background-size:10vh 10vh;
-		background-repeat: no-repeat; 
+		  
 	}	
 	#labelott{
 		position:absolute;		
 		top:60vh;
 		left:7vw;
 			
-		background: url("Television-icon.png");
+		 
 		background-size:calc(10vh) calc(10vh);
-		background-repeat: no-repeat;
+		 
 		z-index:11;
 	}
 	#showbr{
