@@ -1,70 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="iptvbrcac" version="1.3.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>IPTV BR CAC</name>
+<widget id="com.phonegap.helloworld" version="1.3.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Bina</name>
     <description>
-        Consulta els mapes de cobertures de ràdios, canals TDT i televisions IP.
+        A blank PhoneGap app.
     </description>
-    <author email="cmartinb.cac@gencat.cat" href="www.cac.cat">
-        Consell de l'Audiovisual de Catalunya
+    <author email="support@phonegap.com" href="http://phonegap.com">
+        PhoneGap Team
     </author>
     <content src="index.html" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="26" />
-    <platform name="android">
-        <icon density="ldpi" platform="android" src="icons/ios/57_IP.png" />
-        <icon density="mdpi" platform="android" src="icons/ios/72_IP.png" />
-        <icon density="hdpi" height="76" platform="android" src="icons/ios/76_IP.png" width="76" />
-        <icon density="xhdpi" height="114" platform="android" src="icons/ios/114_IP.png" width="114" />
-        <icon density="xxhdpi" height="120" platform="android" src="icons/ios/144_IP.png" width="120" />
-        <icon density="xxxhdpi" height="152" platform="android" src="icons/ios/152_IP.png" width="152" />
-    </platform>
+    <access origin="*" />
     <platform name="ios">
-        <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
-        <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />
-        <icon height="50" platform="ios" src="www/res/icon/ios/icon-50.png" width="50" />
-        <icon height="100" platform="ios" src="www/res/icon/ios/icon-50@2x.png" width="100" />
-        <icon height="72" platform="ios" src="www/res/icon/ios/icon-72.png" width="72" />
-        <icon height="144" platform="ios" src="www/res/icon/ios/icon-72@2x.png" width="144" />
-        <icon height="180" platform="ios" src="www/res/icon/ios/icon-60@3x.png" width="180" />
-        <icon height="60" platform="ios" src="www/res/icon/ios/icon-60.png" width="60" />
-        <icon height="120" platform="ios" src="www/res/icon/ios/icon-60@2x.png" width="120" />
-        <icon height="180" platform="ios" src="www/res/icon/ios/icon-60@3x.png" width="180" />
-        <icon height="76" platform="ios" src="www/res/icon/ios/icon-76.png" width="76" />
-        <icon height="152" platform="ios" src="www/res/icon/ios/icon-76@2x.png" width="152" />
-        <icon height="167" platform="ios" src="www/res/icon/ios/icon-83.5@2x.png" width="167" />
-        <icon height="29" platform="ios" src="www/res/icon/ios/icon-small.png" width="29" />
-        <icon height="58" platform="ios" src="www/res/icon/ios/icon-small@2x.png" width="58" />
-        <icon height="87" platform="ios" src="www/res/icon/ios/icon-small@3x.png" width="87" />
-        <icon height="40" platform="ios" src="www/res/icon/ios/icon-40.png" width="40" />
-        <icon height="80" platform="ios" src="www/res/icon/ios/icon-40@2x.png" width="80" />
-        <icon height="120" platform="ios" src="www/res/icon/ios/icon-40@3x.png" width="120" />
-        <icon height="1024" platform="ios" src="www/res/icon/ios/icon-32@32x.png" width="1024" />
-        <splash height="1136" platform="ios" src="www/res/screen/ios/Default-568h@2x~iphone.png" width="640" />
-        <splash height="1134" platform="ios" src="www/res/screen/ios/Default-667h.png" width="750" />
-        <splash height="2208" platform="ios" src="www/res/screen/ios/Default-736h.png" width="1242" />
-        <splash height="1242" platform="ios" src="www/res/screen/ios/Default-Landscape-736h.png" width="2208" />
-        <splash height="1536" platform="ios" src="www/res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" />
-        <splash height="768" platform="ios" src="www/res/screen/ios/Default-Landscape.png" width="1024" />
-        <splash height="2048" platform="ios" src="www/res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" />
-        <splash height="1024" platform="ios" src="www/res/screen/ios/Default-Portrait.png" width="768" />
-        <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x.png" width="640" />
-        <splash height="480" platform="ios" src="www/res/screen/ios/Default.png" width="320" />
+        <allow-navigation href="*" />
     </platform>
-    <preference name="iosPersistentFileLocation" value="Library" />
-    <preference name="BackupWebStorage" value="none" />
-    <plugin name="cordova-plugin-battery-status" spec="~1.1.1" />
-    <plugin name="cordova-plugin-console" spec="~1.0.2" />
-    <plugin name="cordova-plugin-device" spec="~1.1.1" />
-    <plugin name="cordova-plugin-device-motion" spec="~1.2.0" />
-    <plugin name="cordova-plugin-device-orientation" spec="~1.0.2" />
-    <plugin name="cordova-plugin-dialogs" spec="~1.2.0" />
-    <plugin name="cordova-plugin-file" spec="~4.1.1" />
-    <plugin name="cordova-plugin-geolocation" spec="~2.1.0" />
-    <plugin name="cordova-plugin-globalization" spec="~1.0.3" />
-    <plugin name="cordova-plugin-inappbrowser" spec="~1.3.0" />
-    <plugin name="cordova-plugin-network-information" spec="~1.2.0" />
-    <plugin name="cordova-plugin-splashscreen" spec="~3.2.1" />
-    <plugin name="cordova-plugin-statusbar" spec="~2.1.2" />
-    <plugin name="cordova-plugin-vibration" spec="~2.1.0" />
-    <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
+    <engine name="ios" spec="~4.5.4" />
 </widget>
