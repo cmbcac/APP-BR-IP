@@ -94,9 +94,9 @@ function returnDataParsed(data){
 
 function initMap() {
 	marker;
-      var catalunya = {lat: 41.4419, lng: 1.5719};
+      var california = {lat: 41.4419, lng: 1.5719};
       var map = new google.maps.Map(document.getElementById('Mapa'), {
-        center: catalunya,
+        center: california,
         zoom: 8
   });
 
@@ -106,17 +106,15 @@ function initMap() {
 
 
       google.maps.event.addListener(map, 'click', function(event) {
-				if (marker != undefined) marker.setMap(null);
-				marker = new google.maps.Marker({
-					position: event.latLng,
-					map: map,
-					icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
-				});
-				console.log(marker.getPosition().lat());
-				console.log(marker.getPosition().lng());
-		document.getElementById('Latitud').value = (marker.getPosition().lat());
-		document.getElementById('Longitud').value =(marker.getPosition().lng());
-		geocodeLatLng(geocoder, map, infoWindow, marker);
+    if (marker != undefined) marker.setMap(null);
+
+    marker = new google.maps.Marker({
+      position: event.latLng,
+      map: map
+    });
+    document.getElementById('Latitud').value = (marker.getPosition().lat());
+    document.getElementById('Longitud').value =(marker.getPosition().lng());
+    geocodeLatLng(geocoder, map, infoWindow, marker);
   });
 
 }
@@ -128,7 +126,8 @@ function geocodeLatLng(geocoder, map, infowindow, marker) {
 		if (status === 'OK') {
 
 			if (results[0]) {
-				
+				infowindow.setContent(results[0].formatted_address );
+				infowindow.open(map, marker);
 				$("#d2").css('display', 'inline-block');
 				var c1 = "";
 				var l = results[0].address_components.length;
@@ -138,7 +137,7 @@ function geocodeLatLng(geocoder, map, infowindow, marker) {
 					c1 = revMap.get(rln);
 					if(c1 == undefined){
 						revMap.forEach(comparastring);
-						console.log("forEach");
+						console.log("foreach");
 					}
 					else{
 						com = c1;
@@ -146,8 +145,6 @@ function geocodeLatLng(geocoder, map, infowindow, marker) {
 						break;
 					}
 				}
-				infowindow.setContent(results[0].formatted_address );
-				infowindow.open(map, marker);
 			}
 			else {
 			  window.alert('No results found');
@@ -222,6 +219,7 @@ function executaAJAX3(id, todo, string){
     xmlhttp.open("GET", "https://spreadsheets.google.com/feeds/list/"+id+"/1/public/values?alt=json-in-script&callback=callback", true);
     xmlhttp.send();
 }
+
 
 function activar_geolocalitzacio(){
 		navigator.geolocation.getCurrentPosition(function(position) {

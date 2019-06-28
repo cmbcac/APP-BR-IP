@@ -7,8 +7,6 @@ var hidd = "Calgary88 hidden";
 var pointed = "dot onPointer";
 var notPointed = "dot offPointer";
 
-window.onload = load;
-
 var JParsedText;
 
 var array_marcadors = [];
@@ -33,7 +31,7 @@ var inProgress;
 
 inProgress = setValorInProgress();
 
-
+window.onload = load;
 
 // informa a l'usuari dels canvis de conexió
 window.addEventListener('online',  updateIndicator);
@@ -58,6 +56,7 @@ document .addEventListener('keydown', (e) => {
 
 });
 
+window.onload = load;
 function canvia_finestra(f2){
   if($("#d"+f2).css("display") == "none") return;
   // coloreja aquest
@@ -76,6 +75,37 @@ function canvia_finestra(f2){
     $('.el').css('height', $('.nel').innerHeight());				//tamany de la caixa
   }
 
+
+  	document.addEventListener('keydown', (event) => {
+  	  const keyName = event.key;
+  	  /*if(keyName == '1'){
+  			for(var i = 0;  i < marcadors.length; i++){
+  				if(marcadors[i].icon.includes("yellow")){
+  					marcadors[i].setVisible(!marcadors[i].visible);
+  				}
+  			}
+  		}
+  		if(keyName == '2'){
+  			for(var i = 0;  i < marcadors.length; i++){
+  				if(marcadors[i].icon.includes("red")){
+  					marcadors[i].setVisible(!marcadors[i].visible);
+  				}
+  			}
+  		}
+  		if(keyName == '3'){
+  			if(markerCluster.markers_.length != 0){
+  				markerCluster.clearMarkers();
+  				marcadors.forEach(element => element.setMap(map));
+  			}
+  			else{
+  				markerCluster.addMarkers(marcadors);
+  			}
+
+  		}*/
+  		if(keyName == "Enter"){
+
+  		}
+  	});
 }
 
 function load(){
@@ -100,6 +130,7 @@ function desplaça_components(){
   $('.Botons').toggleClass('onLeft').toggleClass('onRight');
   $('.ContenidorDots').toggleClass('onLeftDot').toggleClass('onRightDot');
 }
+
 
 function setIcon(){
 	/*configura la icona*/
@@ -377,6 +408,7 @@ function peticioXMLHttp(id){
     xmlhttp.open("GET", "https://spreadsheets.google.com/feeds/list/"+id+"/1/public/values?alt=json-in-script&callback=callback", true);
     xmlhttp.send();
 }
+
 
 function handleBefore() {
 	//innecessari de moment, comunica que hi ha un nou proces fent-se

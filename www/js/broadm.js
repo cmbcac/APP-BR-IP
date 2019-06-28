@@ -128,6 +128,39 @@ function canvia_finestra(f2){
     $(finestres[f])[0].className = show;
     $('.el').css('height', $('.nel').innerHeight());				//tamany de la caixa
   }
+
+
+  	document.addEventListener('keydown', (event) => {
+  	  const keyName = event.key;
+  	  if(keyName == '1'){
+  			for(var i = 0;  i < marcadors.length; i++){
+  				if(marcadors[i].icon.includes("yellow")){
+  					marcadors[i].setVisible(!marcadors[i].visible);
+  				}
+  			}
+  		}
+  		if(keyName == '2'){
+  			for(var i = 0;  i < marcadors.length; i++){
+  				if(marcadors[i].icon.includes("red")){
+  					marcadors[i].setVisible(!marcadors[i].visible);
+  				}
+  			}
+  		}
+  		if(keyName == '3'){
+  			if(markerCluster.markers_.length != 0){
+  				markerCluster.clearMarkers();
+  				marcadors.forEach(element => element.setMap(map));
+  			}
+  			else{
+  				markerCluster.addMarkers(marcadors);
+  			}
+
+  		}
+  		if(keyName == "Enter"){
+  			let titol = $("#tags")[0].value;
+  			if(titol != "") mostra_segons_titol(titol);
+  		}
+  	});
 }
 
 function load(){
@@ -186,7 +219,11 @@ function descarrega_canalsDrive(data, params){
 				json: data[i].gsx$json.$t,
 				comarca: data[i].gsx$comarca.$t,
 				àmbit: 'Regional',
-				tipus: t
+				tipus: t,
+				frequencia: ""
+			}
+			if(params.nom.includes("rad")){
+				di.frequencia = data[i].gsx$frequencialocal.$t;
 			}
 			params.nom.includes("rad") ? radios.regionals.push(di) : televs.regionals.push(di);
 		}
@@ -481,6 +518,10 @@ function executaPeticio(id, todo, params){
     xmlhttp.send();
 }
 
+function handleBefore(){
+
+}
+
 function handleComplete(params){
 	if(params.nom.includes("bbdd")){
 		urls_bbdd --;
@@ -551,7 +592,6 @@ function mostra_segons_titol(titol){
 				$('ul#list2').children().remove();
 				$('ul#list3').children().remove();
 				$('ul#list4').children().remove();
-
 				let ll1 = 'ul#list1', ll2 = 'ul#list2', ll3 = 'ul#list3', ll4 = 'ul#list4';
 
 				coloreja_marcadors(element);
@@ -622,16 +662,17 @@ function extreu_respostes(data, params){
 					$('ul#list2').children().remove();
 					$('ul#list3').children().remove();
 					$('ul#list4').children().remove();
+					$('ul#freq').children().remove();
 
-					let ll1 = 'ul#list1', ll2 = 'ul#list2', ll3 = 'ul#list3', ll4 = 'ul#list4';
+					let ll1 = 'ul#list1', ll2 = 'ul#list2', ll3 = 'ul#list3', ll4 = 'ul#list4', ll5='ul#freq';
 
 					coloreja_marcadors(marcador);
-					append_al_llistat(resp, 'Estatal', 'Ràdio', ll1, ll2);
-					append_al_llistat(resp, 'Nacional', 'Ràdio', ll1, ll2);
-					append_al_llistat(resp, 'Regional', 'Ràdio', ll1, ll2);
-					append_al_llistat(resp, 'Estatal', 'Televisió', ll3, ll4);
-					append_al_llistat(resp, 'Nacional', 'Televisió', ll3, ll4);
-					append_al_llistat(resp, 'Regional', 'Televisió', ll3, ll4);
+					append_al_llistatR(resp, 'Estatal', 'Ràdio', ll1, ll2,ll5);
+					append_al_llistatR(resp, 'Nacional', 'Ràdio', ll1, ll2,ll5);
+					append_al_llistatR(resp, 'Regional', 'Ràdio', ll1, ll2, ll5);
+					append_al_llistatTV(resp, 'Estatal', 'Televisió', ll3, ll4);
+					append_al_llistatTV(resp, 'Nacional', 'Televisió', ll3, ll4);
+					append_al_llistatTV(resp, 'Regional', 'Televisió', ll3, ll4);
 
 				}
 
@@ -640,10 +681,43 @@ function extreu_respostes(data, params){
 	}
 }
 
-function append_al_llistat(resp, ambit, tipus, ll1, ll2){
+function append_al_llistatR(resp, ambit, tipus, ll1, ll2, ll5){
 	// cada append correspon a
 	$(ll1).append('<li class = "blanc">'+tipus+' '+ambit+'</li>');
-	$(ll2).append('<li class = "blanc"> -- </li>');
+	$(ll2).append('<li class = "blanc"> Cobertura </li>');
+	$(ll5).append('<li class = "blanc"> Freqüència </li>');
+	
+	for(var i = 0;  i < resp.canals.length; i++){
+		let r = resp.canals[i];
+		if(r.àmbit == ambit && r.tipus == tipus){
+			$(ll1).append('<li>'+r.nom+'</li>');
+			if(r.resposta == "") $(ll2).append('<li>'+'...'+'</li>');
+			else {$(ll2).append('<li>'+r.resposta+'</li>');}
+			
+			if(ambit == "Regional" && tipus == "Ràdio" ){
+			for( var x = 0; x<radios.regionals.length ; x++){
+				if(r.nom == radios.regionals[x].nom){
+					if(radios.regionals[x].frequencia!=""){
+						$(ll5).append('<li>'+radios.regionals[x].frequencia+'</li>');
+					}else{
+						$(ll5).append('<li>'+'...'+'</li>');
+					}
+				}
+				
+			}
+			}else{
+				$(ll5).append('<li> --- </li>');
+			}
+			
+		}
+		
+	}
+}
+
+function append_al_llistatTV(resp, ambit, tipus, ll1, ll2){
+	// cada append correspon a
+	$(ll1).append('<li class = "blanc">'+tipus+' '+ambit+'</li>');
+	$(ll2).append('<li class = "blanc"> Cobertura </li>');
 
 	for(var i = 0;  i < resp.canals.length; i++){
 		let r = resp.canals[i];
