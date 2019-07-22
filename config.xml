@@ -9,7 +9,7 @@
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="26" />
+    <preference name="android-minSdkVersion" value="28" />
     <platform name="android">
         <icon density="ldpi" platform="android" src="icons/ios/57_IP.png" />
         <icon density="mdpi" platform="android" src="icons/ios/72_IP.png" />
